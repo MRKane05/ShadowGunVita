@@ -1,0 +1,626 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &147589
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 479954}
+  - component: {fileID: 11409266}
+  m_Layer: 0
+  m_Name: DefaultFont
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &479954
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147589}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11409266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b72a357173e70ad6753cac0ef36a3e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FontDscr:
+    m_CharTable:
+    - m_Idx: 32
+      m_Width: 0.27869
+      m_CX: 0.00195
+      m_CY: 0.00195
+      m_CW: 0.01855
+      m_CH: 0.07324
+    - m_Idx: 33
+      m_Width: 0.31148
+      m_CX: 0.10156
+      m_CY: 0.00195
+      m_CW: 0.12012
+      m_CH: 0.07324
+    - m_Idx: 34
+      m_Width: 0.45902
+      m_CX: 0.20117
+      m_CY: 0.00195
+      m_CW: 0.22852
+      m_CH: 0.07324
+    - m_Idx: 35
+      m_Width: 0.63934
+      m_CX: 0.30078
+      m_CY: 0.00195
+      m_CW: 0.33887
+      m_CH: 0.07324
+    - m_Idx: 36
+      m_Width: 0.65574
+      m_CX: 0.40039
+      m_CY: 0.00195
+      m_CW: 0.43945
+      m_CH: 0.07324
+    - m_Idx: 37
+      m_Width: 1
+      m_CX: 0.5
+      m_CY: 0.00195
+      m_CW: 0.55957
+      m_CH: 0.07324
+    - m_Idx: 38
+      m_Width: 0.67213
+      m_CX: 0.59961
+      m_CY: 0.00195
+      m_CW: 0.63965
+      m_CH: 0.07324
+    - m_Idx: 39
+      m_Width: 0.27869
+      m_CX: 0.69922
+      m_CY: 0.00195
+      m_CW: 0.71582
+      m_CH: 0.07324
+    - m_Idx: 40
+      m_Width: 0.40984
+      m_CX: 0.79883
+      m_CY: 0.00195
+      m_CW: 0.82324
+      m_CH: 0.07324
+    - m_Idx: 41
+      m_Width: 0.42623
+      m_CX: 0.89844
+      m_CY: 0.00195
+      m_CW: 0.92383
+      m_CH: 0.07324
+    - m_Idx: 42
+      m_Width: 0.54098
+      m_CX: 0.00195
+      m_CY: 0.10156
+      m_CW: 0.03418
+      m_CH: 0.17285
+    - m_Idx: 43
+      m_Width: 0.62295
+      m_CX: 0.10156
+      m_CY: 0.10156
+      m_CW: 0.13867
+      m_CH: 0.17285
+    - m_Idx: 44
+      m_Width: 0.32787
+      m_CX: 0.20117
+      m_CY: 0.10156
+      m_CW: 0.2207
+      m_CH: 0.17285
+    - m_Idx: 45
+      m_Width: 0.37705
+      m_CX: 0.30078
+      m_CY: 0.10156
+      m_CW: 0.32324
+      m_CH: 0.17285
+    - m_Idx: 46
+      m_Width: 0.31148
+      m_CX: 0.40039
+      m_CY: 0.10156
+      m_CW: 0.41895
+      m_CH: 0.17285
+    - m_Idx: 47
+      m_Width: 0.52459
+      m_CX: 0.5
+      m_CY: 0.10156
+      m_CW: 0.53125
+      m_CH: 0.17285
+    - m_Idx: 48
+      m_Width: 0.62295
+      m_CX: 0.59961
+      m_CY: 0.10156
+      m_CW: 0.63672
+      m_CH: 0.17285
+    - m_Idx: 49
+      m_Width: 0.62295
+      m_CX: 0.69922
+      m_CY: 0.10156
+      m_CW: 0.73633
+      m_CH: 0.17285
+    - m_Idx: 50
+      m_Width: 0.62295
+      m_CX: 0.79883
+      m_CY: 0.10156
+      m_CW: 0.83594
+      m_CH: 0.17285
+    - m_Idx: 51
+      m_Width: 0.62295
+      m_CX: 0.89844
+      m_CY: 0.10156
+      m_CW: 0.93555
+      m_CH: 0.17285
+    - m_Idx: 52
+      m_Width: 0.62295
+      m_CX: 0.00195
+      m_CY: 0.20117
+      m_CW: 0.03906
+      m_CH: 0.27246
+    - m_Idx: 53
+      m_Width: 0.62295
+      m_CX: 0.10156
+      m_CY: 0.20117
+      m_CW: 0.13867
+      m_CH: 0.27246
+    - m_Idx: 54
+      m_Width: 0.62295
+      m_CX: 0.20117
+      m_CY: 0.20117
+      m_CW: 0.23828
+      m_CH: 0.27246
+    - m_Idx: 55
+      m_Width: 0.62295
+      m_CX: 0.30078
+      m_CY: 0.20117
+      m_CW: 0.33789
+      m_CH: 0.27246
+    - m_Idx: 56
+      m_Width: 0.62295
+      m_CX: 0.40039
+      m_CY: 0.20117
+      m_CW: 0.4375
+      m_CH: 0.27246
+    - m_Idx: 57
+      m_Width: 0.62295
+      m_CX: 0.5
+      m_CY: 0.20117
+      m_CW: 0.53711
+      m_CH: 0.27246
+    - m_Idx: 58
+      m_Width: 0.31148
+      m_CX: 0.59961
+      m_CY: 0.20117
+      m_CW: 0.61816
+      m_CH: 0.27246
+    - m_Idx: 59
+      m_Width: 0.31148
+      m_CX: 0.69922
+      m_CY: 0.20117
+      m_CW: 0.71777
+      m_CH: 0.27246
+    - m_Idx: 60
+      m_Width: 0.86885
+      m_CX: 0.79883
+      m_CY: 0.20117
+      m_CW: 0.85059
+      m_CH: 0.27246
+    - m_Idx: 61
+      m_Width: 0.57377
+      m_CX: 0.89844
+      m_CY: 0.20117
+      m_CW: 0.93262
+      m_CH: 0.27246
+    - m_Idx: 62
+      m_Width: 0.86885
+      m_CX: 0.00195
+      m_CY: 0.30078
+      m_CW: 0.05371
+      m_CH: 0.37207
+    - m_Idx: 63
+      m_Width: 0.55738
+      m_CX: 0.10156
+      m_CY: 0.30078
+      m_CW: 0.13477
+      m_CH: 0.37207
+    - m_Idx: 64
+      m_Width: 0.77049
+      m_CX: 0.20117
+      m_CY: 0.30078
+      m_CW: 0.24707
+      m_CH: 0.37207
+    - m_Idx: 65
+      m_Width: 0.65574
+      m_CX: 0.30078
+      m_CY: 0.30078
+      m_CW: 0.33984
+      m_CH: 0.37207
+    - m_Idx: 66
+      m_Width: 0.67213
+      m_CX: 0.40039
+      m_CY: 0.30078
+      m_CW: 0.44043
+      m_CH: 0.37207
+    - m_Idx: 67
+      m_Width: 0.65574
+      m_CX: 0.5
+      m_CY: 0.30078
+      m_CW: 0.53906
+      m_CH: 0.37207
+    - m_Idx: 68
+      m_Width: 0.67213
+      m_CX: 0.59961
+      m_CY: 0.30078
+      m_CW: 0.63965
+      m_CH: 0.37207
+    - m_Idx: 69
+      m_Width: 0.62295
+      m_CX: 0.69922
+      m_CY: 0.30078
+      m_CW: 0.73633
+      m_CH: 0.37207
+    - m_Idx: 70
+      m_Width: 0.59016
+      m_CX: 0.79883
+      m_CY: 0.30078
+      m_CW: 0.83398
+      m_CH: 0.37207
+    - m_Idx: 71
+      m_Width: 0.72131
+      m_CX: 0.89844
+      m_CY: 0.30078
+      m_CW: 0.94141
+      m_CH: 0.37207
+    - m_Idx: 72
+      m_Width: 0.68852
+      m_CX: 0.00195
+      m_CY: 0.40039
+      m_CW: 0.04297
+      m_CH: 0.47168
+    - m_Idx: 73
+      m_Width: 0.29508
+      m_CX: 0.10156
+      m_CY: 0.40039
+      m_CW: 0.11914
+      m_CH: 0.47168
+    - m_Idx: 74
+      m_Width: 0.55738
+      m_CX: 0.20117
+      m_CY: 0.40039
+      m_CW: 0.23438
+      m_CH: 0.47168
+    - m_Idx: 75
+      m_Width: 0.63934
+      m_CX: 0.30078
+      m_CY: 0.40039
+      m_CW: 0.33887
+      m_CH: 0.47168
+    - m_Idx: 76
+      m_Width: 0.57377
+      m_CX: 0.40039
+      m_CY: 0.40039
+      m_CW: 0.43457
+      m_CH: 0.47168
+    - m_Idx: 77
+      m_Width: 0.78689
+      m_CX: 0.5
+      m_CY: 0.40039
+      m_CW: 0.54688
+      m_CH: 0.47168
+    - m_Idx: 78
+      m_Width: 0.67213
+      m_CX: 0.59961
+      m_CY: 0.40039
+      m_CW: 0.63965
+      m_CH: 0.47168
+    - m_Idx: 79
+      m_Width: 0.70492
+      m_CX: 0.69922
+      m_CY: 0.40039
+      m_CW: 0.74121
+      m_CH: 0.47168
+    - m_Idx: 80
+      m_Width: 0.63934
+      m_CX: 0.79883
+      m_CY: 0.40039
+      m_CW: 0.83691
+      m_CH: 0.47168
+    - m_Idx: 81
+      m_Width: 0.70492
+      m_CX: 0.89844
+      m_CY: 0.40039
+      m_CW: 0.94043
+      m_CH: 0.47168
+    - m_Idx: 82
+      m_Width: 0.68852
+      m_CX: 0.00195
+      m_CY: 0.5
+      m_CW: 0.04297
+      m_CH: 0.57129
+    - m_Idx: 83
+      m_Width: 0.68852
+      m_CX: 0.10156
+      m_CY: 0.5
+      m_CW: 0.14258
+      m_CH: 0.57129
+    - m_Idx: 84
+      m_Width: 0.60656
+      m_CX: 0.20117
+      m_CY: 0.5
+      m_CW: 0.2373
+      m_CH: 0.57129
+    - m_Idx: 85
+      m_Width: 0.67213
+      m_CX: 0.30078
+      m_CY: 0.5
+      m_CW: 0.34082
+      m_CH: 0.57129
+    - m_Idx: 86
+      m_Width: 0.62295
+      m_CX: 0.40039
+      m_CY: 0.5
+      m_CW: 0.4375
+      m_CH: 0.57129
+    - m_Idx: 87
+      m_Width: 0.88525
+      m_CX: 0.5
+      m_CY: 0.5
+      m_CW: 0.55273
+      m_CH: 0.57129
+    - m_Idx: 88
+      m_Width: 0.63934
+      m_CX: 0.59961
+      m_CY: 0.5
+      m_CW: 0.6377
+      m_CH: 0.57129
+    - m_Idx: 89
+      m_Width: 0.62295
+      m_CX: 0.69922
+      m_CY: 0.5
+      m_CW: 0.73633
+      m_CH: 0.57129
+    - m_Idx: 90
+      m_Width: 0.59016
+      m_CX: 0.79883
+      m_CY: 0.5
+      m_CW: 0.83398
+      m_CH: 0.57129
+    - m_Idx: 91
+      m_Width: 0.39344
+      m_CX: 0.89844
+      m_CY: 0.5
+      m_CW: 0.92188
+      m_CH: 0.57129
+    - m_Idx: 92
+      m_Width: 0.52459
+      m_CX: 0.00195
+      m_CY: 0.59961
+      m_CW: 0.0332
+      m_CH: 0.6709
+    - m_Idx: 93
+      m_Width: 0.39344
+      m_CX: 0.10156
+      m_CY: 0.59961
+      m_CW: 0.125
+      m_CH: 0.6709
+    - m_Idx: 94
+      m_Width: 0.40984
+      m_CX: 0.20117
+      m_CY: 0.59961
+      m_CW: 0.22559
+      m_CH: 0.6709
+    - m_Idx: 95
+      m_Width: 0.55738
+      m_CX: 0.30078
+      m_CY: 0.59961
+      m_CW: 0.33398
+      m_CH: 0.6709
+    - m_Idx: 96
+      m_Width: 0.45902
+      m_CX: 0.40039
+      m_CY: 0.59961
+      m_CW: 0.42773
+      m_CH: 0.6709
+    - m_Idx: 97
+      m_Width: 0.57377
+      m_CX: 0.5
+      m_CY: 0.59961
+      m_CW: 0.53418
+      m_CH: 0.6709
+    - m_Idx: 98
+      m_Width: 0.59016
+      m_CX: 0.59961
+      m_CY: 0.59961
+      m_CW: 0.63477
+      m_CH: 0.6709
+    - m_Idx: 99
+      m_Width: 0.55738
+      m_CX: 0.69922
+      m_CY: 0.59961
+      m_CW: 0.73242
+      m_CH: 0.6709
+    - m_Idx: 100
+      m_Width: 0.59016
+      m_CX: 0.79883
+      m_CY: 0.59961
+      m_CW: 0.83398
+      m_CH: 0.6709
+    - m_Idx: 101
+      m_Width: 0.57377
+      m_CX: 0.89844
+      m_CY: 0.59961
+      m_CW: 0.93262
+      m_CH: 0.6709
+    - m_Idx: 102
+      m_Width: 0.40984
+      m_CX: 0.00195
+      m_CY: 0.69922
+      m_CW: 0.02637
+      m_CH: 0.77051
+    - m_Idx: 103
+      m_Width: 0.59016
+      m_CX: 0.10156
+      m_CY: 0.69922
+      m_CW: 0.13672
+      m_CH: 0.77051
+    - m_Idx: 104
+      m_Width: 0.57377
+      m_CX: 0.20117
+      m_CY: 0.69922
+      m_CW: 0.23535
+      m_CH: 0.77051
+    - m_Idx: 105
+      m_Width: 0.2623
+      m_CX: 0.30078
+      m_CY: 0.69922
+      m_CW: 0.31641
+      m_CH: 0.77051
+    - m_Idx: 106
+      m_Width: 0.27869
+      m_CX: 0.40039
+      m_CY: 0.69922
+      m_CW: 0.41699
+      m_CH: 0.77051
+    - m_Idx: 107
+      m_Width: 0.52459
+      m_CX: 0.5
+      m_CY: 0.69922
+      m_CW: 0.53125
+      m_CH: 0.77051
+    - m_Idx: 108
+      m_Width: 0.27869
+      m_CX: 0.59961
+      m_CY: 0.69922
+      m_CW: 0.61621
+      m_CH: 0.77051
+    - m_Idx: 109
+      m_Width: 0.85246
+      m_CX: 0.69922
+      m_CY: 0.69922
+      m_CW: 0.75
+      m_CH: 0.77051
+    - m_Idx: 110
+      m_Width: 0.59016
+      m_CX: 0.79883
+      m_CY: 0.69922
+      m_CW: 0.83398
+      m_CH: 0.77051
+    - m_Idx: 111
+      m_Width: 0.57377
+      m_CX: 0.89844
+      m_CY: 0.69922
+      m_CW: 0.93262
+      m_CH: 0.77051
+    - m_Idx: 112
+      m_Width: 0.59016
+      m_CX: 0.00195
+      m_CY: 0.79883
+      m_CW: 0.03711
+      m_CH: 0.87012
+    - m_Idx: 113
+      m_Width: 0.59016
+      m_CX: 0.10156
+      m_CY: 0.79883
+      m_CW: 0.13672
+      m_CH: 0.87012
+    - m_Idx: 114
+      m_Width: 0.4918
+      m_CX: 0.20117
+      m_CY: 0.79883
+      m_CW: 0.23047
+      m_CH: 0.87012
+    - m_Idx: 115
+      m_Width: 0.55738
+      m_CX: 0.30078
+      m_CY: 0.79883
+      m_CW: 0.33398
+      m_CH: 0.87012
+    - m_Idx: 116
+      m_Width: 0.42623
+      m_CX: 0.40039
+      m_CY: 0.79883
+      m_CW: 0.42578
+      m_CH: 0.87012
+    - m_Idx: 117
+      m_Width: 0.59016
+      m_CX: 0.5
+      m_CY: 0.79883
+      m_CW: 0.53516
+      m_CH: 0.87012
+    - m_Idx: 118
+      m_Width: 0.5082
+      m_CX: 0.59961
+      m_CY: 0.79883
+      m_CW: 0.62988
+      m_CH: 0.87012
+    - m_Idx: 119
+      m_Width: 0.78689
+      m_CX: 0.69922
+      m_CY: 0.79883
+      m_CW: 0.74609
+      m_CH: 0.87012
+    - m_Idx: 120
+      m_Width: 0.52459
+      m_CX: 0.79883
+      m_CY: 0.79883
+      m_CW: 0.83008
+      m_CH: 0.87012
+    - m_Idx: 121
+      m_Width: 0.5082
+      m_CX: 0.89844
+      m_CY: 0.79883
+      m_CW: 0.92871
+      m_CH: 0.87012
+    - m_Idx: 122
+      m_Width: 0.52459
+      m_CX: 0.00195
+      m_CY: 0.89844
+      m_CW: 0.0332
+      m_CH: 0.96973
+    - m_Idx: 123
+      m_Width: 0.42623
+      m_CX: 0.10156
+      m_CY: 0.89844
+      m_CW: 0.12695
+      m_CH: 0.96973
+    - m_Idx: 124
+      m_Width: 0.27869
+      m_CX: 0.20117
+      m_CY: 0.89844
+      m_CW: 0.21777
+      m_CH: 0.96973
+    - m_Idx: 125
+      m_Width: 0.42623
+      m_CX: 0.30078
+      m_CY: 0.89844
+      m_CW: 0.32617
+      m_CH: 0.96973
+    - m_Idx: 126
+      m_Width: 0.55738
+      m_CX: 0.40039
+      m_CY: 0.89844
+      m_CW: 0.43359
+      m_CH: 0.96973
+    m_CharMaxWidth: 61
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 147589}
+  m_IsPrefabAsset: 1

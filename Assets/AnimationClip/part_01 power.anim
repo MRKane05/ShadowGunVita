@@ -1,0 +1,277 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: part_01 power
+  m_Legacy: 1
+  m_Compressed: 0
+  m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: -0, z: -0, w: 1}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - time: 15.366667
+        value: {x: 0, y: -0, z: -0, w: 1}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: elevator_m3_body
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: 0.7071069, w: 0.70710677}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - time: 15.366667
+        value: {x: 0, y: 0, z: 0.7071069, w: 0.70710677}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: elevator_m3_body/lift_blik
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: 0.70710665, w: 0.707107}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - time: 15.366667
+        value: {x: 0, y: 0, z: 0.70710665, w: 0.707107}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: elevator_m3_body/liftdoor02
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: 0.7071069, w: 0.70710677}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - time: 15.366667
+        value: {x: 0, y: 0, z: 0.7071069, w: 0.70710677}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: elevator_m3_body/liftdoor01
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: 1, w: -1.3315805E-07}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - time: 15.366667
+        value: {x: 0, y: 0, z: 1, w: -1.3315805E-07}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: elevator_m3_body/liftdoor003
+  m_CompressedRotationCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 93.73988, y: 572.07324, z: -65.58151}
+        inSlope: {x: -3.980566, y: 0.0011718749, z: 0.62929684}
+        outSlope: {x: -3.9981441, y: -0.0035156247, z: 0.632373}
+        tangentMode: 0
+      - time: 1.6333333
+        value: {x: 86.61368, y: 572.0732, z: -64.45474}
+        inSlope: {x: -4.6860394, y: 0.0011718761, z: 0.74091864}
+        outSlope: {x: -4.6977415, y: 0.0011718719, z: 0.7425273}
+        tangentMode: 0
+      - time: 3.3
+        value: {x: 78.387085, y: 572.0732, z: -63.153976}
+        inSlope: {x: -5.130034, y: -0, z: 0.81108475}
+        outSlope: {x: -5.135747, y: 0.0011718761, z: 0.8119636}
+        tangentMode: 0
+      - time: 4.9333334
+        value: {x: 69.83451, y: 572.0731, z: -61.801655}
+        inSlope: {x: -5.2943897, y: -0.0011718761, z: 0.8373054}
+        outSlope: {x: -5.2949753, y: 0.0023437522, z: 0.8371589}
+        tangentMode: 0
+      - time: 6.6
+        value: {x: 61.06439, y: 572.0731, z: -60.41493}
+        inSlope: {x: -5.185259, y: 0.0011718761, z: 0.82002026}
+        outSlope: {x: -5.1804247, y: 0.0023437522, z: 0.8188484}
+        tangentMode: 0
+      - time: 8.266666
+        value: {x: 52.712963, y: 572.0732, z: -59.094418}
+        inSlope: {x: -4.797592, y: -0, z: 0.7584859}
+        outSlope: {x: -4.786889, y: -0.0011718929, z: 0.75689626}
+        tangentMode: 0
+      - time: 9.933332
+        value: {x: 45.24547, y: 572.0731, z: -57.913654}
+        inSlope: {x: -4.130483, y: -0.0011718929, z: 0.6531838}
+        outSlope: {x: -4.114105, y: 0.0011718593, z: 0.6505284}
+        tangentMode: 0
+      - time: 11.566667
+        value: {x: 39.233273, y: 572.0731, z: -56.963005}
+        inSlope: {x: -3.205548, y: -0.0011718593, z: 0.50697565}
+        outSlope: {x: -3.184106, y: -0, z: 0.50332797}
+        tangentMode: 0
+      - time: 13.233333
+        value: {x: 34.888496, y: 572.0732, z: -56.276016}
+        inSlope: {x: -1.985919, y: 0.0011718929, z: 0.3139208}
+        outSlope: {x: -1.9586165, y: -0.0011718593, z: 0.3098103}
+        tangentMode: 0
+      - time: 14.866666
+        value: {x: 32.830288, y: 572.0732, z: -55.95057}
+        inSlope: {x: -0.519588, y: -0, z: 0.082032494}
+        outSlope: {x: -0.4869808, y: -0, z: 0.07704975}
+        tangentMode: 0
+      - time: 15.366666
+        value: {x: 32.703415, y: 572.0732, z: -55.930508}
+        inSlope: {x: -0.017138932, y: -0, z: 0.0026367588}
+        outSlope: {x: -0.05866621, y: -0, z: 0.009521357}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: elevator_m3_body
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -4.600078, y: -1.1980859, z: 0.21388671}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 15.366666
+        value: {x: -4.600078, y: -1.1980859, z: 0.21388671}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: elevator_m3_body/liftdoor02
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 4.599922, y: -1.1980078, z: 0.21388671}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 15.366666
+        value: {x: 4.599922, y: -1.1980078, z: 0.21388671}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: elevator_m3_body/liftdoor01
+  m_ScaleCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 15.366667
+        value: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: elevator_m3_body
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 15.366667
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: elevator_m3_body/lift_blik
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 15.366667
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: elevator_m3_body/liftdoor02
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 15.366667
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: elevator_m3_body/liftdoor01
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 15.366667
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: elevator_m3_body/liftdoor003
+  m_FloatCurves: []
+  m_SampleRate: 30
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 63.21994, y: 572.0732, z: -59.97014}
+    m_Extent: {x: 35.222046, y: 4.0826416, z: 5.6526794}
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_Events: []

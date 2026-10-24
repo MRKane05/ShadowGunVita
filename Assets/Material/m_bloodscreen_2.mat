@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: m_bloodscreen_2
+  m_Shader: {fileID: 4800000, guid: 4e50c81cbb2b8cf46af745acc74bac29, type: 1}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 2c37d818c24496c44a6e223ae1c4fa5e, type: 1}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _Cutoff
+        second: 0.5
+      data:
+        first:
+          name: _ScrollX
+        second: 1
+      data:
+        first:
+          name: _ScrollY
+        second: 0
+      data:
+        first:
+          name: _Scroll2X
+        second: 1
+      data:
+        first:
+          name: _Scroll2Y
+        second: 0
+      data:
+        first:
+          name: _MMultiplier
+        second: 2
+      data:
+        first:
+          name: _SineAmplX
+        second: 0.5
+      data:
+        first:
+          name: _SineAmplY
+        second: 0.5
+      data:
+        first:
+          name: _SineFreqX
+        second: 10
+      data:
+        first:
+          name: _SineFreqY
+        second: 10
+      data:
+        first:
+          name: _SineAmplX2
+        second: 0.5
+      data:
+        first:
+          name: _SineAmplY2
+        second: 0.5
+      data:
+        first:
+          name: _SineFreqX2
+        second: 10
+      data:
+        first:
+          name: _SineFreqY2
+        second: 10
+      data:
+        first:
+          name: _InvFade
+        second: 2.724
+      data:
+        first:
+          name: _FadeInSpeed
+        second: 5
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 0.27058825, g: 0.27058825, b: 0.27058825, a: 1}
+      data:
+        first:
+          name: _TintColor
+        second: {r: 1, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _EmisColor
+        second: {r: 0.2, g: 0.2, b: 0.2, a: 0}
+      data:
+        first:
+          name: _Params
+        second: {r: 0, g: 1, b: 0, a: 0}
+      data:
+        first:
+          name: _ColorBooster
+        second: {r: 0.5, g: 0, b: 0, a: 0}

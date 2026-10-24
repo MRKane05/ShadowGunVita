@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: CAMERA_animace
+  m_Legacy: 1
+  m_Compressed: 0
+  m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 2.1666667
+        value: {x: -0.06181993, y: 0, z: 0, w: 0.99808735}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - time: 6.5
+        value: {x: -0.06181993, y: 0, z: 0, w: 0.99808735}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path:
+  m_CompressedRotationCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -155.15321, y: -6.286915, z: -146.04662}
+        inSlope: {x: -0.19620454, y: -0.53603595, z: 12.605004}
+        outSlope: {x: -0.19620454, y: -0.53603595, z: 12.605004}
+        tangentMode: 0
+      - time: 2.1666667
+        value: {x: -155.57832, y: -7.448326, z: -118.73577}
+        inSlope: {x: -0.09810227, y: -0.15408479, z: -0.5746218}
+        outSlope: {x: -0.09810227, y: -0.15408479, z: 12.699562}
+        tangentMode: 0
+      - time: 6.5
+        value: {x: -155.57832, y: -7.448326, z: -118.73577}
+        inSlope: {x: Infinity, y: Infinity, z: Infinity}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path:
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_SampleRate: 60
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_Events: []

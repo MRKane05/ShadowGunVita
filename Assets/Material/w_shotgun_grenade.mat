@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: w_shotgun_grenade
+  m_Shader: {fileID: 4800000, guid: 5a81ef833992c0f4bbb26cfd82a75363, type: 1}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 09e7ed93c5b439b428418144089b3e47, type: 1}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _Shininess
+        second: 0.02081922
+      data:
+        first:
+          name: _SHLightingScale
+        second: 1.1
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 0.5882353, g: 0.5882353, b: 0.5882353, a: 1}
+      data:
+        first:
+          name: _SpecColor
+        second: {r: 0.91791046, g: 0.9931114, b: 1, a: 1}
+      data:
+        first:
+          name: _SpecDir
+        second: {r: 0, g: 1, b: 0, a: 0}

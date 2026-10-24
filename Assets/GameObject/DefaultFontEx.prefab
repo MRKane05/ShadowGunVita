@@ -1,0 +1,848 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &147589
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 479954}
+  - component: {fileID: 11409266}
+  m_Layer: 0
+  m_Name: DefaultFontEx
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &479954
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147589}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5, y: 0.5, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11409266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 280134ce1a71b1b158911e16573797f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CharSet:
+    MaxCharHeight: 66
+    LineHeight: 64
+    Base: 51
+    RenderedSize: -64
+    Width: 512
+    Height: 512
+    _CharTable:
+    - Char: -1
+      X: 298
+      Y: 272
+      Width: 3
+      Height: 66
+      XOffset: -1
+      YOffset: -1
+      XAdvance: 15
+      KerningList: []
+    - Char: 32
+      X: 505
+      Y: 68
+      Width: 3
+      Height: 66
+      XOffset: -1
+      YOffset: -1
+      XAdvance: 15
+      KerningList: []
+    - Char: 33
+      X: 246
+      Y: 272
+      Width: 9
+      Height: 66
+      XOffset: 1
+      YOffset: -1
+      XAdvance: 15
+      KerningList: []
+    - Char: 35
+      X: 453
+      Y: 0
+      Width: 31
+      Height: 66
+      XOffset: -1
+      YOffset: -1
+      XAdvance: 34
+      KerningList: []
+    - Char: 38
+      X: 0
+      Y: 68
+      Width: 31
+      Height: 66
+      XOffset: 2
+      YOffset: -1
+      XAdvance: 37
+      KerningList: []
+    - Char: 39
+      X: 288
+      Y: 272
+      Width: 8
+      Height: 66
+      XOffset: 2
+      YOffset: -1
+      XAdvance: 15
+      KerningList: []
+    - Char: 40
+      X: 160
+      Y: 272
+      Width: 16
+      Height: 66
+      XOffset: 1
+      YOffset: -1
+      XAdvance: 22
+      KerningList: []
+    - Char: 41
+      X: 142
+      Y: 272
+      Width: 16
+      Height: 66
+      XOffset: 1
+      YOffset: -1
+      XAdvance: 23
+      KerningList: []
+    - Char: 44
+      X: 195
+      Y: 272
+      Width: 13
+      Height: 66
+      XOffset: -1
+      YOffset: -1
+      XAdvance: 17
+      KerningList: []
+    - Char: 45
+      X: 67
+      Y: 272
+      Width: 17
+      Height: 66
+      XOffset: 0
+      YOffset: -1
+      XAdvance: 21
+      KerningList: []
+    - Char: 46
+      X: 235
+      Y: 272
+      Width: 9
+      Height: 66
+      XOffset: 2
+      YOffset: -1
+      XAdvance: 17
+      KerningList: []
+    - Char: 47
+      X: 353
+      Y: 68
+      Width: 29
+      Height: 66
+      XOffset: -3
+      YOffset: -1
+      XAdvance: 28
+      KerningList: []
+    - Char: 48
+      X: 60
+      Y: 136
+      Width: 28
+      Height: 66
+      XOffset: 1
+      YOffset: -1
+      XAdvance: 33
+      KerningList: []
+    - Char: 49
+      X: 336
+      Y: 204
+      Width: 25
+      Height: 66
+      XOffset: 3
+      YOffset: -1
+      XAdvance: 33
+      KerningList: []
+    - Char: 50
+      X: 30
+      Y: 136
+      Width: 28
+      Height: 66
+      XOffset: 0
+      YOffset: -1
+      XAdvance: 33
+      KerningList: []
+    - Char: 51
+      X: 0
+      Y: 136
+      Width: 28
+      Height: 66
+      XOffset: 0
+      YOffset: -1
+      XAdvance: 33
+      KerningList: []
+    - Char: 52
+      X: 33
+      Y: 68
+      Width: 31
+      Height: 66
+      XOffset: -1
+      YOffset: -1
+      XAdvance: 33
+      KerningList: []
+    - Char: 53
+      X: 210
+      Y: 136
+      Width: 27
+      Height: 66
+      XOffset: 1
+      YOffset: -1
+      XAdvance: 33
+      KerningList: []
+    - Char: 54
+      X: 475
+      Y: 68
+      Width: 28
+      Height: 66
+      XOffset: 1
+      YOffset: -1
+      XAdvance: 33
+      KerningList: []
+    - Char: 55
+      X: 180
+      Y: 136
+      Width: 28
+      Height: 66
+      XOffset: 0
+      YOffset: -1
+      XAdvance: 33
+      KerningList: []
+    - Char: 56
+      X: 239
+      Y: 136
+      Width: 27
+      Height: 66
+      XOffset: 1
+      YOffset: -1
+      XAdvance: 33
+      KerningList: []
+    - Char: 57
+      X: 268
+      Y: 136
+      Width: 27
+      Height: 66
+      XOffset: 1
+      YOffset: -1
+      XAdvance: 33
+      KerningList: []
+    - Char: 58
+      X: 257
+      Y: 272
+      Width: 9
+      Height: 66
+      XOffset: 2
+      YOffset: -1
+      XAdvance: 17
+      KerningList: []
+    - Char: 59
+      X: 498
+      Y: 136
+      Width: 12
+      Height: 66
+      XOffset: -1
+      YOffset: -1
+      XAdvance: 17
+      KerningList: []
+    - Char: 63
+      X: 384
+      Y: 136
+      Width: 27
+      Height: 66
+      XOffset: 0
+      YOffset: -1
+      XAdvance: 30
+      KerningList: []
+    - Char: 65
+      X: 202
+      Y: 0
+      Width: 36
+      Height: 66
+      XOffset: -2
+      YOffset: -1
+      XAdvance: 36
+      KerningList: []
+    - Char: 66
+      X: 415
+      Y: 68
+      Width: 28
+      Height: 66
+      XOffset: 2
+      YOffset: -1
+      XAdvance: 36
+      KerningList: []
+    - Char: 67
+      X: 132
+      Y: 68
+      Width: 30
+      Height: 66
+      XOffset: 1
+      YOffset: -1
+      XAdvance: 35
+      KerningList: []
+    - Char: 68
+      X: 445
+      Y: 68
+      Width: 28
+      Height: 66
+      XOffset: 2
+      YOffset: -1
+      XAdvance: 36
+      KerningList: []
+    - Char: 69
+      X: 252
+      Y: 204
+      Width: 26
+      Height: 66
+      XOffset: 2
+      YOffset: -1
+      XAdvance: 33
+      KerningList: []
+    - Char: 70
+      X: 280
+      Y: 204
+      Width: 26
+      Height: 66
+      XOffset: 2
+      YOffset: -1
+      XAdvance: 31
+      KerningList: []
+    - Char: 71
+      X: 419
+      Y: 0
+      Width: 32
+      Height: 66
+      XOffset: 1
+      YOffset: -1
+      XAdvance: 38
+      KerningList: []
+    - Char: 72
+      X: 322
+      Y: 68
+      Width: 29
+      Height: 66
+      XOffset: 2
+      YOffset: -1
+      XAdvance: 36
+      KerningList: []
+    - Char: 73
+      X: 278
+      Y: 272
+      Width: 8
+      Height: 66
+      XOffset: 2
+      YOffset: -1
+      XAdvance: 14
+      KerningList: []
+    - Char: 74
+      X: 442
+      Y: 136
+      Width: 26
+      Height: 66
+      XOffset: -2
+      YOffset: -1
+      XAdvance: 30
+      KerningList: []
+    - Char: 75
+      X: 164
+      Y: 68
+      Width: 30
+      Height: 66
+      XOffset: 2
+      YOffset: -1
+      XAdvance: 33
+      KerningList: []
+    - Char: 76
+      X: 308
+      Y: 204
+      Width: 26
+      Height: 66
+      XOffset: 2
+      YOffset: -1
+      XAdvance: 30
+      KerningList: []
+    - Char: 77
+      X: 277
+      Y: 0
+      Width: 35
+      Height: 66
+      XOffset: 2
+      YOffset: -1
+      XAdvance: 43
+      KerningList: []
+    - Char: 78
+      X: 384
+      Y: 68
+      Width: 29
+      Height: 66
+      XOffset: 2
+      YOffset: -1
+      XAdvance: 37
+      KerningList: []
+    - Char: 79
+      X: 99
+      Y: 68
+      Width: 31
+      Height: 66
+      XOffset: 1
+      YOffset: -1
+      XAdvance: 37
+      KerningList: []
+    - Char: 80
+      X: 120
+      Y: 136
+      Width: 28
+      Height: 66
+      XOffset: 2
+      YOffset: -1
+      XAdvance: 34
+      KerningList: []
+    - Char: 81
+      X: 66
+      Y: 68
+      Width: 31
+      Height: 66
+      XOffset: 1
+      YOffset: -1
+      XAdvance: 37
+      KerningList: []
+    - Char: 82
+      X: 228
+      Y: 68
+      Width: 30
+      Height: 66
+      XOffset: 2
+      YOffset: -1
+      XAdvance: 37
+      KerningList: []
+    - Char: 83
+      X: 385
+      Y: 0
+      Width: 32
+      Height: 66
+      XOffset: 0
+      YOffset: -1
+      XAdvance: 36
+      KerningList: []
+    - Char: 84
+      X: 196
+      Y: 68
+      Width: 30
+      Height: 66
+      XOffset: 0
+      YOffset: -1
+      XAdvance: 32
+      KerningList: []
+    - Char: 85
+      X: 291
+      Y: 68
+      Width: 29
+      Height: 66
+      XOffset: 1
+      YOffset: -1
+      XAdvance: 35
+      KerningList: []
+    - Char: 86
+      X: 240
+      Y: 0
+      Width: 35
+      Height: 66
+      XOffset: -2
+      YOffset: -1
+      XAdvance: 35
+      KerningList: []
+    - Char: 87
+      X: 65
+      Y: 0
+      Width: 47
+      Height: 66
+      XOffset: -2
+      YOffset: -1
+      XAdvance: 47
+      KerningList: []
+    - Char: 88
+      X: 350
+      Y: 0
+      Width: 33
+      Height: 66
+      XOffset: -2
+      YOffset: -1
+      XAdvance: 33
+      KerningList: []
+    - Char: 89
+      X: 314
+      Y: 0
+      Width: 34
+      Height: 66
+      XOffset: -2
+      YOffset: -1
+      XAdvance: 32
+      KerningList: []
+    - Char: 90
+      X: 297
+      Y: 136
+      Width: 27
+      Height: 66
+      XOffset: 1
+      YOffset: -1
+      XAdvance: 32
+      KerningList: []
+    - Char: 92
+      X: 260
+      Y: 68
+      Width: 29
+      Height: 66
+      XOffset: -1
+      YOffset: -1
+      XAdvance: 28
+      KerningList: []
+    - Char: 97
+      X: 326
+      Y: 136
+      Width: 27
+      Height: 66
+      XOffset: -1
+      YOffset: -1
+      XAdvance: 31
+      KerningList: []
+    - Char: 98
+      X: 470
+      Y: 136
+      Width: 26
+      Height: 66
+      XOffset: 0
+      YOffset: -1
+      XAdvance: 31
+      KerningList: []
+    - Char: 99
+      X: 0
+      Y: 204
+      Width: 26
+      Height: 66
+      XOffset: 1
+      YOffset: -1
+      XAdvance: 31
+      KerningList: []
+    - Char: 100
+      X: 28
+      Y: 204
+      Width: 26
+      Height: 66
+      XOffset: 1
+      YOffset: -1
+      XAdvance: 32
+      KerningList: []
+    - Char: 101
+      X: 56
+      Y: 204
+      Width: 26
+      Height: 66
+      XOffset: 1
+      YOffset: -1
+      XAdvance: 31
+      KerningList: []
+    - Char: 102
+      X: 23
+      Y: 272
+      Width: 21
+      Height: 66
+      XOffset: -2
+      YOffset: -1
+      XAdvance: 22
+      KerningList: []
+    - Char: 103
+      X: 84
+      Y: 204
+      Width: 26
+      Height: 66
+      XOffset: 1
+      YOffset: -1
+      XAdvance: 32
+      KerningList: []
+    - Char: 104
+      X: 486
+      Y: 0
+      Width: 24
+      Height: 66
+      XOffset: 1
+      YOffset: -1
+      XAdvance: 31
+      KerningList: []
+    - Char: 105
+      X: 224
+      Y: 272
+      Width: 9
+      Height: 66
+      XOffset: 0
+      YOffset: -1
+      XAdvance: 14
+      KerningList: []
+    - Char: 106
+      X: 124
+      Y: 272
+      Width: 16
+      Height: 66
+      XOffset: -6
+      YOffset: -1
+      XAdvance: 14
+      KerningList: []
+    - Char: 107
+      X: 112
+      Y: 204
+      Width: 26
+      Height: 66
+      XOffset: 1
+      YOffset: -1
+      XAdvance: 29
+      KerningList: []
+    - Char: 108
+      X: 268
+      Y: 272
+      Width: 8
+      Height: 66
+      XOffset: 1
+      YOffset: -1
+      XAdvance: 14
+      KerningList: []
+    - Char: 109
+      X: 159
+      Y: 0
+      Width: 41
+      Height: 66
+      XOffset: 0
+      YOffset: -1
+      XAdvance: 46
+      KerningList: []
+    - Char: 110
+      X: 140
+      Y: 204
+      Width: 26
+      Height: 66
+      XOffset: 0
+      YOffset: -1
+      XAdvance: 31
+      KerningList: []
+    - Char: 111
+      X: 363
+      Y: 204
+      Width: 25
+      Height: 66
+      XOffset: 1
+      YOffset: -1
+      XAdvance: 31
+      KerningList: []
+    - Char: 112
+      X: 168
+      Y: 204
+      Width: 26
+      Height: 66
+      XOffset: 0
+      YOffset: -1
+      XAdvance: 32
+      KerningList: []
+    - Char: 113
+      X: 196
+      Y: 204
+      Width: 26
+      Height: 66
+      XOffset: 1
+      YOffset: -1
+      XAdvance: 31
+      KerningList: []
+    - Char: 114
+      X: 390
+      Y: 204
+      Width: 25
+      Height: 66
+      XOffset: 0
+      YOffset: -1
+      XAdvance: 27
+      KerningList: []
+    - Char: 115
+      X: 355
+      Y: 136
+      Width: 27
+      Height: 66
+      XOffset: -1
+      YOffset: -1
+      XAdvance: 30
+      KerningList: []
+    - Char: 116
+      X: 0
+      Y: 272
+      Width: 21
+      Height: 66
+      XOffset: -2
+      YOffset: -1
+      XAdvance: 22
+      KerningList: []
+    - Char: 117
+      X: 224
+      Y: 204
+      Width: 26
+      Height: 66
+      XOffset: 1
+      YOffset: -1
+      XAdvance: 31
+      KerningList: []
+    - Char: 118
+      X: 90
+      Y: 136
+      Width: 28
+      Height: 66
+      XOffset: -2
+      YOffset: -1
+      XAdvance: 28
+      KerningList: []
+    - Char: 119
+      X: 114
+      Y: 0
+      Width: 43
+      Height: 66
+      XOffset: -2
+      YOffset: -1
+      XAdvance: 43
+      KerningList: []
+    - Char: 120
+      X: 150
+      Y: 136
+      Width: 28
+      Height: 66
+      XOffset: -2
+      YOffset: -1
+      XAdvance: 29
+      KerningList: []
+    - Char: 121
+      X: 413
+      Y: 136
+      Width: 27
+      Height: 66
+      XOffset: -2
+      YOffset: -1
+      XAdvance: 28
+      KerningList: []
+    - Char: 122
+      X: 417
+      Y: 204
+      Width: 25
+      Height: 66
+      XOffset: 0
+      YOffset: -1
+      XAdvance: 28
+      KerningList: []
+    - Char: 180
+      X: 178
+      Y: 272
+      Width: 15
+      Height: 66
+      XOffset: 8
+      YOffset: -1
+      XAdvance: 24
+      KerningList: []
+    - Char: 8217
+      X: 210
+      Y: 272
+      Width: 12
+      Height: 66
+      XOffset: -1
+      YOffset: -1
+      XAdvance: 13
+      KerningList: []
+    - Char: 8220
+      X: 444
+      Y: 204
+      Width: 22
+      Height: 66
+      XOffset: -2
+      YOffset: -1
+      XAdvance: 23
+      KerningList: []
+    - Char: 8221
+      X: 468
+      Y: 204
+      Width: 22
+      Height: 66
+      XOffset: -2
+      YOffset: -1
+      XAdvance: 23
+      KerningList: []
+    - Char: 8224
+      X: 86
+      Y: 272
+      Width: 17
+      Height: 66
+      XOffset: 1
+      YOffset: -1
+      XAdvance: 21
+      KerningList: []
+    - Char: 8225
+      X: 105
+      Y: 272
+      Width: 17
+      Height: 66
+      XOffset: 1
+      YOffset: -1
+      XAdvance: 21
+      KerningList: []
+    - Char: 8240
+      X: 0
+      Y: 0
+      Width: 63
+      Height: 66
+      XOffset: 0
+      YOffset: -1
+      XAdvance: 66
+      KerningList: []
+    - Char: 8249
+      X: 46
+      Y: 272
+      Width: 19
+      Height: 66
+      XOffset: 1
+      YOffset: -1
+      XAdvance: 25
+      KerningList: []
+    - Char: 8250
+      X: 492
+      Y: 204
+      Width: 18
+      Height: 66
+      XOffset: 2
+      YOffset: -1
+      XAdvance: 25
+      KerningList: []
+  m_Material: {fileID: 2100000, guid: 41613e2df4ec9a54282471994124cdda, type: 2}
+  m_FontDescriptionFile: {fileID: 4900000, guid: dbcc8f3883e5d304797537ee9f711e6d,
+    type: 3}
+  m_CorrectionFontSizeScale: 1.13
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 147589}
+  m_IsPrefabAsset: 1

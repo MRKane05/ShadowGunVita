@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: m_sand_wind
+  m_Shader: {fileID: 4800000, guid: aa196fd4e6f596841b68e66a6c3e69c4, type: 1}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: df06c1c160e642140a24a280bee17498, type: 1}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailTex
+        second:
+          m_Texture: {fileID: 2800000, guid: df06c1c160e642140a24a280bee17498, type: 1}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _Shininess
+        second: 0.100571945
+      data:
+        first:
+          name: _ScrollX
+        second: 0.26
+      data:
+        first:
+          name: _ScrollY
+        second: 0.3
+      data:
+        first:
+          name: _Scroll2X
+        second: 0.22
+      data:
+        first:
+          name: _Scroll2Y
+        second: 0.21
+      data:
+        first:
+          name: _AMultiplier
+        second: 0.5
+      data:
+        first:
+          name: _MMultiplier
+        second: 0.5
+      data:
+        first:
+          name: _SineAmplX
+        second: 0.15
+      data:
+        first:
+          name: _SineAmplY
+        second: 0.16
+      data:
+        first:
+          name: _SineFreqX
+        second: 0.11
+      data:
+        first:
+          name: _SineFreqY
+        second: 0.12
+      data:
+        first:
+          name: _SineAmplX2
+        second: 0.08
+      data:
+        first:
+          name: _SineAmplY2
+        second: 0.09
+      data:
+        first:
+          name: _SineFreqX2
+        second: 0.12
+      data:
+        first:
+          name: _SineFreqY2
+        second: 0.1
+      data:
+        first:
+          name: _SpecRange
+        second: 60
+      data:
+        first:
+          name: _Spread
+        second: 0.5
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 0.588, g: 0.588, b: 0.588, a: 1}
+      data:
+        first:
+          name: _SpecColor
+        second: {r: 0.9328358, g: 0.8860042, b: 0.67526174, a: 1}
+      data:
+        first:
+          name: _SpecDir
+        second: {r: 1, g: 1, b: 1, a: 0}
+      data:
+        first:
+          name: _SpecOffset
+        second: {r: 0, g: 0, b: 0, a: 0}
+      data:
+        first:
+          name: _ScrollingSpeed
+        second: {r: 0, g: 0, b: 0, a: 0}

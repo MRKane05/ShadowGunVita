@@ -1,0 +1,326 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: reload_copy
+  m_Legacy: 1
+  m_Compressed: 0
+  m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 1.9073486E-06
+        value: {x: 0, y: -0, z: -2.3341263E-08, w: 1}
+        inSlope: {x: 0, y: 0, z: -0.018357566, w: -1.1623083E-05}
+        outSlope: {x: 0, y: 0, z: -0.018357566, w: -1.1623083E-05}
+        tangentMode: 0
+      - time: 0.5000019
+        value: {x: 0, y: -0, z: -0.16882868, w: 0.9856454}
+        inSlope: {x: 0, y: 0, z: -0.4448536, w: -0.076082915}
+        outSlope: {x: 0, y: 0, z: -0.4448536, w: -0.076082915}
+        tangentMode: 0
+      - time: 0.8666687
+        value: {x: 0, y: -0, z: -0.25881907, w: 0.9659258}
+        inSlope: {x: 0, y: 0, z: 4.4704166E-07, w: 0}
+        outSlope: {x: 0, y: 0, z: 4.4704166E-07, w: 0}
+        tangentMode: 0
+      - time: 1.9666691
+        value: {x: 0, y: -0, z: -0.25881907, w: 0.9659258}
+        inSlope: {x: 0, y: 0, z: 8.940833E-07, w: 0}
+        outSlope: {x: 0, y: 0, z: 8.940833E-07, w: 0}
+        tangentMode: 0
+      - time: 2.166668
+        value: {x: 0, y: -0, z: -0.19270422, w: 0.9812569}
+        inSlope: {x: 0, y: 0, z: 0.6805322, w: 0.13282482}
+        outSlope: {x: 0, y: 0, z: 0.6805322, w: 0.13282482}
+        tangentMode: 0
+      - time: 2.4333363
+        value: {x: 0, y: -0, z: -0.012724956, w: 0.99991906}
+        inSlope: {x: 0, y: 0, z: 0.35840017, w: 0.0054786936}
+        outSlope: {x: 0, y: 0, z: 0.35840017, w: 0.0054786936}
+        tangentMode: 0
+      - time: 2.500002
+        value: {x: 0, y: 0, z: 6.364442E-08, w: 1}
+        inSlope: {x: 0, y: 0, z: 0.050052024, w: 8.3149745E-05}
+        outSlope: {x: 0, y: 0, z: 0.050052024, w: 8.3149745E-05}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: mover/dropship_mesh/reload_L
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 1.9073486E-06
+        value: {x: 0, y: 0, z: 2.3341263E-08, w: 1}
+        inSlope: {x: 0, y: 0, z: 0.018357566, w: -1.1623083E-05}
+        outSlope: {x: 0, y: 0, z: 0.018357566, w: -1.1623083E-05}
+        tangentMode: 0
+      - time: 0.5000019
+        value: {x: 0, y: 0, z: 0.16882868, w: 0.9856454}
+        inSlope: {x: 0, y: 0, z: 0.4448536, w: -0.076082915}
+        outSlope: {x: 0, y: 0, z: 0.4448536, w: -0.076082915}
+        tangentMode: 0
+      - time: 0.8666687
+        value: {x: 0, y: 0, z: 0.25881907, w: 0.9659258}
+        inSlope: {x: 0, y: 0, z: -4.4704166E-07, w: 0}
+        outSlope: {x: 0, y: 0, z: -4.4704166E-07, w: 0}
+        tangentMode: 0
+      - time: 1.9666691
+        value: {x: 0, y: 0, z: 0.25881907, w: 0.9659258}
+        inSlope: {x: 0, y: 0, z: -8.940833E-07, w: 0}
+        outSlope: {x: 0, y: 0, z: -8.940833E-07, w: 0}
+        tangentMode: 0
+      - time: 2.166668
+        value: {x: 0, y: 0, z: 0.19270422, w: 0.9812569}
+        inSlope: {x: 0, y: 0, z: -0.6805322, w: 0.13282482}
+        outSlope: {x: 0, y: 0, z: -0.6805322, w: 0.13282482}
+        tangentMode: 0
+      - time: 2.4333363
+        value: {x: 0, y: 0, z: 0.012724956, w: 0.99991906}
+        inSlope: {x: 0, y: 0, z: -0.35840017, w: 0.0054786936}
+        outSlope: {x: 0, y: 0, z: -0.35840017, w: 0.0054786936}
+        tangentMode: 0
+      - time: 2.500002
+        value: {x: 0, y: -0, z: -6.364442E-08, w: 1}
+        inSlope: {x: 0, y: 0, z: -0.050052024, w: 8.3149745E-05}
+        outSlope: {x: 0, y: 0, z: -0.050052024, w: 8.3149745E-05}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: mover/dropship_mesh/reload_R
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 1.9073486E-06
+        value: {x: 2.5888575E-15, y: -4.452509E-15, z: 0.17364818, w: 0.9848077}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - time: 1.0333347
+        value: {x: 2.5633142E-15, y: -4.467263E-15, z: 0.16800506, w: 0.98578614}
+        inSlope: {x: -2.4300788E-16, y: -1.393962E-16, z: -0.053621672, w: 0.009130995}
+        outSlope: {x: -2.4300788E-16, y: -1.393962E-16, z: -0.053621672, w: 0.009130995}
+        tangentMode: 0
+      - time: 1.9000015
+        value: {x: 2.1531232E-15, y: -4.6787906E-15, z: 0.079085074, w: 0.9968679}
+        inSlope: {x: -6.376539E-16, y: -2.9326393E-16, z: -0.13584696, w: 0.0107465675}
+        outSlope: {x: -6.376539E-16, y: -2.9326393E-16, z: -0.13584696, w: 0.0107465675}
+        tangentMode: 0
+      - time: 2.500002
+        value: {x: 1.7763568E-15, y: -4.8344156E-15, z: -8.909631E-09, w: 1}
+        inSlope: {x: -3.3870187E-17, y: -1.24515746E-17, z: -0.00700682, w: 1.7881666E-06}
+        outSlope: {x: -3.3870187E-17, y: -1.24515746E-17, z: -0.00700682, w: 1.7881666E-06}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: mover/dropship_mesh/rockets_L
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 1.9073486E-06
+        value: {x: 9.098825E-16, y: -5.069431E-15, z: -0.17364818, w: 0.9848077}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - time: 1.3666687
+        value: {x: 1.0698438E-15, y: -5.0381003E-15, z: -0.14239798, w: 0.9898095}
+        inSlope: {x: 4.566599E-16, y: 9.6969814E-17, z: 0.089717686, w: 0.012906987}
+        outSlope: {x: 4.566599E-16, y: 9.6969814E-17, z: 0.089717686, w: 0.012906987}
+        tangentMode: 0
+      - time: 2.2333355
+        value: {x: 1.6679027E-15, y: -4.8728963E-15, z: -0.022342043, w: 0.9997504}
+        inSlope: {x: 7.1282884E-16, y: 2.4385393E-16, z: 0.14623863, w: 0.003293803}
+        outSlope: {x: 7.1282884E-16, y: 2.4385393E-16, z: 0.14623863, w: 0.003293803}
+        tangentMode: 0
+      - time: 2.500002
+        value: {x: 1.7763568E-15, y: -4.8344156E-15, z: 8.118916E-09, w: 1}
+        inSlope: {x: 3.0870056E-17, y: 1.13398265E-17, z: 0.006384975, w: 1.7881666E-06}
+        outSlope: {x: 3.0870056E-17, y: 1.13398265E-17, z: 0.006384975, w: 1.7881666E-06}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: mover/dropship_mesh/rockets_R
+  m_CompressedRotationCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0.60591125, y: 1.0306985, z: -3.1191063}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 2.5
+        value: {x: 0.60591125, y: 1.0306985, z: -3.1191063}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: mover/dropship_mesh/reload_L
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -0.6059203, y: 1.0306985, z: -3.1191063}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 2.5
+        value: {x: -0.6059203, y: 1.0306985, z: -3.1191063}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: mover/dropship_mesh/reload_R
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0.26275226, y: 1.1671228, z: -3.2239437}
+        inSlope: {x: 2.854903E-15, y: 1.1419612E-14, z: -1.5226149E-14}
+        outSlope: {x: 6.6610586E-15, y: 2.6644235E-14, z: -3.5525646E-14}
+        tangentMode: 0
+      - time: 0.80000114
+        value: {x: 0.26275226, y: 1.1671228, z: -3.2239437}
+        inSlope: {x: 2.8547395E-15, y: 1.1418958E-14, z: -1.5225277E-14}
+        outSlope: {x: -9.533141E-06, y: 2.7262697E-06, z: -3.552768E-14}
+        tangentMode: 0
+      - time: 0.8666668
+        value: {x: 0.2711355, y: 1.1703538, z: -3.2239437}
+        inSlope: {x: 0.48900688, y: 0.18835124, z: -1.5226149E-14}
+        outSlope: {x: 0.48882273, y: 0.18829226, z: -3.5525646E-14}
+        tangentMode: 0
+      - time: 1.5666676
+        value: {x: 1.9440995, y: 1.8003993, z: -3.223943}
+        inSlope: {x: 1.2330053, y: 0.47777492, z: 4.060306E-14}
+        outSlope: {x: 1.2330644, y: 0.47777256, z: -4.060306E-14}
+        tangentMode: 0
+      - time: 1.8666668
+        value: {x: 2.2508485, y: 1.8507037, z: -3.223943}
+        inSlope: {x: 1.7161136, y: -0.03363633, z: 4.060306E-14}
+        outSlope: {x: 1.7153926, y: -0.033648353, z: -4.060074E-14}
+        tangentMode: 0
+      - time: 2.5
+        value: {x: 3.3571925, y: 1.7712438, z: -3.2239428}
+        inSlope: {x: 0.090257965, y: -0.008720529, z: 4.060306E-14}
+        outSlope: {x: 0.09024105, y: -0.008680796, z: -4.060074E-14}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: mover/dropship_mesh/rockets_L
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -0.2743018, y: 1.1660173, z: -3.2239416}
+        inSlope: {x: -9.516343E-16, y: 3.8065373E-15, z: -1.5226149E-14}
+        outSlope: {x: -2.2203529E-15, y: 8.8814115E-15, z: -3.5525646E-14}
+        tangentMode: 0
+      - time: 0.80000114
+        value: {x: -0.2743018, y: 1.1660173, z: -3.2239416}
+        inSlope: {x: -9.515798E-16, y: 3.806319E-15, z: -1.5225277E-14}
+        outSlope: {x: 6.1271217E-06, y: 1.3625541E-05, z: -3.552768E-14}
+        tangentMode: 0
+      - time: 0.8666668
+        value: {x: -0.28265688, y: 1.1691815, z: -3.2239416}
+        inSlope: {x: -0.4874436, y: 0.18449834, z: -1.5226149E-14}
+        outSlope: {x: -0.48725584, y: 0.18442358, z: -3.5525646E-14}
+        tangentMode: 0
+      - time: 1.5333347
+        value: {x: -1.9163013, y: 1.7718171, z: -3.2239418}
+        inSlope: {x: -1.6291451, y: 0.58427995, z: -1.5225277E-14}
+        outSlope: {x: -1.6298589, y: 0.584563, z: -3.552768E-14}
+        tangentMode: 0
+      - time: 1.8666668
+        value: {x: -2.2993927, y: 1.8457828, z: -3.2239418}
+        inSlope: {x: -1.6824523, y: -0.031558707, z: -1.5226149E-14}
+        outSlope: {x: -1.6818032, y: -0.03155668, z: 2.3541144E-05}
+        tangentMode: 0
+      - time: 2.5
+        value: {x: -3.357187, y: 1.7712475, z: -3.2239423}
+        inSlope: {x: -0.085272186, y: -0.008157907, z: -1.5226149E-14}
+        outSlope: {x: -0.08520586, y: -0.008163109, z: -3.5525646E-14}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: mover/dropship_mesh/rockets_R
+  m_ScaleCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 1.9073486E-06
+        value: {x: 1, y: 0.99999994, z: 0.99999994}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 2.500002
+        value: {x: 1, y: 0.99999994, z: 0.99999994}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: mover/dropship_mesh/rockets_R
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 1.9073486E-06
+        value: {x: 1, y: 0.99999994, z: 0.99999994}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 2.500002
+        value: {x: 1, y: 0.99999994, z: 0.99999994}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: mover/dropship_mesh/rockets_L
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 1.9073486E-06
+        value: {x: 0.97564375, y: 0.7907354, z: 0.7907354}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 2.500002
+        value: {x: 0.97564375, y: 0.7907354, z: 0.7907354}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: mover/dropship_mesh/reload_R
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 1.9073486E-06
+        value: {x: 0.97564375, y: 0.7907354, z: 0.7907354}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 2.500002
+        value: {x: 0.97564375, y: 0.7907354, z: 0.7907354}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: mover/dropship_mesh/reload_L
+  m_FloatCurves: []
+  m_SampleRate: 60
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_Events: []

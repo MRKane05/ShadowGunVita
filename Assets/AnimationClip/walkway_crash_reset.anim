@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: walkway_crash_reset
+  m_Legacy: 1
+  m_Compressed: 0
+  m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -0.05571508, y: 0.023050033, z: 0.09203568, w: 0.9939285}
+        inSlope: {x: 0.781198, y: -0.06910432, z: 0.017644465, w: 0.03859162}
+        outSlope: {x: 0.781198, y: -0.06910432, z: 0.017644465, w: 0.03859162}
+        tangentMode: 0
+      - time: 0.16666667
+        value: {x: 0.07449496, y: 0.010839779, z: 0.09425695, w: 0.99269766}
+        inSlope: {x: 0.7797088, y: -0.07726847, z: 0.008868725, w: -0.053336624}
+        outSlope: {x: 0.7797088, y: -0.07726847, z: 0.008868725, w: -0.053336624}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -0.12817617, y: 0.024215428, z: -0.0046425434, w: 0.9914449}
+        inSlope: {x: 0.76604915, y: -0.13763309, z: 0.009653213, w: 0.0972712}
+        outSlope: {x: 0.76604915, y: -0.13763309, z: 0.009653213, w: 0.0972712}
+        tangentMode: 0
+      - time: 0.16666667
+        value: {x: 0, y: 0, z: 0, w: 1}
+        inSlope: {x: 0.7703349, y: -0.15206206, z: 0.04584491, w: 0.005153418}
+        outSlope: {x: 0.7703349, y: -0.15206206, z: 0.04584491, w: 0.005153418}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: dead_root
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -0.84067833, y: -0.012422618, z: -0.16465278, w: 0.5157471}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - time: 0.16666667
+        value: {x: -0.84067833, y: -0.012422618, z: -0.16465278, w: 0.5157471}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: dead_root/toltech_dead_stomach
+  m_CompressedRotationCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0.188832, y: 0.4159585, z: -2.5429904}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: dead_root
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0.9172014, y: -3.3618221, z: -2.594153}
+        inSlope: {x: 2.606716, y: 14.949085, z: 6.006011}
+        outSlope: {x: 2.606716, y: 14.949085, z: 6.006011}
+        tangentMode: 0
+      - time: 0.16666667
+        value: {x: 1.351654, y: -0.8703079, z: -1.5931511}
+        inSlope: {x: 2.606716, y: 14.949085, z: 6.006011}
+        outSlope: {x: 2.606716, y: 14.949085, z: 6.006011}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: dead_root/toltech_dead_stomach
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_SampleRate: 60
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_Events: []

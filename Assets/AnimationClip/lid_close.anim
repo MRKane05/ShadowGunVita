@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: lid_close
+  m_Legacy: 1
+  m_Compressed: 0
+  m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0.9961947, y: 0, z: 0, w: 0.087155804}
+        inSlope: {x: 0.069730274, y: 0, z: 0, w: -0.8698712}
+        outSlope: {x: 0.069730274, y: 0, z: 0, w: -0.8698712}
+        tangentMode: 0
+      - time: 0.7
+        value: {x: 0.8660254, y: 0, z: 0, w: -0.50000006}
+        inSlope: {x: -0.43631715, y: 0, z: 0, w: -0.75572205}
+        outSlope: {x: -0.43631715, y: 0, z: 0, w: -0.75572205}
+        tangentMode: 0
+      - time: 1
+        value: {x: 0.70710677, y: 0, z: 0, w: -0.70710677}
+        inSlope: {x: -0.6125597, y: 0, z: 0, w: -0.621536}
+        outSlope: {x: -0.6125597, y: 0, z: 0, w: -0.621536}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path:
+  m_CompressedRotationCurves: []
+  m_PositionCurves: []
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_SampleRate: 60
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_Events: []

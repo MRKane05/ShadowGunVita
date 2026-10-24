@@ -1,0 +1,208 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: tur_observing
+  m_Legacy: 1
+  m_Compressed: 0
+  m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: -0, w: 1}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - time: 8.033334
+        value: {x: 0, y: 0, z: -0, w: 1}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: tur_legs
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: -5.9604645E-08, z: -0, w: 1}
+        inSlope: {x: 0, y: 0.0075510647, z: 0, w: -1.7881283E-06}
+        outSlope: {x: 0, y: 0.0075510647, z: 0, w: -1.7881283E-06}
+        tangentMode: 0
+      - time: 0.9333334
+        value: {x: 0, y: 0.27148396, z: -0, w: 0.962443}
+        inSlope: {x: 0, y: 0.43879795, z: 0, w: -0.123790756}
+        outSlope: {x: 0, y: 0.43879795, z: 0, w: -0.123790756}
+        tangentMode: 0
+      - time: 1.6666667
+        value: {x: 0, y: 0.53593594, z: -0, w: 0.84425867}
+        inSlope: {x: 0, y: 0.21478719, z: 0, w: -0.13624515}
+        outSlope: {x: 0, y: 0.21478719, z: 0, w: -0.13624515}
+        tangentMode: 0
+      - time: 2.4666667
+        value: {x: 0, y: 0.5365832, z: -0, w: 0.84384745}
+        inSlope: {x: 0, y: -0.15406892, z: 0, w: 0.097928435}
+        outSlope: {x: 0, y: -0.15406892, z: 0, w: 0.097928435}
+        tangentMode: 0
+      - time: 3.666667
+        value: {x: 0, y: 0.16576461, z: -0, w: 0.98616534}
+        inSlope: {x: 0, y: -0.42465043, z: 0, w: 0.07136113}
+        outSlope: {x: 0, y: -0.42465043, z: 0, w: 0.07136113}
+        tangentMode: 0
+      - time: 4.6333337
+        value: {x: 0, y: -0.2482964, z: -0, w: 0.96868414}
+        inSlope: {x: 0, y: -0.38602364, z: 0, w: -0.09891459}
+        outSlope: {x: 0, y: -0.38602364, z: 0, w: -0.09891459}
+        tangentMode: 0
+      - time: 6.0666676
+        value: {x: 0, y: -0.5383809, z: -0, w: 0.8427017}
+        inSlope: {x: 0, y: 0.046343412, z: 0, w: 0.029578637}
+        outSlope: {x: 0, y: 0.046343412, z: 0, w: 0.029578637}
+        tangentMode: 0
+      - time: 6.966667
+        value: {x: 0, y: -0.29498586, z: -0, w: 0.9555016}
+        inSlope: {x: 0, y: 0.40812758, z: 0, w: 0.1259915}
+        outSlope: {x: 0, y: 0.40812758, z: 0, w: 0.1259915}
+        tangentMode: 0
+      - time: 7.7666674
+        value: {x: 0, y: -0.021477101, z: -0, w: 0.99976933}
+        inSlope: {x: 0, y: 0.17613849, z: 0, w: 0.0038480689}
+        outSlope: {x: 0, y: 0.17613849, z: 0, w: 0.0038480689}
+        tangentMode: 0
+      - time: 8.033334
+        value: {x: 0, y: -5.9604645E-08, z: -0, w: 1}
+        inSlope: {x: 0, y: -3.1462965E-05, z: 0, w: 7.450581E-09}
+        outSlope: {x: 0, y: -3.1462965E-05, z: 0, w: 7.450581E-09}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: tur_legs/tur_neck/tur_head
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: -0, z: -0, w: 1}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - time: 8.033334
+        value: {x: 0, y: -0, z: -0, w: 1}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: tur_legs/tur_neck/tur_head/tur_arms
+  m_CompressedRotationCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 1.7584321E-09, y: -0.19559775, z: 8.549851E-09}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 8.033334
+        value: {x: 1.7584321E-09, y: -0.19559775, z: 8.549851E-09}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: tur_legs
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -4.263256E-15, y: 0.15317069, z: -6.6953043E-09}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 8.033334
+        value: {x: -4.263256E-15, y: 0.15317069, z: -6.6953043E-09}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: tur_legs/tur_neck/tur_head
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -2.9217366E-08, y: -0.3668329, z: 0.7422415}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 8.033334
+        value: {x: -2.9217366E-08, y: -0.3668329, z: 0.7422415}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: tur_legs/tur_neck/tur_head/tur_arms/tur_gun
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 1.9073485E-07, y: 1.0927972, z: 0.58260024}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 8.033334
+        value: {x: 1.9073485E-07, y: 1.0927972, z: 0.58260024}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: tur_legs/tur_neck/tur_head/tur_shield
+  m_ScaleCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 8.033334
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: tur_legs
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 8.033334
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: tur_legs/tur_neck/tur_head
+  m_FloatCurves: []
+  m_SampleRate: 30
+  m_WrapMode: 2
+  m_Bounds:
+    m_Center: {x: 1.1920929E-07, y: 1.5414761, z: 0.034070015}
+    m_Extent: {x: 1.3911597, y: 1.5681356, z: 1.3570843}
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_Events: []

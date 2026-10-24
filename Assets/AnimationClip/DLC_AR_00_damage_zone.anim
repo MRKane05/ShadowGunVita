@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: DLC_AR_00_damage_zone
+  m_Legacy: 1
+  m_Compressed: 0
+  m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path:
+  m_CompressedRotationCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 8.694785, y: 1.6312103, z: -21.23892}
+        inSlope: {x: 457.73074, y: 0, z: 0.0030899046}
+        outSlope: {x: 457.73074, y: 0, z: 0.0030899046}
+        tangentMode: 0
+      - time: 0.016666668
+        value: {x: 16.323631, y: 1.6312103, z: -21.238869}
+        inSlope: {x: 457.73074, y: 0, z: 0.0030899046}
+        outSlope: {x: 457.73074, y: 0, z: 0.0030899046}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path:
+  m_ScaleCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0.49999994, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 2.292872E-39}
+        outSlope: {x: 0, y: 0, z: 2.292872E-39}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path:
+  m_FloatCurves: []
+  m_SampleRate: 60
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_Events: []

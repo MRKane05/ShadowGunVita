@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: dropship_flyby
+  m_Legacy: 1
+  m_Compressed: 0
+  m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 9.415696E-08, y: -0.70710677, z: -9.415696E-08, w: 0.70710677}
+        inSlope: {x: 0.24567877, y: 0.17389654, z: -0.24726579, w: 0.1717615}
+        outSlope: {x: 0.24567877, y: 0.17389654, z: -0.24726579, w: 0.1717615}
+        tangentMode: 0
+      - time: 0.71666664
+        value: {x: 0.16396007, y: -0.56702054, z: -0.2199251, w: 0.77668375}
+        inSlope: {x: 0.123289645, y: 0.2575102, z: -0.29489753, w: 0.07847972}
+        outSlope: {x: 0.123289645, y: 0.2575102, z: -0.29489753, w: 0.07847972}
+        tangentMode: 0
+      - time: 1.1999996
+        value: {x: 0.13577309, y: -0.3949698, z: -0.31266648, w: 0.8531144}
+        inSlope: {x: -0.26918676, y: 0.50146806, z: -0.028587904, w: 0.2644893}
+        outSlope: {x: -0.26918676, y: 0.50146806, z: -0.028587904, w: 0.2644893}
+        tangentMode: 0
+      - time: 1.6833324
+        value: {x: 0.031879023, y: -0.17892401, z: -0.23637068, w: 0.954515}
+        inSlope: {x: -0.12571637, y: 0.3763782, z: 0.31432837, w: 0.152625}
+        outSlope: {x: -0.12571637, y: 0.3763782, z: 0.31432837, w: 0.152625}
+        tangentMode: 0
+      - time: 2.2833319
+        value: {x: 0.012782632, y: -0.056735314, z: -0.12536174, w: 0.990405}
+        inSlope: {x: 0.014722324, y: 0.07678244, z: 0.0988918, w: 0.016728058}
+        outSlope: {x: 0.014722324, y: 0.07678244, z: 0.0988918, w: 0.016728058}
+        tangentMode: 0
+      - time: 2.6166666
+        value: {x: 0.018290084, y: -0.029452873, z: -0.0914107, w: 0.9952096}
+        inSlope: {x: 0.014890036, y: 0.11243655, z: 0.1196227, w: 0.014267936}
+        outSlope: {x: 0.014890036, y: 0.11243655, z: 0.1196227, w: 0.014267936}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: dropship_fake
+  m_CompressedRotationCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 30.221191, y: -37.148785, z: -32.778374}
+        inSlope: {x: -47.44696, y: -3.8146973E-06, z: 10.975616}
+        outSlope: {x: -47.44696, y: -3.8146973E-06, z: 10.975616}
+        tangentMode: 0
+      - time: 1
+        value: {x: -17.225769, y: -37.14879, z: -21.802757}
+        inSlope: {x: -41.41533, y: -6.308923E-06, z: 22.744497}
+        outSlope: {x: -41.41533, y: -6.308923E-06, z: 22.744497}
+        tangentMode: 0
+      - time: 1.4333333
+        value: {x: -32.5587, y: -37.148792, z: -6.846962}
+        inSlope: {x: -29.117983, y: -4.401574E-06, z: 39.88531}
+        outSlope: {x: -29.117983, y: -4.401574E-06, z: 39.88531}
+        tangentMode: 0
+      - time: 1.8833333
+        value: {x: -42.842224, y: -37.148792, z: 13.518801}
+        inSlope: {x: -14.749386, y: 0, z: 46.441322}
+        outSlope: {x: -14.749386, y: 0, z: 46.441322}
+        tangentMode: 0
+      - time: 2.6166666
+        value: {x: -47.716324, y: -37.148792, z: 48.444084}
+        inSlope: {x: -4.9587216, y: -0.8187003, z: 50.141663}
+        outSlope: {x: -4.9587216, y: -0.8187003, z: 50.141663}
+        tangentMode: 0
+      - time: 3.2
+        value: {x: -49.624374, y: -38.103943, z: 79.16122}
+        inSlope: {x: -3.270943, y: -1.6374006, z: 52.65793}
+        outSlope: {x: -3.270943, y: -1.6374006, z: 52.65793}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: dropship_fake
+  m_ScaleCurves: []
+  m_FloatCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 3.65
+        value: 1
+        inSlope: -2.9999943
+        outSlope: -2.9999943
+        tangentMode: 0
+      - time: 3.816667
+        value: 0
+        inSlope: -5.9999886
+        outSlope: -5.9999886
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_Enabled
+    path: dropship_fake
+    classID: 23
+    script: {fileID: 0}
+  m_SampleRate: 60
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_Events: []

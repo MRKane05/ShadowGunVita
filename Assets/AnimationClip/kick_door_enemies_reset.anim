@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: kick_door_enemies_reset
+  m_Legacy: 1
+  m_Compressed: 0
+  m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0.4304629, y: -0.56098276, z: -0.56098276, w: -0.4304629}
+        inSlope: {x: 5.701371, y: 5.27036, z: 5.27036, w: -5.701371}
+        outSlope: {x: 5.701371, y: 5.27036, z: 5.27036, w: -5.701371}
+        tangentMode: 0
+      - time: 0.016666668
+        value: {x: 0.52548575, y: -0.47314343, z: -0.47314343, w: -0.52548575}
+        inSlope: {x: 5.173414, y: 5.7457314, z: 5.7457314, w: -5.173414}
+        outSlope: {x: 5.173414, y: 5.7457314, z: 5.7457314, w: -5.173414}
+        tangentMode: 0
+      - time: 0.06666667
+        value: {x: 0.695267, y: -0.12885548, z: -0.12885548, w: -0.695267}
+        inSlope: {x: 1.4089234, y: 7.6021414, z: 7.6021414, w: -1.4089234}
+        outSlope: {x: 1.4089234, y: 7.6021414, z: 7.6021414, w: -1.4089234}
+        tangentMode: 0
+      - time: 0.083333336
+        value: {x: 0.70710677, y: 4.5195343E-06, z: 4.5195343E-06, w: -0.70710677}
+        inSlope: {x: 0.7103849, y: 7.7316003, z: 7.7316003, w: -0.7103849}
+        outSlope: {x: 0.7103849, y: 7.7316003, z: 7.7316003, w: -0.7103849}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path:
+  m_CompressedRotationCurves: []
+  m_PositionCurves: []
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_SampleRate: 60
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_Events: []

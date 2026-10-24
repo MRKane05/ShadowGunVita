@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: cam_collectible
+  m_Legacy: 1
+  m_Compressed: 0
+  m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path:
+  m_CompressedRotationCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0.092163086, y: -3.7795925, z: 19.70459}
+        inSlope: {x: 0, y: -0.019836426, z: -0.019515991}
+        outSlope: {x: 0, y: -0.019836426, z: -0.019515991}
+        tangentMode: 0
+      - time: 1.5
+        value: {x: 0.092163086, y: -3.8093472, z: 19.675316}
+        inSlope: {x: 0, y: -0.016343435, z: -0.009933472}
+        outSlope: {x: 0, y: -0.016343435, z: -0.009933472}
+        tangentMode: 0
+      - time: 3
+        value: {x: 0.092163086, y: -3.8286228, z: 19.67479}
+        inSlope: {x: 0, y: -0.012850444, z: -0.00035095215}
+        outSlope: {x: 0, y: -0.012850444, z: -0.00035095215}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path:
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_SampleRate: 60
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_Events: []

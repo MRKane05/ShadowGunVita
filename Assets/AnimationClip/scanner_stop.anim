@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: scanner_stop
+  m_Legacy: 1
+  m_Compressed: 0
+  m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: 0.70710677, w: 0.7071069}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - time: 0.033333335
+        value: {x: 0, y: 0, z: 0.70710677, w: 0.7071069}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: scanner_body
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: -0, z: -0.7071067, w: 0.7071069}
+        inSlope: {x: 0, y: 0, z: 8.940696E-07, w: 1.7881392E-06}
+        outSlope: {x: 0, y: 0, z: 8.940696E-07, w: 1.7881392E-06}
+        tangentMode: 0
+      - time: 0.033333335
+        value: {x: 0, y: -0, z: -0.70710665, w: 0.707107}
+        inSlope: {x: 0, y: 0, z: 8.940696E-07, w: 8.9406973E-07}
+        outSlope: {x: 0, y: 0, z: 8.940696E-07, w: 8.9406973E-07}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: scanner_body/scanner_paprsek001
+  m_CompressedRotationCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -7.404941, y: -0.5090813, z: -0.66768634}
+        inSlope: {x: -0, y: -0, z: 0.41474986}
+        outSlope: {x: -0, y: -0, z: 0.41474757}
+        tangentMode: 0
+      - time: 0.033333335
+        value: {x: -7.404941, y: -0.5090813, z: -0.65386146}
+        inSlope: {x: -0, y: -0, z: 0.41474757}
+        outSlope: {x: -0, y: -0, z: 0.41474995}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: scanner_body
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0.54439205, y: -0.37671614, z: 0.6688769}
+        inSlope: {x: -0, y: 1.1444091E-06, z: -2.2888182E-06}
+        outSlope: {x: -1.1444091E-06, y: -0, z: 2.2888182E-06}
+        tangentMode: 0
+      - time: 0.033333335
+        value: {x: 0.54439205, y: -0.37671614, z: 0.66887695}
+        inSlope: {x: -1.1444091E-06, y: -0, z: 2.2888182E-06}
+        outSlope: {x: 3.4332277E-06, y: -2.2888185E-06, z: 2.2888185E-06}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: scanner_body/scanner_paprsek001
+  m_ScaleCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 0.033333335
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: scanner_body
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 1E-05, y: 1E-05, z: 1E-05}
+        inSlope: {x: -1.364242E-11, y: -1.364242E-11, z: -1.364242E-11}
+        outSlope: {x: -1.364242E-11, y: -1.364242E-11, z: -1.364242E-11}
+        tangentMode: 0
+      - time: 0.033333335
+        value: {x: 1E-05, y: 1E-05, z: 1E-05}
+        inSlope: {x: 2.7284836E-11, y: 2.7284836E-11, z: 2.7284836E-11}
+        outSlope: {x: 2.7284836E-11, y: 2.7284836E-11, z: 2.7284836E-11}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: scanner_body/scanner_paprsek001
+  m_FloatCurves: []
+  m_SampleRate: 30
+  m_WrapMode: 8
+  m_Bounds:
+    m_Center: {x: -0.4202714, y: -0.013271809, z: -0.06514126}
+    m_Extent: {x: 6.607942, y: 4.479893, z: 0.4289429}
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_Events: []

@@ -1,0 +1,138 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: electricity_off
+  m_Legacy: 1
+  m_Compressed: 0
+  m_RotationCurves: []
+  m_CompressedRotationCurves: []
+  m_PositionCurves: []
+  m_ScaleCurves: []
+  m_FloatCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: -6
+        outSlope: -6
+        tangentMode: 0
+      - time: 0.16666667
+        value: 0
+        inSlope: -6
+        outSlope: -6
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_Enabled
+    path: electric_plane
+    classID: 23
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: -6
+        outSlope: -6
+        tangentMode: 0
+      - time: 0.16666667
+        value: 0
+        inSlope: -6
+        outSlope: -6
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_Enabled
+    path: Damage_Zone_Electro
+    classID: 114
+    script: {fileID: 11500000, guid: d2b3511585f42783c53b2710c52a95e1, type: 1}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: -6
+        outSlope: -6
+        tangentMode: 0
+      - time: 0.16666667
+        value: 0
+        inSlope: -6
+        outSlope: -6
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_Enabled
+    path: ElFX6
+    classID: 114
+    script: {fileID: 11500000, guid: 041524d5663b8686ba2fb4a5143f58b2, type: 1}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: -3
+        outSlope: -3
+        tangentMode: 0
+      - time: 0.33333334
+        value: 0
+        inSlope: -3
+        outSlope: -3
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_Enabled
+    path: ElFX_cistern1
+    classID: 114
+    script: {fileID: 11500000, guid: 041524d5663b8686ba2fb4a5143f58b2, type: 1}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: -3
+        outSlope: -3
+        tangentMode: 0
+      - time: 0.33333334
+        value: 0
+        inSlope: -3
+        outSlope: -3
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_Enabled
+    path: ElFX_cistern2
+    classID: 114
+    script: {fileID: 11500000, guid: 041524d5663b8686ba2fb4a5143f58b2, type: 1}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: -3
+        outSlope: -3
+        tangentMode: 0
+      - time: 0.33333334
+        value: 0
+        inSlope: -3
+        outSlope: -3
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_Enabled
+    path: ElFX_tube
+    classID: 114
+    script: {fileID: 11500000, guid: 041524d5663b8686ba2fb4a5143f58b2, type: 1}
+  m_SampleRate: 60
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_Events: []

@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: elevator_CRASH
+  m_Legacy: 1
+  m_Compressed: 0
+  m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: 0.7071069, w: 0.7071067}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - time: 1.6333334
+        value: {x: 0, y: 0, z: 0.7071069, w: 0.70710677}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - time: 2.6000001
+        value: {x: 0, y: 0, z: 0.7071069, w: 0.70710677}
+        inSlope: {x: -1.5760558E-07, y: 1.5760556E-07, z: 0, w: 0}
+        outSlope: {x: -1.5760558E-07, y: 1.5760556E-07, z: 0, w: 0}
+        tangentMode: 0
+      - time: 2.8333335
+        value: {x: -0.026439585, y: 0.026439585, z: 0.70661235, w: 0.70661235}
+        inSlope: {x: -0.13213582, y: 0.13213515, z: -0.00494421, w: -0.00494421}
+        outSlope: {x: -0.13213582, y: 0.13213515, z: -0.00494421, w: -0.00494421}
+        tangentMode: 0
+      - time: 3.0000002
+        value: {x: -0.07535328, y: 0.029335687, z: 0.7047261, w: 0.7048564}
+        inSlope: {x: -0.18138322, y: -0.009493493, z: -0.006937093, w: -0.011731099}
+        outSlope: {x: -0.18138322, y: -0.009493493, z: -0.006937093, w: -0.011731099}
+        tangentMode: 0
+      - time: 3.3333335
+        value: {x: -0.0060991193, y: 0.02725712, z: 0.70739716, w: 0.7062642}
+        inSlope: {x: 0.673948, y: 0.0003436025, z: 0.025962915, w: -0.021425508}
+        outSlope: {x: 0.673948, y: 0.0003436025, z: 0.025962915, w: -0.021425508}
+        tangentMode: 0
+      - time: 3.466667
+        value: {x: 0.04135636, y: 0.027432505, z: 0.7092197, w: 0.7032386}
+        inSlope: {x: -0.102866724, y: -0.00055893377, z: -0.003933016, w: 0.009530792}
+        outSlope: {x: -0.102866724, y: -0.00055893377, z: -0.003933016, w: 0.009530792}
+        tangentMode: 0
+      - time: 3.5000002
+        value: {x: 0.03449863, y: 0.027395232, z: 0.70895743, w: 0.70387405}
+        inSlope: {x: -0.10286605, y: -0.0005591014, z: -0.0039339103, w: 0.009531686}
+        outSlope: {x: -0.10286605, y: -0.0005591014, z: -0.0039339103, w: 0.009531686}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: elevator_crash
+  m_CompressedRotationCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -1.8656006, y: -29.486258, z: -9.280924}
+        inSlope: {x: -0, y: -7.324218E-05, z: -0.027813718}
+        outSlope: {x: -4.5776364E-06, y: -0, z: -0.08276367}
+        tangentMode: 0
+      - time: 1.6333333
+        value: {x: -1.8656003, y: -29.486252, z: -10.883437}
+        inSlope: {x: 4.577641E-06, y: -7.3242256E-05, z: -1.4849135}
+        outSlope: {x: -4.5776246E-06, y: -0, z: -1.4883505}
+        tangentMode: 0
+      - time: 2.6333334
+        value: {x: -1.8656006, y: -29.48625, z: -12.265309}
+        inSlope: {x: -4.577641E-06, y: -0, z: -1.133314}
+        outSlope: {x: -4.577641E-06, y: -7.3242256E-05, z: -7.1250796}
+        tangentMode: 0
+      - time: 2.8666668
+        value: {x: -1.8656006, y: -29.48625, z: -13.927826}
+        inSlope: {x: -0, y: -7.324173E-05, z: -7.125029}
+        outSlope: {x: -4.577641E-06, y: -0, z: -28.35076}
+        tangentMode: 0
+      - time: 3.2
+        value: {x: -1.8656006, y: -29.48625, z: -20.340479}
+        inSlope: {x: -0, y: 7.3242256E-05, z: -10.125193}
+        outSlope: {x: -0, y: -0.00014648451, z: -8.100265}
+        tangentMode: 0
+      - time: 3.5
+        value: {x: -1.8656006, y: -29.486252, z: -20.947994}
+        inSlope: {x: -0, y: 7.3242256E-05, z: 7.3242256E-05}
+        outSlope: {x: -0, y: -0, z: -0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: elevator_crash
+  m_ScaleCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 3.5000002
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: elevator_crash
+  m_FloatCurves: []
+  m_SampleRate: 30
+  m_WrapMode: 8
+  m_Bounds:
+    m_Center: {x: -1.7391791, y: -29.333519, z: -15.302226}
+    m_Extent: {x: 4.1767483, y: 2.2964668, z: 6.9100504}
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_Events: []

@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: cutscene_5_2
+  m_Legacy: 1
+  m_Compressed: 0
+  m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0.06696793, y: -0.49214807, z: 0.018053414, w: 0.8677441}
+        inSlope: {x: -0.0020956993, y: -0.0032204387, z: 0.011481642, w: -0.001913309}
+        outSlope: {x: -0.0020956993, y: -0.0032204387, z: 0.011481642, w: -0.001913309}
+        tangentMode: 0
+      - time: 0.8333332
+        value: {x: 0.061382998, y: -0.5833911, z: 0.035535168, w: 0.80908847}
+        inSlope: {x: -0.012646963, y: -0.19010442, z: 0.027755972, w: -0.13734175}
+        outSlope: {x: -0.012646963, y: -0.19010442, z: 0.027755972, w: -0.13734175}
+        tangentMode: 0
+      - time: 1.6666658
+        value: {x: 0.045085944, y: -0.7593809, z: 0.058995787, w: 0.6463958}
+        inSlope: {x: -0.025549518, y: -0.20506401, z: 0.025568852, w: -0.24145626}
+        outSlope: {x: -0.025549518, y: -0.20506401, z: 0.025568852, w: -0.24145626}
+        tangentMode: 0
+      - time: 2.4999983
+        value: {x: 0.02278867, y: -0.89380604, z: 0.07495141, w: 0.44155827}
+        inSlope: {x: -0.024518766, y: -0.10928403, z: 0.012232002, w: -0.22200933}
+        outSlope: {x: -0.024518766, y: -0.10928403, z: 0.012232002, w: -0.22200933}
+        tangentMode: 0
+      - time: 3.3333309
+        value: {x: 0.009907793, y: -0.9432118, z: 0.08052306, w: 0.32213265}
+        inSlope: {x: -0.0062895347, y: -0.025155568, z: 0.0025351369, w: -0.074095204}
+        outSlope: {x: -0.0062895347, y: -0.025155568, z: 0.0025351369, w: -0.074095204}
+        tangentMode: 0
+      - time: 4.1499987
+        value: {x: 0.008599632, y: -0.95757455, z: 0.08095644, w: 0.27644697}
+        inSlope: {x: 0.0024164147, y: -0.011422481, z: -0.00095954747, w: -0.039360892}
+        outSlope: {x: 0.0024164147, y: -0.011422481, z: -0.00095954747, w: -0.039360892}
+        tangentMode: 0
+      - time: 4.966676
+        value: {x: 0.01265895, y: -0.9635609, z: 0.07958552, w: 0.25506136}
+        inSlope: {x: 0.006754606, y: -0.0040018028, z: -0.002091201, w: -0.014810961}
+        outSlope: {x: 0.006754606, y: -0.0040018028, z: -0.002091201, w: -0.014810961}
+        tangentMode: 0
+      - time: 5.783354
+        value: {x: 0.01836021, y: -0.96511716, z: 0.07800545, w: 0.24925244}
+        inSlope: {x: 0.0064285547, y: -0.00032722513, z: -0.0014895002, w: -0.0012771615}
+        outSlope: {x: 0.0064285547, y: -0.00032722513, z: -0.0014895002, w: -0.0012771615}
+        tangentMode: 0
+      - time: 6
+        value: {x: 0.019664979, y: -0.9651337, z: 0.07773048, w: 0.24917509}
+        inSlope: {x: 0.0056016366, y: 0.00012892505, z: -0.001046173, w: 0.00038050796}
+        outSlope: {x: 0.0056016366, y: 0.00012892505, z: -0.001046173, w: 0.00038050796}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path:
+  m_CompressedRotationCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -122.0747, y: -5.026831, z: -121.1039}
+        inSlope: {x: -0.015375773, y: 0.032622177, z: -0.002389272}
+        outSlope: {x: -0.015375773, y: 0.032622177, z: -0.002389272}
+        tangentMode: 0
+      - time: 6
+        value: {x: -122.166954, y: -4.831098, z: -121.11823}
+        inSlope: {x: -0.015375773, y: 0.032622177, z: -0.002389272}
+        outSlope: {x: -0.015375773, y: 0.032622177, z: -0.002389272}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path:
+  m_ScaleCurves: []
+  m_FloatCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 50
+        inSlope: 0.9053364
+        outSlope: 0.9053364
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: field of view
+    path:
+    classID: 20
+    script: {fileID: 0}
+  m_SampleRate: 60
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_Events: []

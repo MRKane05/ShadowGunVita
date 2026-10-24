@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: bridge_01_gear
+  m_Legacy: 1
+  m_Compressed: 0
+  m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -1, y: 4.3711413E-08, z: 4.3711413E-08, w: 5.326322E-07}
+        inSlope: {x: 0.005317926, y: -4.257537E-07, z: -0.79890275, w: 3.209038E-08}
+        outSlope: {x: 0.005317926, y: -4.257537E-07, z: -0.79890275, w: 3.209038E-08}
+        tangentMode: 0
+      - time: 0.71666664
+        value: {x: -0.83959264, y: -2.526349E-07, z: -0.5432165, w: 4.709389E-07}
+        inSlope: {x: 0.4328875, y: -3.7529313E-07, z: -0.6690759, w: -2.013231E-07}
+        outSlope: {x: 0.4328875, y: -3.7529313E-07, z: -0.6690759, w: -2.013231E-07}
+        tangentMode: 0
+      - time: 1.5499992
+        value: {x: -0.34103027, y: -4.857952E-07, z: -0.94005233, w: 2.2273471E-07}
+        inSlope: {x: 0.7202865, y: -1.7066174E-07, z: -0.26130283, w: -3.722261E-07}
+        outSlope: {x: 0.7202865, y: -1.7066174E-07, z: -0.26130283, w: -3.722261E-07}
+        tangentMode: 0
+      - time: 2.3833318
+        value: {x: 0.30076635, y: -5.211171E-07, z: -0.95369786, w: -1.18510386E-07}
+        inSlope: {x: 0.767032, y: 9.531627E-08, z: 0.24189973, w: -4.1911986E-07}
+        outSlope: {x: 0.767032, y: 9.531627E-08, z: 0.24189973, w: -4.1911986E-07}
+        tangentMode: 0
+      - time: 3.2166643
+        value: {x: 0.82359606, y: -3.3809718E-07, z: -0.5671768, w: -4.138817E-07}
+        inSlope: {x: 0.44099492, y: 3.2180114E-07, z: 0.6403619, w: -2.6287861E-07}
+        outSlope: {x: 0.44099492, y: 3.2180114E-07, z: 0.6403619, w: -2.6287861E-07}
+        tangentMode: 0
+      - time: 4.0499973
+        value: {x: 0.9992673, y: -2.32935E-08, z: 0.038273804, w: -5.3391494E-07}
+        inSlope: {x: -0.029282179, y: 4.0850378E-07, z: 0.76454973, w: -1.7823584E-08}
+        outSlope: {x: -0.029282179, y: 4.0850378E-07, z: 0.76454973, w: -1.7823584E-08}
+        tangentMode: 0
+      - time: 4.866675
+        value: {x: 0.7906859, y: 2.9152721E-07, z: 0.612222, w: -4.4790588E-07}
+        inSlope: {x: -0.4643861, y: 3.39748E-07, z: 0.5997572, w: 2.211313E-07}
+        outSlope: {x: -0.4643861, y: 3.39748E-07, z: 0.5997572, w: 2.211313E-07}
+        tangentMode: 0
+      - time: 5.0333333
+        value: {x: 0.70710677, y: 3.4571923E-07, z: 0.70710677, w: -4.0753645E-07}
+        inSlope: {x: -0.5339634, y: 3.1137031E-07, z: 0.54076606, w: 2.6077012E-07}
+        outSlope: {x: -0.5339634, y: 3.1137031E-07, z: 0.54076606, w: 2.6077012E-07}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: bridge_01_kolo
+  m_CompressedRotationCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 1.4191437, y: 0.119252205, z: -10.049635}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: -0, y: -0, z: -0}
+        tangentMode: 0
+      - time: 4.9333334
+        value: {x: 1.4191437, y: 0.119252205, z: -10.049635}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: -1.9512198, y: -0, z: -0}
+        tangentMode: 0
+      - time: 6.983333
+        value: {x: -2.5808563, y: 0.119252205, z: -10.049635}
+        inSlope: {x: -1.9512198, y: 0, z: 0}
+        outSlope: {x: -1.9512198, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: bridge_01_door2
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 1.4191437, y: 0.119252205, z: -1.8450413}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: -0, y: -0, z: -0}
+        tangentMode: 0
+      - time: 5.0166664
+        value: {x: 1.4191437, y: 0.119252205, z: -1.8450413}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 1.9999995, y: -0, z: -0}
+        tangentMode: 0
+      - time: 7.016667
+        value: {x: 5.4191437, y: 0.119252205, z: -1.8450413}
+        inSlope: {x: 1.9999995, y: 0, z: 0}
+        outSlope: {x: 1.9999995, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: bridge_01_door1
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_SampleRate: 60
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_Events: []

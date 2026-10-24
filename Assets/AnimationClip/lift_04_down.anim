@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: lift_04_down
+  m_Legacy: 1
+  m_Compressed: 0
+  m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 16.016666
+        value: {x: -1.3315805E-07, y: 0, z: 0, w: 1}
+        inSlope: {x: -0.81245583, y: 0, z: 0, w: -0.0055004004}
+        outSlope: {x: -0.81245583, y: 0, z: 0, w: -0.0055004004}
+        tangentMode: 0
+      - time: 16.799988
+        value: {x: -0.59433097, y: 0, z: 0, w: 0.80422056}
+        inSlope: {x: -0.6533943, y: 0, z: 0, w: -0.48286936}
+        outSlope: {x: -0.6533943, y: 0, z: 0, w: -0.48286936}
+        tangentMode: 0
+      - time: 16.983334
+        value: {x: -0.707107, y: 0, z: 0, w: 0.70710653}
+        inSlope: {x: -0.5783894, y: 0, z: 0, w: -0.5706037}
+        outSlope: {x: -0.5783894, y: 0, z: 0, w: -0.5706037}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: liftdoor02
+  m_CompressedRotationCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 29.065674, y: 74.923355, z: 142.22235}
+        inSlope: {x: 0, y: -2.018242, z: 0}
+        outSlope: {x: -0, y: -2.018242, z: 0}
+        tangentMode: 0
+      - time: 14.983334
+        value: {x: 29.065674, y: 44.683365, z: 142.22235}
+        inSlope: {x: 0, y: -2.018242, z: 0}
+        outSlope: {x: -0, y: -0, z: 0}
+        tangentMode: 0
+      - time: 16.016666
+        value: {x: 29.065674, y: 44.683365, z: 142.22235}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path:
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_SampleRate: 60
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_Events: []

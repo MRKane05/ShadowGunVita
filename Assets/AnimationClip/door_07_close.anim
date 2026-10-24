@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: door_07_close
+  m_Legacy: 1
+  m_Compressed: 0
+  m_RotationCurves: []
+  m_CompressedRotationCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0.02393341, y: 1.8326412, z: 4.581055}
+        inSlope: {x: 0, y: 1.1733298, z: 1.5894572E-07}
+        outSlope: {x: 0, y: 1.1733298, z: 1.5894572E-07}
+        tangentMode: 0
+      - time: 3
+        value: {x: 0.02393341, y: 5.3526306, z: 4.5810556}
+        inSlope: {x: 0, y: 1.1733298, z: 1.5894572E-07}
+        outSlope: {x: 0, y: 1.1733298, z: 1.5894572E-07}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: Lgate
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0.02393341, y: 12.883698, z: 4.5810566}
+        inSlope: {x: 0, y: -1.2266645, z: -1.5894572E-07}
+        outSlope: {x: 0, y: -1.2266645, z: -1.5894572E-07}
+        tangentMode: 0
+      - time: 3
+        value: {x: 0.02393341, y: 9.203705, z: 4.581056}
+        inSlope: {x: 0, y: -1.2266645, z: -1.5894572E-07}
+        outSlope: {x: 0, y: -1.2266645, z: -1.5894572E-07}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: Rgate
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_SampleRate: 60
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_Events: []

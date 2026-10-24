@@ -1,0 +1,158 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: spider_touch_a
+  m_Legacy: 1
+  m_Compressed: 0
+  m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0.83830583, y: 0.19695026, z: 0.14475264, w: 0.4873403}
+        inSlope: {x: 0.073900215, y: -0.018500982, z: 0.02579659, w: -0.12769282}
+        outSlope: {x: 0.073900215, y: -0.018500982, z: 0.02579659, w: -0.12769282}
+        tangentMode: 0
+      - time: 0.35000008
+        value: {x: 0.90531814, y: 0.14654495, z: 0.10482876, w: 0.3846225}
+        inSlope: {x: 0.13288546, y: -0.16441166, z: -0.13120103, w: -0.21405351}
+        outSlope: {x: 0.13288546, y: -0.16441166, z: -0.13120103, w: -0.21405351}
+        tangentMode: 0
+      - time: 0.46666685
+        value: {x: 0.8968603, y: 0.15714823, z: 0.0903225, w: 0.40346995}
+        inSlope: {x: -0.41924858, y: 0.78298306, z: -0.21953392, w: 0.67100585}
+        outSlope: {x: -0.41924858, y: 0.78298306, z: -0.21953392, w: 0.67100585}
+        tangentMode: 0
+      - time: 0.58333343
+        value: {x: 0.8411365, y: 0.2502799, z: 0.055399492, w: 0.4762147}
+        inSlope: {x: -0.19664901, y: 0.2843855, z: -0.14463602, w: 0.21777412}
+        outSlope: {x: -0.19664901, y: 0.2843855, z: -0.14463602, w: 0.21777412}
+        tangentMode: 0
+      - time: 0.8333332
+        value: {x: 0.8145698, y: 0.25668707, z: 0.07043013, w: 0.51539063}
+        inSlope: {x: 0.017108934, y: -0.13160628, z: 0.19694003, w: 0.011522781}
+        outSlope: {x: 0.017108934, y: -0.13160628, z: 0.19694003, w: 0.011522781}
+        tangentMode: 0
+      - time: 1.25
+        value: {x: 0.8383059, y: 0.1969499, z: 0.14475286, w: 0.48734033}
+        inSlope: {x: 0.0057612257, y: -0.011995401, z: 0.012749975, w: -0.008838529}
+        outSlope: {x: 0.0057612257, y: -0.011995401, z: 0.012749975, w: -0.008838529}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: EnemySpider2
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0.24999999
+        value: {x: 0.022583082, y: 0.57278323, z: -0.80353665, w: 0.16043112}
+        inSlope: {x: 0.2624924, y: -0.06619335, z: -0.20441653, w: -0.8697224}
+        outSlope: {x: 0.2624924, y: -0.06619335, z: -0.20441653, w: -0.8697224}
+        tangentMode: 0
+      - time: 0.45000014
+        value: {x: 0.06649486, y: 0.60802007, z: -0.7910493, w: -0.0114419535}
+        inSlope: {x: 0.0996755, y: 0.31778607, z: 0.25925317, w: -0.49995694}
+        outSlope: {x: 0.0996755, y: 0.31778607, z: 0.25925317, w: -0.49995694}
+        tangentMode: 0
+      - time: 0.6666667
+        value: {x: 0.084805235, y: 0.62490314, z: -0.7758888, w: -0.017342918}
+        inSlope: {x: 0.036524795, y: -0.13677132, z: -0.11061798, w: 0.20417547}
+        outSlope: {x: 0.036524795, y: -0.13677132, z: -0.11061798, w: 0.20417547}
+        tangentMode: 0
+      - time: 0.98333305
+        value: {x: 0.046289407, y: 0.57190394, z: -0.8111175, w: 0.11345351}
+        inSlope: {x: -0.23049518, y: -0.0425506, z: 0.023539089, w: 0.47759414}
+        outSlope: {x: -0.23049518, y: -0.0425506, z: 0.023539089, w: 0.47759414}
+        tangentMode: 0
+      - time: 1.2833328
+        value: {x: 0.017522538, y: 0.5742515, z: -0.80062604, w: 0.17007712}
+        inSlope: {x: 0.016130429, y: -0.0053930334, z: -0.010045776, w: -0.030772567}
+        outSlope: {x: 0.016130429, y: -0.0053930334, z: -0.010045776, w: -0.030772567}
+        tangentMode: 0
+      - time: 1.4999999
+        value: {x: 0.022583082, y: 0.57278323, z: -0.80353665, w: 0.16043112}
+        inSlope: {x: 0.003957238, y: -0.0009762901, z: -0.002088474, w: -0.0075447913}
+        outSlope: {x: 0.003957238, y: -0.0009762901, z: -0.002088474, w: -0.0075447913}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: EnemySpider1
+  m_CompressedRotationCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 20.49791, y: 1.2371788, z: 1.6076431}
+        inSlope: {x: 0, y: -0.84021527, z: -0.25292438}
+        outSlope: {x: -0, y: -0.84021527, z: -0.25292438}
+        tangentMode: 0
+      - time: 0.24999999
+        value: {x: 20.49791, y: 0.9150963, z: 1.5106888}
+        inSlope: {x: 0, y: -0.84021527, z: -0.25292438}
+        outSlope: {x: -0, y: -0, z: -0}
+        tangentMode: 0
+      - time: 0.55
+        value: {x: 20.49791, y: 0.9709282, z: 1.4674225}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 1.1166667
+        value: {x: 20.49791, y: 0.9150963, z: 1.5106888}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 1.5
+        value: {x: 20.49791, y: 1.237179, z: 1.607643}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: EnemySpider1
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 20.763565, y: 1.2798767, z: -0.8751374}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 0.18333334
+        value: {x: 20.763565, y: 1.2798767, z: -0.8751374}
+        inSlope: {x: 0, y: -0.16497645, z: 0.075688854}
+        outSlope: {x: 0, y: -0.16497645, z: 0.075688854}
+        tangentMode: 0
+      - time: 0.38333333
+        value: {x: 20.763565, y: 1.1203995, z: -0.8019715}
+        inSlope: {x: 0, y: -0.3299529, z: 0.15137771}
+        outSlope: {x: 0, y: -0.3299529, z: 0.15137771}
+        tangentMode: 0
+      - time: 0.6000001
+        value: {x: 20.763565, y: 1.0903358, z: -0.8578492}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 1.25
+        value: {x: 20.76357, y: 1.279877, z: -0.8751374}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: EnemySpider2
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_SampleRate: 60
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_Events: []

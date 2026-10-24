@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: bridge_02_gear
+  m_Legacy: 1
+  m_Compressed: 0
+  m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0.70710677, y: 0, z: 0, w: -0.70710677}
+        inSlope: {x: 0.5517053, y: 0, z: 0, w: 0.5589759}
+        outSlope: {x: 0.5517053, y: 0, z: 0, w: 0.5589759}
+        tangentMode: 0
+      - time: 0.81666654
+        value: {x: 0.9896514, y: 0, z: 0, w: -0.14349256}
+        inSlope: {x: 0.11269401, y: 0, z: 0, w: 0.7772441}
+        outSlope: {x: 0.11269401, y: 0, z: 0, w: 0.7772441}
+        tangentMode: 0
+      - time: 1
+        value: {x: 1, y: 0, z: 0, w: -4.371139E-08}
+        inSlope: {x: 0.0051390254, y: 0, z: 0, w: 0.7853723}
+        outSlope: {x: 0.0051390254, y: 0, z: 0, w: 0.7853723}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: bridge_02_door1
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -3.0626614E-07, y: -0.70710677, z: -0.70710677, w: 3.0626614E-07}
+        inSlope: {x: -2.3896231E-07, y: 0.55897945, z: -0.55171245, w: -2.421069E-07}
+        outSlope: {x: -2.3896231E-07, y: 0.55897945, z: -0.55171245, w: -2.421069E-07}
+        tangentMode: 0
+      - time: 0.81666654
+        value: {x: -1.9269223E-07, y: -0.1434926, z: -0.9896514, w: 2.793904E-08}
+        inSlope: {x: -2.194215E-08, y: 0.77724457, z: -0.11269401, w: -1.5133514E-07}
+        outSlope: {x: -2.194215E-08, y: 0.77724457, z: -0.11269401, w: -1.5133514E-07}
+        tangentMode: 0
+      - time: 1
+        value: {x: 4.371139E-08, y: 4.371139E-08, z: -1, w: 1.9106855E-15}
+        inSlope: {x: 2.2466981E-10, y: 0.78537947, z: -0.0051390254, w: 3.4330025E-08}
+        outSlope: {x: 2.2466981E-10, y: 0.78537947, z: -0.0051390254, w: 3.4330025E-08}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: bridge_02_door2
+  m_CompressedRotationCurves: []
+  m_PositionCurves: []
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_SampleRate: 60
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_Events:
+  - time: -0.15
+    functionName:
+    data:
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

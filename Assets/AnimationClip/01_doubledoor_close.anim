@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 01_doubledoor_close
+  m_Legacy: 1
+  m_Compressed: 0
+  m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: -0.70710677, w: 0.70710677}
+        inSlope: {x: 0, y: 0, z: 1.6983603, w: 1.632943}
+        outSlope: {x: 0, y: 0, z: 1.6983603, w: 1.632943}
+        tangentMode: 0
+      - time: 0.13333334
+        value: {x: 0, y: 0, z: -0.4539905, w: 0.8910065}
+        inSlope: {x: 0, y: 0, z: 2.0988436, w: 1.0694144}
+        outSlope: {x: 0, y: 0, z: 2.0988436, w: 1.0694144}
+        tangentMode: 0
+      - time: 0.31666672
+        value: {x: 0, y: 0, z: -0.039259683, w: 0.999229}
+        inSlope: {x: 0, y: 0, z: 2.3537722, w: 0.09247899}
+        outSlope: {x: 0, y: 0, z: 2.3537722, w: 0.09247899}
+        tangentMode: 0
+      - time: 0.33333334
+        value: {x: 0, y: 0, z: 0, w: 1}
+        inSlope: {x: 0, y: 0, z: 2.3555875, w: 0.04625929}
+        outSlope: {x: 0, y: 0, z: 2.3555875, w: 0.04625929}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: i2_door_01_left
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: 0, z: 0.70710677, w: 0.70710677}
+        inSlope: {x: 0, y: 0, z: -1.6983603, w: 1.632943}
+        outSlope: {x: 0, y: 0, z: -1.6983603, w: 1.632943}
+        tangentMode: 0
+      - time: 0.13333334
+        value: {x: 0, y: 0, z: 0.45399058, w: 0.89100647}
+        inSlope: {x: 0, y: 0, z: -2.098846, w: 1.0694163}
+        outSlope: {x: 0, y: 0, z: -2.098846, w: 1.0694163}
+        tangentMode: 0
+      - time: 0.31666672
+        value: {x: 0, y: 0, z: 0.039259855, w: 0.999229}
+        inSlope: {x: 0, y: 0, z: -2.353773, w: 0.09248078}
+        outSlope: {x: 0, y: 0, z: -2.353773, w: 0.09248078}
+        tangentMode: 0
+      - time: 0.33333334
+        value: {x: 0, y: 0, z: 1.1920953E-07, w: 1}
+        inSlope: {x: 0, y: 0, z: -2.3555906, w: 0.04625929}
+        outSlope: {x: 0, y: 0, z: -2.3555906, w: 0.04625929}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: i2_door_01_right
+  m_CompressedRotationCurves: []
+  m_PositionCurves: []
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_SampleRate: 60
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_Events: []

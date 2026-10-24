@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: m_turret_hit_fx
+  m_Shader: {fileID: 4800000, guid: 50be481a31fa40f418796e202b82f358, type: 1}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 2, y: 2}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _TimeOffs
+        second: 9999
+      data:
+        first:
+          name: _Speed
+        second: 2
+      data:
+        first:
+          name: _BorderWidth
+        second: 5
+      data:
+        first:
+          name: _ExpansionSpeed
+        second: 3
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _ColorStart
+        second: {r: 0.07718867, g: 0.9402985, b: 0.8316554, a: 1}
+      data:
+        first:
+          name: _ColorEnd
+        second: {r: 1, g: 0.9409457, b: 0.08208954, a: 1}

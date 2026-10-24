@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: door_intro
+  m_Legacy: 1
+  m_Compressed: 0
+  m_RotationCurves: []
+  m_CompressedRotationCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 7.2997565, y: -3.5019073, z: 1.5983385}
+        inSlope: {x: 0, y: 0.9599991, z: 0}
+        outSlope: {x: 0, y: 0.9599991, z: 0}
+        tangentMode: 0
+      - time: 2
+        value: {x: 7.2997565, y: -1.5819092, z: 1.5983385}
+        inSlope: {x: 0, y: 0.9599991, z: 0}
+        outSlope: {x: 0, y: 0.9599991, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: i2_vrata01_a
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 7.2997565, y: 0.7971039, z: 1.5983385}
+        inSlope: {x: 0, y: -1.2000008, z: 0}
+        outSlope: {x: 0, y: -1.2000008, z: 0}
+        tangentMode: 0
+      - time: 2
+        value: {x: 7.2997565, y: -1.6028976, z: 1.5983385}
+        inSlope: {x: 0, y: -1.2000008, z: 0}
+        outSlope: {x: 0, y: -1.2000008, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: i2_vrata01_b
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_SampleRate: 60
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_Events: []

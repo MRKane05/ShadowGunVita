@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: terminal
+  m_Legacy: 1
+  m_Compressed: 0
+  m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0.5, y: 0.50000006, z: 0.5, w: 0.49999994}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - time: 1
+        value: {x: 0.5, y: 0.50000006, z: 0.5, w: 0.49999994}
+        inSlope: {x: 0.0054529165, y: -0.0054555987, z: 0.0054529165, w: -0.0054560457}
+        outSlope: {x: 0.0054529165, y: -0.0054555987, z: 0.0054529165, w: -0.0054560457}
+        tangentMode: 0
+      - time: 1.5000001
+        value: {x: 0.57476944, y: 0.41187397, z: 0.57476944, w: 0.41187382}
+        inSlope: {x: 0.2692766, y: -0.37635207, z: 0.2692766, w: -0.37635207}
+        outSlope: {x: 0.2692766, y: -0.37635207, z: 0.2692766, w: -0.37635207}
+        tangentMode: 0
+      - time: 1.9666668
+        value: {x: 0.6964534, y: 0.12228134, z: 0.6964534, w: 0.122281164}
+        inSlope: {x: 0.15404382, y: -0.8811184, z: 0.15404382, w: -0.88111854}
+        outSlope: {x: 0.15404382, y: -0.8811184, z: 0.15404382, w: -0.88111854}
+        tangentMode: 0
+      - time: 2
+        value: {x: 0.7010574, y: 0.09229605, z: 0.7010574, w: 0.09229586}
+        inSlope: {x: 0.13812009, y: -0.8995629, z: 0.13812009, w: -0.89956313}
+        outSlope: {x: 0.13812009, y: -0.8995629, z: 0.13812009, w: -0.89956313}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: terminal_paka_body
+  m_CompressedRotationCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -0, y: 0, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 2
+        value: {x: -0, y: 0, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: terminal_paka_body
+  m_ScaleCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0.98748314, y: 0.91161984, z: 0.9360374}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 2
+        value: {x: 0.98748314, y: 0.91161984, z: 0.9360374}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: terminal_paka_body
+  m_FloatCurves: []
+  m_SampleRate: 30
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: -0.0022563338, y: -0.22329623, z: 0.21365201}
+    m_Extent: {x: 0.267847, y: 0.28743857, z: 0.2793829}
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_Events: []

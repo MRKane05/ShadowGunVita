@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: klipsna_RESET
+  m_Legacy: 1
+  m_Compressed: 0
+  m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -0, y: 0, z: 0, w: -1}
+        inSlope: {x: 0, y: 0, z: 0.115191475, w: 0.00021994112}
+        outSlope: {x: 0, y: 0, z: 0.115191475, w: 0.00021994112}
+        tangentMode: 0
+      - time: 0.033333335
+        value: {x: -0, y: 0, z: 0.003839716, w: -0.99999267}
+        inSlope: {x: 0, y: 0, z: 0.22513908, w: 0.0016897916}
+        outSlope: {x: 0, y: 0, z: 0.22513908, w: 0.0016897916}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: klipsna_P
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0, y: -0, z: -0, w: 1}
+        inSlope: {x: 0, y: 0, z: 0.115191475, w: -0.00021994112}
+        outSlope: {x: 0, y: 0, z: 0.115191475, w: -0.00021994112}
+        tangentMode: 0
+      - time: 0.033333335
+        value: {x: 0, y: 0, z: 0.003839716, w: 0.99999267}
+        inSlope: {x: 0, y: 0, z: 0.22513908, w: -0.0016897916}
+        outSlope: {x: 0, y: 0, z: 0.22513908, w: -0.0016897916}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: klipsna_L
+  m_CompressedRotationCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -0.15344238, y: 0.55871916, z: 0.007425537}
+        inSlope: {x: 2.8610228E-07, y: -1.1444091E-06, z: -1.7881392E-08}
+        outSlope: {x: 2.8610228E-07, y: -1.1444091E-06, z: -1.7881392E-08}
+        tangentMode: 0
+      - time: 0.033333335
+        value: {x: -0.15344237, y: 0.5587191, z: 0.0074255364}
+        inSlope: {x: 2.8610228E-07, y: -1.1444091E-06, z: -1.7881392E-08}
+        outSlope: {x: -2.8610228E-07, y: 2.2888182E-06, z: 1.7881392E-08}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: klipsna_P
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -0.15344238, y: -0.55755216, z: 0.007425537}
+        inSlope: {x: 2.8610228E-07, y: 1.1444091E-06, z: -1.7881392E-08}
+        outSlope: {x: 2.8610228E-07, y: 1.1444091E-06, z: -1.7881392E-08}
+        tangentMode: 0
+      - time: 0.033333335
+        value: {x: -0.15344237, y: -0.55755216, z: 0.0074255364}
+        inSlope: {x: 2.8610228E-07, y: 1.1444091E-06, z: -1.7881392E-08}
+        outSlope: {x: -2.8610228E-07, y: -2.2888182E-06, z: 1.7881392E-08}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: klipsna_L
+  m_ScaleCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: -5.3644176E-06, y: -5.3644176E-06, z: -5.3644176E-06}
+        outSlope: {x: -5.3644176E-06, y: -5.3644176E-06, z: -5.3644176E-06}
+        tangentMode: 0
+      - time: 0.033333335
+        value: {x: 0.9999998, y: 0.9999998, z: 0.9999998}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: klipsna_P
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: -5.3644176E-06, y: -5.3644176E-06, z: -5.3644176E-06}
+        outSlope: {x: -5.3644176E-06, y: -5.3644176E-06, z: -5.3644176E-06}
+        tangentMode: 0
+      - time: 0.033333335
+        value: {x: 0.9999998, y: 0.9999998, z: 0.9999998}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: klipsna_L
+  m_FloatCurves: []
+  m_SampleRate: 30
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: -0.2655983, y: 0.00058203936, z: 0.00027149916}
+    m_Extent: {x: 0.26184845, y: 0.6097664, z: 0.1838494}
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_Events: []
