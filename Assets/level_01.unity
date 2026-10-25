@@ -439609,6 +439609,19 @@ MonoBehaviour:
   m_FadeDuration: 1
   m_Font: {fileID: 11409266, guid: 3189e9f581507b041980710f7e98b8db, type: 2}
   m_Font_Kor: {fileID: 11409266, guid: ca5e16983c9708546bcd0f16013e3214, type: 2}
+--- !u!115 &584276806
+MonoScript:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  serializedVersion: 5
+  m_Script: 
+  m_DefaultReferences: {}
+  m_Icon: {fileID: 0}
+  m_ExecutionOrder: 0
+  m_ClassName: RecoveredNavMesh
+  m_Namespace: 
 --- !u!114 &900000000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -459668,3 +459681,81 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lightmapIndex: 0
   scaleOffset: {x: 0.0117188, y: 0.0117188, z: 0.576529, w: 0.559809}
+--- !u!1 &1919989808
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1919989811}
+  - component: {fileID: 1919989810}
+  - component: {fileID: 1919989809}
+  m_Layer: 0
+  m_Name: '!navmesh'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1919989809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1919989808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 23800000, guid: bbf0f8cb0b36e47439ddc5a88dd35a6e, type: 2}
+--- !u!114 &1919989810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1919989808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 584276806}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  navMeshData: {fileID: 0}
+  sourceMeshes:
+  - {fileID: 4300000, guid: eeb4908cb420aa341837b9abf9be2fb3, type: 2}
+  - {fileID: 4300000, guid: da811171907b85943b9595a051dea848, type: 2}
+  sourceAreas: 0000000004000000
+  sourceAssetPath: C:/Users/kano/Documents/Projects/VitaGames/shadowgun/shadowgun/NEWRIP/ExportedProject/Assets/NavMesh\NavMesh_12.asset
+  originalAgentHeight: 1.8
+  originalAgentRadius: 0.4
+  originalAgentClimb: 0.9
+--- !u!4 &1919989811
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1919989808}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 35
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

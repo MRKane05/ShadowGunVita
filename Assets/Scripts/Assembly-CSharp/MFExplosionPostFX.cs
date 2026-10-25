@@ -98,7 +98,8 @@ public class MFExplosionPostFX : ImageEffectBase
 			m_FreeWaveEmitterSlots.Push(i);
 		}
 	}
-
+	/*
+	//PROBLEM: Disabled post-effect for whatever was happening with an explosion - Kano!
 	private void OnRenderImage(RenderTexture source, RenderTexture destination)
 	{
 		if (!m_InitOK)
@@ -134,7 +135,7 @@ public class MFExplosionPostFX : ImageEffectBase
 		}
 		RenderTexture.active = active;
 	}
-
+	*/
 	private bool DoInit()
 	{
 		m_GameObj = new GameObject();
