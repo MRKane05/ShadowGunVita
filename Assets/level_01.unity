@@ -9865,7 +9865,7 @@ GameObject:
   - component: {fileID: 3462}
   - component: {fileID: 7898}
   - component: {fileID: 6056}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: laser_zablesk1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9882,7 +9882,7 @@ GameObject:
   - component: {fileID: 3461}
   - component: {fileID: 7899}
   - component: {fileID: 6057}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: laser_zablesk2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9898,7 +9898,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3464}
   - component: {fileID: 10306}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -459737,15 +459737,6 @@ MonoBehaviour:
   m_Script: {fileID: 584276806}
   m_Name: 
   m_EditorClassIdentifier: 
-  navMeshData: {fileID: 0}
-  sourceMeshes:
-  - {fileID: 4300000, guid: eeb4908cb420aa341837b9abf9be2fb3, type: 2}
-  - {fileID: 4300000, guid: da811171907b85943b9595a051dea848, type: 2}
-  sourceAreas: 0000000004000000
-  sourceAssetPath: C:/Users/kano/Documents/Projects/VitaGames/shadowgun/shadowgun/NEWRIP/ExportedProject/Assets/NavMesh\NavMesh_12.asset
-  originalAgentHeight: 1.8
-  originalAgentRadius: 0.4
-  originalAgentClimb: 0.9
 --- !u!4 &1919989811
 Transform:
   m_ObjectHideFlags: 0

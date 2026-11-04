@@ -8,8 +8,9 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: a359572ebdbf73f4fbb75a75148d65b0
+  m_OcclusionCullingData: {fileID: 36300000, guid: c4c6bd6bbd42a0a4da6001ffbed6cf6a,
+    type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -13493,8 +13494,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1642}
   - component: {fileID: 2850}
-  - component: {fileID: 2839}
   - component: {fileID: 2831}
+  - component: {fileID: 2512}
   m_Layer: 0
   m_Name: _Game
   m_TagString: Untagged
@@ -25963,10 +25964,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 3a1f66a80fedac346940e720becab1a2, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0214844, y: 0.0214844, z: 5.45431E-05, w: 0.0870445}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26002,10 +25999,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 3a1f66a80fedac346940e720becab1a2, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0380859, y: 0.0380859, z: 0.959647, w: 0.960944}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26041,10 +26034,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: edfc7de90c7d3254fa17b1af29e6952c, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26080,10 +26069,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: edfc7de90c7d3254fa17b1af29e6952c, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26119,10 +26104,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: edfc7de90c7d3254fa17b1af29e6952c, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26158,10 +26139,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: edfc7de90c7d3254fa17b1af29e6952c, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26197,10 +26174,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: edfc7de90c7d3254fa17b1af29e6952c, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26236,10 +26209,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: edfc7de90c7d3254fa17b1af29e6952c, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26275,10 +26244,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e5637201c5a610f438343144f061a1a4, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26314,10 +26279,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 477fd41d08d80f842ac637a0deb71e81, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26353,10 +26314,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: af7aceb27275f3d42bfb076073842eec, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0283203, y: 0.0283203, z: 0.963652, w: 0.932506}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26392,10 +26349,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: b0e620eb07afb5644a20f23aad564bb3, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00390625, y: 0.00390625, z: 0.587363, w: 0.0238867}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26431,10 +26384,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: b0e620eb07afb5644a20f23aad564bb3, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00390625, y: 0.00390625, z: 0.469199, w: 0.965293}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26470,10 +26419,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: b0e620eb07afb5644a20f23aad564bb3, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00390625, y: 0.00390625, z: 0.784629, w: 0.0229102}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26509,10 +26454,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: b0e620eb07afb5644a20f23aad564bb3, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00390625, y: 0.00390625, z: 0.0346289, w: 0.0717383}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26548,10 +26489,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: aacb1f4368fff8f4289bf9712e735305, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0146484, y: 0.0146484, z: 0.375077, w: 0.0157967}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26587,10 +26524,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 8f10e5de1b513074188f7c93e5a6dc1d, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26626,10 +26559,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: df42497246fc3db4fa21c016b6382262, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26665,10 +26594,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: df42497246fc3db4fa21c016b6382262, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00585938, y: 0.00585938, z: 0.487734, w: 0.02875}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26704,10 +26629,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: df42497246fc3db4fa21c016b6382262, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00585938, y: 0.00585938, z: 0.674258, w: 0.0238672}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26743,10 +26664,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: df42497246fc3db4fa21c016b6382262, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26782,10 +26699,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: aacb1f4368fff8f4289bf9712e735305, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0146484, y: 0.0146484, z: 0.080155, w: 0.0343514}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26821,10 +26734,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 7d7f2d6e2ace82a4ba3f85d570fe8c50, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00585938, y: 0.00585938, z: 0.328537, w: 0.016034}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26860,10 +26769,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 7d7f2d6e2ace82a4ba3f85d570fe8c50, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00585938, y: 0.00585938, z: 0.42717, w: 0.0238465}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26899,10 +26804,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 7d7f2d6e2ace82a4ba3f85d570fe8c50, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00585938, y: 0.00585938, z: 0.525803, w: 0.0238465}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26938,10 +26839,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 7d7f2d6e2ace82a4ba3f85d570fe8c50, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00585938, y: 0.00585938, z: 0.42717, w: 0.0306825}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26977,10 +26874,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: aacb1f4368fff8f4289bf9712e735305, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0146484, y: 0.0146484, z: 0.47371, w: 0.0157967}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27016,10 +26909,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: aacb1f4368fff8f4289bf9712e735305, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0146484, y: 0.0146484, z: 0.178788, w: 0.0343514}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27055,10 +26944,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 8ec3348b70ab4934e9f4afbe890f81f7, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0136719, y: 0.0136719, z: 0.473389, w: 0.0312029}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27094,10 +26979,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 8ec3348b70ab4934e9f4afbe890f81f7, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0136719, y: 0.0136719, z: 0.17749, w: 0.0497576}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27133,10 +27014,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 1e8ce65643e007549a30c176c7b5e92e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0273438, y: 0.0273438, z: 0.295353, w: 0.0858928}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27172,10 +27049,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 1e8ce65643e007549a30c176c7b5e92e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0273438, y: 0.0273438, z: 0.098087, w: 0.096635}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27211,10 +27084,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 1e8ce65643e007549a30c176c7b5e92e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0273438, y: 0.0273438, z: 0.473087, w: 0.894487}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27250,10 +27119,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 1e8ce65643e007549a30c176c7b5e92e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0273438, y: 0.0273438, z: 0.612735, w: 0.89644}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27290,10 +27155,6 @@ MeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: deacd798488c0de4b9b4e9645c8c2f0f, type: 2}
   - {fileID: 2100000, guid: 3a1f66a80fedac346940e720becab1a2, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.181641, y: 0.181641, z: -0.000946428, w: 0.820529}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27329,10 +27190,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 86c677f055a92054087c35863acd0f6a, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27368,10 +27225,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 86c677f055a92054087c35863acd0f6a, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27407,10 +27260,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: df42497246fc3db4fa21c016b6382262, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0078125, y: 0.0078125, z: 0.0326367, w: 0.0580273}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27446,10 +27295,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: df42497246fc3db4fa21c016b6382262, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27485,10 +27330,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: df42497246fc3db4fa21c016b6382262, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27524,10 +27365,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: df42497246fc3db4fa21c016b6382262, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0078125, y: 0.0078125, z: 0.525801, w: 0.0306836}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27563,10 +27400,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 5dda869b19bad354499bc58e9c5b7c47, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27602,10 +27435,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: c9ce5dd9866130547a7da33c6b531c8d, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0537109, y: 0.0537109, z: 0.543711, w: 0.878527}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27641,10 +27470,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 5dda869b19bad354499bc58e9c5b7c47, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27680,10 +27505,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 8ec3348b70ab4934e9f4afbe890f81f7, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0361328, y: 0.0361328, z: 0.138201, w: 0.0732922}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27719,10 +27540,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: d7ae8c038ee958442ba3751ad7d544ba, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00488281, y: 0.00488281, z: 0.48777, w: 0.0229207}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27758,10 +27575,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: d7ae8c038ee958442ba3751ad7d544ba, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00488281, y: 0.00488281, z: 0.469216, w: 0.96921}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27797,10 +27610,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: cf0a248e31437984d94d3b3dc3a3cccb, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00683594, y: 0.00683594, z: 0.13101, w: 0.0160584}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27836,10 +27645,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 96c2ee46d99d0034eb9a9b73ee7939d1, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00878906, y: 0.00878906, z: 0.483819, w: 0.0447791}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27875,10 +27680,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.487395, w: 0.035208}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27914,10 +27715,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.78427, w: 0.019583}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27953,10 +27750,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.78427, w: 0.0215361}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27992,10 +27785,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.880949, w: 0.0225127}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28031,10 +27820,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.883879, w: 0.0225127}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28070,10 +27855,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.78134, w: 0.0293486}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28109,10 +27890,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.78427, w: 0.0293486}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28148,10 +27925,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.0889573, w: 0.0732939}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28187,10 +27960,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.878996, w: 0.0244658}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28226,10 +27995,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.881926, w: 0.0244658}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28265,10 +28030,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.884856, w: 0.0244658}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28304,10 +28065,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.091887, w: 0.0742705}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28343,10 +28100,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.0948166, w: 0.0742705}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28382,10 +28135,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.78134, w: 0.0313017}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28421,10 +28170,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.78427, w: 0.0313017}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28460,10 +28205,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.0889573, w: 0.075247}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28499,10 +28240,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.994231, w: 0.0186064}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28538,10 +28275,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.99716, w: 0.0186064}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28577,10 +28310,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.0821213, w: 0.0762236}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28616,10 +28345,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.085051, w: 0.0762236}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28655,10 +28380,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.878996, w: 0.0264189}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28694,10 +28415,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.881926, w: 0.0264189}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28733,10 +28450,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.884856, w: 0.0264189}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28772,10 +28485,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.091887, w: 0.0762236}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28811,10 +28520,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.0948166, w: 0.0762236}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28850,10 +28555,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.78134, w: 0.0332548}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28889,10 +28590,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28928,10 +28625,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 96c2ee46d99d0034eb9a9b73ee7939d1, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00878906, y: 0.00878906, z: 0.280694, w: 0.0340369}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28967,10 +28660,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29006,10 +28695,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 1e8ce65643e007549a30c176c7b5e92e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.000976563, y: 0.000976563, z: 0.0385631, w: 0.0278088}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29045,10 +28730,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: a18f0fb3b0132c14585dd80d7e32d5cb, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00390625, y: 0.00390625, z: 0.0326648, w: 0.0356074}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29084,10 +28765,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: a18f0fb3b0132c14585dd80d7e32d5cb, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29123,10 +28800,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 8ec3348b70ab4934e9f4afbe890f81f7, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0361328, y: 0.0361328, z: 0.236834, w: 0.0732922}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29162,10 +28835,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e7a2409502e9b8043a9a354eca8afd96, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29201,10 +28870,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 93a3872bcc899cb42be771f5bd5c10c8, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0244141, y: 0.0244141, z: 0.402133, w: 0.0864549}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29240,10 +28905,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 8ec3348b70ab4934e9f4afbe890f81f7, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00683594, y: 0.00683594, z: 0.229614, w: 0.0158456}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29279,10 +28940,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 8ec3348b70ab4934e9f4afbe890f81f7, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00683594, y: 0.00683594, z: 0.0323487, w: 0.0353769}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29318,10 +28975,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 8ec3348b70ab4934e9f4afbe890f81f7, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00683594, y: 0.00683594, z: 0.229614, w: 0.0236581}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29357,10 +29010,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 96c2ee46d99d0034eb9a9b73ee7939d1, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00878906, y: 0.00878906, z: 0.680108, w: 0.0330603}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29396,10 +29045,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: ec72192211286f841bb82aada8d1437f, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29435,10 +29080,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 96c2ee46d99d0034eb9a9b73ee7939d1, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00878906, y: 0.00878906, z: 0.0804991, w: 0.0496619}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29474,10 +29115,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: cf0a248e31437984d94d3b3dc3a3cccb, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00585938, y: 0.00585938, z: 0.131058, w: 0.0238788}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29513,10 +29150,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: cf0a248e31437984d94d3b3dc3a3cccb, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00585938, y: 0.00585938, z: 0.487504, w: 0.0160663}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29552,10 +29185,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: ec72192211286f841bb82aada8d1437f, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29591,10 +29220,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 7d7f2d6e2ace82a4ba3f85d570fe8c50, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00585938, y: 0.00585938, z: 0.536545, w: 0.968182}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29630,10 +29255,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 7d7f2d6e2ace82a4ba3f85d570fe8c50, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00585938, y: 0.00585938, z: 0.605881, w: 0.968182}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29669,10 +29290,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 7d7f2d6e2ace82a4ba3f85d570fe8c50, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0292969, y: 0.0292969, z: 0.92003, w: 0.902436}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29708,10 +29325,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 7d7f2d6e2ace82a4ba3f85d570fe8c50, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0292969, y: 0.0292969, z: 0.00108418, w: 0.122162}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29747,10 +29360,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 8ec3348b70ab4934e9f4afbe890f81f7, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0927734, y: 0.0927734, z: 0.176183, w: 0.909942}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29786,10 +29395,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: a18f0fb3b0132c14585dd80d7e32d5cb, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00390625, y: 0.00390625, z: 0.22993, w: 0.0238887}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29825,10 +29430,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29864,10 +29465,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29903,10 +29500,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29942,10 +29535,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29981,10 +29570,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30020,10 +29605,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30059,10 +29640,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30098,10 +29675,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30137,10 +29710,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30176,10 +29745,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30215,10 +29780,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30254,10 +29815,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30293,10 +29850,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30332,10 +29885,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30371,10 +29920,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30410,10 +29955,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30449,10 +29990,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30488,10 +30025,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30527,10 +30060,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: d7ae8c038ee958442ba3751ad7d544ba, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0673828, y: 0.0673828, z: 0.402666, w: 0.865088}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30566,10 +30095,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 1e8ce65643e007549a30c176c7b5e92e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00292969, y: 0.00292969, z: 0.784668, w: 0.0209961}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30605,10 +30130,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 1e8ce65643e007549a30c176c7b5e92e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00292969, y: 0.00292969, z: 0.034668, w: 0.0678711}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30644,10 +30165,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 1e8ce65643e007549a30c176c7b5e92e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00292969, y: 0.00292969, z: 0.034668, w: 0.0698242}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30683,10 +30200,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 7d7f2d6e2ace82a4ba3f85d570fe8c50, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00585938, y: 0.00585938, z: 0.0326387, w: 0.0511903}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30722,10 +30235,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 7d7f2d6e2ace82a4ba3f85d570fe8c50, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00390625, y: 0.00390625, z: 0.587348, w: 0.0199761}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30761,10 +30270,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 7d7f2d6e2ace82a4ba3f85d570fe8c50, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00390625, y: 0.00390625, z: 0.587348, w: 0.0160699}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30800,10 +30305,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 8ec3348b70ab4934e9f4afbe890f81f7, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0361328, y: 0.0361328, z: 0.4341, w: 0.0732922}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30839,10 +30340,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 96c2ee46d99d0034eb9a9b73ee7939d1, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00878906, y: 0.00878906, z: 0.375421, w: 0.0311072}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30878,10 +30375,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 96c2ee46d99d0034eb9a9b73ee7939d1, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00878906, y: 0.00878906, z: 0.671319, w: 0.0154822}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30917,10 +30410,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 96c2ee46d99d0034eb9a9b73ee7939d1, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00878906, y: 0.00878906, z: 0.671319, w: 0.0311072}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30956,10 +30445,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 7d7f2d6e2ace82a4ba3f85d570fe8c50, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0292969, y: 0.0292969, z: 0.963975, w: 0.902436}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30995,10 +30480,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 7d7f2d6e2ace82a4ba3f85d570fe8c50, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00585938, y: 0.00585938, z: 0.42717, w: 0.0375184}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31034,10 +30515,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 7d7f2d6e2ace82a4ba3f85d570fe8c50, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00585938, y: 0.00585938, z: 0.536545, w: 0.961347}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31073,10 +30550,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 7d7f2d6e2ace82a4ba3f85d570fe8c50, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0175781, y: 0.0175781, z: 0.0793614, w: 0.0158755}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31112,10 +30585,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 7d7f2d6e2ace82a4ba3f85d570fe8c50, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0175781, y: 0.0175781, z: 0.177994, w: 0.0158755}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31151,10 +30620,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 7d7f2d6e2ace82a4ba3f85d570fe8c50, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0175781, y: 0.0175781, z: 0.276627, w: 0.0158755}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31190,10 +30655,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 31bf4d083d04a7d439f84a7134d7b760, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00585938, y: 0.00585938, z: 0.48681, w: 0.0326797}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31229,10 +30690,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 1e8ce65643e007549a30c176c7b5e92e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00976563, y: 0.00976563, z: 0.279447, w: 0.0423505}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31268,10 +30725,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 1e8ce65643e007549a30c176c7b5e92e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00976563, y: 0.00976563, z: 0.989408, w: 0.00035829}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31307,10 +30760,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 31bf4d083d04a7d439f84a7134d7b760, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00585938, y: 0.00585938, z: 0.58349, w: 0.0268204}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31346,10 +30795,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 31bf4d083d04a7d439f84a7134d7b760, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00585938, y: 0.00585938, z: 0.783685, w: 0.0151016}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31385,10 +30830,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 1e8ce65643e007549a30c176c7b5e92e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00976563, y: 0.00976563, z: 0.0802282, w: 0.0579755}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31424,10 +30865,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 96c2ee46d99d0034eb9a9b73ee7939d1, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00878906, y: 0.00878906, z: 0.681085, w: 0.0154822}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31463,10 +30900,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 96c2ee46d99d0034eb9a9b73ee7939d1, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00878906, y: 0.00878906, z: 0.573663, w: 0.0301306}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31502,10 +30935,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 96c2ee46d99d0034eb9a9b73ee7939d1, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00878906, y: 0.00878906, z: 0.280694, w: 0.051615}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31541,10 +30970,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 1e8ce65643e007549a30c176c7b5e92e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.000976563, y: 0.000976563, z: 0.137196, w: 0.0219494}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31580,10 +31005,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31619,10 +31040,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 93a3872bcc899cb42be771f5bd5c10c8, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.03125, y: 0.03125, z: 0.533773, w: 0.0734943}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31658,10 +31075,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0195313, y: 0.0195313, z: 0.495334, w: 0.912357}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31697,10 +31110,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0195313, y: 0.0195313, z: 0.0988478, w: 0.0869939}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31736,10 +31145,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 0f983928576e2314c80de12f7fd75936, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00292969, y: 0.00292969, z: 0.033906, w: 0.0740518}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31775,10 +31180,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 0f983928576e2314c80de12f7fd75936, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00292969, y: 0.00292969, z: 0.136445, w: 0.0174112}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31814,10 +31215,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 1e8ce65643e007549a30c176c7b5e92e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00976563, y: 0.00976563, z: 0.37515, w: 0.0394208}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31853,10 +31250,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 31bf4d083d04a7d439f84a7134d7b760, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00585938, y: 0.00585938, z: 0.468255, w: 0.959438}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31892,10 +31285,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 96c2ee46d99d0034eb9a9b73ee7939d1, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00878906, y: 0.00878906, z: 0.868585, w: 0.0154822}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31931,10 +31320,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 96c2ee46d99d0034eb9a9b73ee7939d1, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00878906, y: 0.00878906, z: 0.878351, w: 0.0154822}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31970,10 +31355,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 96c2ee46d99d0034eb9a9b73ee7939d1, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00878906, y: 0.00878906, z: 0.582452, w: 0.0320838}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32009,10 +31390,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 96c2ee46d99d0034eb9a9b73ee7939d1, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00878906, y: 0.00878906, z: 0.990655, w: 0.00962282}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32048,10 +31425,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 96c2ee46d99d0034eb9a9b73ee7939d1, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00878906, y: 0.00878906, z: 0.474054, w: 0.0447791}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32087,10 +31460,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 31bf4d083d04a7d439f84a7134d7b760, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00585938, y: 0.00585938, z: 0.0346617, w: 0.0619766}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32126,10 +31495,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 1e8ce65643e007549a30c176c7b5e92e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00976563, y: 0.00976563, z: 0.679838, w: 0.0237958}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32165,10 +31530,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 7d7f2d6e2ace82a4ba3f85d570fe8c50, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0292969, y: 0.0292969, z: 0.349717, w: 0.0762638}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32204,10 +31565,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 7d7f2d6e2ace82a4ba3f85d570fe8c50, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0292969, y: 0.0292969, z: 0.682725, w: 0.893647}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32243,10 +31600,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 0f983928576e2314c80de12f7fd75936, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00292969, y: 0.00292969, z: 0.783906, w: 0.0252237}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32282,10 +31635,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 0f983928576e2314c80de12f7fd75936, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00292969, y: 0.00292969, z: 0.769258, w: 0.0281533}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32321,10 +31670,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0195313, y: 0.0195313, z: 0.337129, w: 0.0742986}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32360,10 +31705,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0195313, y: 0.0195313, z: 0.967013, w: 0.031498}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32399,10 +31740,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e7a2409502e9b8043a9a354eca8afd96, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32438,10 +31775,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 7d9d0798b0a7c64479df1b2160ba0478, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32477,10 +31810,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.100586, y: 0.100586, z: 0.295275, w: -0.000668076}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32516,10 +31845,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.100586, y: 0.100586, z: 0.196642, w: -0.000668076}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32555,10 +31880,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.100586, y: 0.100586, z: 0.0980096, w: -0.000668076}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32594,10 +31915,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.100586, y: 0.100586, z: -0.000623198, w: -0.000668076}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32633,10 +31950,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0693359, y: 0.0693359, z: 0.180291, w: 0.846419}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32672,10 +31985,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0996094, y: 0.0996094, z: 0.919314, w: 0.817534}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32711,10 +32020,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.09375, y: 0.09375, z: 0.40473, w: 0.248274}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32750,10 +32055,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0703125, y: 0.0703125, z: 0.890239, w: 0.932346}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32789,10 +32090,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.100586, y: 0.100586, z: 0.416369, w: 0.691715}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32828,10 +32125,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.100586, y: 0.100586, z: 0.890002, w: 0.147769}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32867,10 +32160,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.100586, y: 0.100586, z: 0.681994, w: 0.724918}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32906,10 +32195,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.78427, w: 0.0332548}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32945,10 +32230,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.0889573, w: 0.0772002}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32984,10 +32265,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.994231, w: 0.0205595}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33023,10 +32300,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.99716, w: 0.0205595}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33062,10 +32335,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.0791916, w: 0.0781767}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33101,10 +32370,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.0821213, w: 0.0781767}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33140,10 +32405,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: ec72192211286f841bb82aada8d1437f, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33179,10 +32440,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.09375, y: 0.09375, z: 0.693793, w: 0.225813}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33218,10 +32475,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0878906, y: 0.0878906, z: 0.515146, w: 0.662416}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33257,10 +32510,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.09375, y: 0.09375, z: 0.890082, w: 0.222883}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33296,10 +32545,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0878906, y: 0.0878906, z: 0.79542, w: 0.237611}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33335,10 +32580,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.100586, y: 0.100586, z: 0.761096, w: 0.742496}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33374,10 +32615,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0703125, y: 0.0703125, z: 0.820903, w: 0.932346}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33413,10 +32650,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.09375, y: 0.09375, z: 0.0287536, w: 0.638899}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33452,10 +32685,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0878906, y: 0.0878906, z: 0.47999, w: 0.252259}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33491,10 +32720,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.09375, y: 0.09375, z: 0.127386, w: 0.654524}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33530,10 +32755,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0878906, y: 0.0878906, z: 0.47999, w: 0.178041}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33569,10 +32790,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.09375, y: 0.09375, z: 0.206488, w: 0.679915}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33608,10 +32825,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0878906, y: 0.0878906, z: 0.613779, w: 0.737611}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33647,10 +32860,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0703125, y: 0.0703125, z: 0.751567, w: 0.932346}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33686,10 +32895,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0488281, y: 0.0488281, z: 0.751902, w: 0.923755}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33725,10 +32930,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0878906, y: 0.0878906, z: 0.594248, w: 0.8089}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33764,10 +32965,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.09375, y: 0.09375, z: 0.40473, w: 0.180891}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33803,10 +33000,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.100586, y: 0.100586, z: 0.0286737, w: 0.718082}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33842,10 +33035,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0703125, y: 0.0703125, z: 0.682232, w: 0.932346}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33881,10 +33070,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.09375, y: 0.09375, z: 0.693793, w: 0.15843}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33920,10 +33105,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0878906, y: 0.0878906, z: 0.921396, w: 0.0735483}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33959,10 +33140,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0136719, y: 0.0136719, z: 0.76985, w: 0.0159657}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33998,10 +33175,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0136719, y: 0.0136719, z: 0.572584, w: 0.0159657}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34037,10 +33210,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0195313, y: 0.0195313, z: 0.515897, w: 0.915303}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34076,10 +33245,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.085051, w: 0.0781767}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34115,10 +33280,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.878996, w: 0.028372}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34154,10 +33315,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.881926, w: 0.028372}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34193,10 +33350,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.884856, w: 0.028372}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34232,10 +33385,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.091887, w: 0.0781767}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34271,10 +33420,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.0948166, w: 0.0781767}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34310,10 +33455,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.78134, w: 0.035208}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34349,10 +33490,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.78427, w: 0.035208}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34388,10 +33525,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: e210c1e9406bab74cba26ad60dc79d2e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00195313, y: 0.00195313, z: 0.0889573, w: 0.0791533}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34427,10 +33560,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 3c1068712a577684b94394a52e11247b, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0244141, y: 0.0244141, z: 0.639661, w: 0.899381}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34466,10 +33595,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 93a3872bcc899cb42be771f5bd5c10c8, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0244141, y: 0.0244141, z: 0.637485, w: 0.88333}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34505,10 +33630,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 93a3872bcc899cb42be771f5bd5c10c8, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.03125, y: 0.03125, z: 0.502523, w: 0.89576}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34544,10 +33665,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 272357df578ace047b9ed1c727f63f10, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34583,10 +33700,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.100586, y: 0.100586, z: 0.662463, w: 0.811832}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34622,10 +33735,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.100586, y: 0.100586, z: 0.107775, w: 0.733707}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34661,10 +33770,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.100586, y: 0.100586, z: 0.186877, w: 0.759098}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34700,10 +33805,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.100586, y: 0.100586, z: 0.416369, w: 0.778629}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34739,10 +33840,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0703125, y: 0.0703125, z: 0.612896, w: 0.932346}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34778,10 +33875,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0693359, y: 0.0693359, z: 0.334587, w: 0.865951}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34817,10 +33910,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.100586, y: 0.100586, z: 0.265978, w: 0.778629}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34856,10 +33945,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0996094, y: 0.0996094, z: 0.401736, w: 0.10855}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34895,10 +33980,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.100586, y: 0.100586, z: 0.495471, w: 0.804019}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34934,10 +34015,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0703125, y: 0.0703125, z: 0.54356, w: 0.932346}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34973,10 +34050,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.09375, y: 0.09375, z: 0.919379, w: 0.738508}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35012,10 +34085,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.100586, y: 0.100586, z: 0.741564, w: 0.82941}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35051,10 +34120,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0703125, y: 0.0703125, z: 0.474224, w: 0.932346}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35090,10 +34155,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0996094, y: 0.0996094, z: 0.788455, w: 0.0860891}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35129,10 +34190,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.09375, y: 0.09375, z: 0.285589, w: 0.699446}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35168,10 +34225,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.100586, y: 0.100586, z: 0.820666, w: 0.845035}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35207,10 +34260,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.100586, y: 0.100586, z: 0.887072, w: -0.000668076}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35246,10 +34295,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0703125, y: 0.0703125, z: 0.404888, w: 0.932346}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35285,10 +34330,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0996094, y: 0.0996094, z: 0.492556, w: 0.0978079}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35324,10 +34365,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.09375, y: 0.09375, z: 0.515082, w: 0.724836}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35363,10 +34400,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0703125, y: 0.0703125, z: 0.335552, w: 0.932346}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35402,10 +34435,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.100586, y: 0.100586, z: 0.788439, w: -0.000668076}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35441,10 +34470,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.100586, y: 0.100586, z: 0.689806, w: -0.000668076}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35480,10 +34505,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0488281, y: 0.0488281, z: 0.682566, w: 0.923755}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35519,10 +34540,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.100586, y: 0.100586, z: 0.591174, w: -0.000668076}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35558,10 +34575,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 8e99557afd19e6b4796ea9aea2e62f4a, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0224609, y: 0.0224609, z: 0.966672, w: 0.0154436}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35597,10 +34610,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0390625, y: 0.0390625, z: 0.0401214, w: 0.0731713}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35636,10 +34645,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0195313, y: 0.0195313, z: 0.197482, w: 0.0803261}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35675,10 +34680,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0195313, y: 0.0195313, z: 0.474824, w: 0.921955}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35714,10 +34715,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 0f983928576e2314c80de12f7fd75936, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00292969, y: 0.00292969, z: 0.772187, w: 0.0281533}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35753,10 +34750,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 0f983928576e2314c80de12f7fd75936, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00292969, y: 0.00292969, z: 0.0368356, w: 0.0730752}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35792,10 +34785,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 0f983928576e2314c80de12f7fd75936, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00292969, y: 0.00292969, z: 0.780976, w: 0.0262002}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35831,10 +34820,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 0f983928576e2314c80de12f7fd75936, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00292969, y: 0.00292969, z: 0.136445, w: 0.0144815}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35870,10 +34855,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: d7ae8c038ee958442ba3751ad7d544ba, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.358398, y: 0.358398, z: 0.043278, w: 0.113591}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35909,10 +34890,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35948,10 +34925,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35987,10 +34960,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -36026,10 +34995,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -36065,10 +35030,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -36104,10 +35065,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -36143,10 +35100,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -36182,10 +35135,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -36221,10 +35170,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -36260,10 +35205,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -36299,10 +35240,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -36338,10 +35275,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -36377,10 +35310,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -36416,10 +35345,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -36455,10 +35380,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -36494,10 +35415,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -36533,10 +35450,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -36572,10 +35485,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -36611,10 +35520,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -36650,10 +35555,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 8ec3348b70ab4934e9f4afbe890f81f7, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00683594, y: 0.00683594, z: 0.42688, w: 0.0158456}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -36689,10 +35590,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 8ec3348b70ab4934e9f4afbe890f81f7, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00683594, y: 0.00683594, z: 0.0323487, w: 0.0431894}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -36728,10 +35625,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 8ec3348b70ab4934e9f4afbe890f81f7, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00683594, y: 0.00683594, z: 0.525513, w: 0.0158456}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -36767,10 +35660,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 93a3872bcc899cb42be771f5bd5c10c8, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0234375, y: 0.0234375, z: -0.000118115, w: 0.109421}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -36806,10 +35695,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -36845,10 +35730,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 1e8ce65643e007549a30c176c7b5e92e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.000976563, y: 0.000976563, z: 0.0385631, w: 0.0297619}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -36884,10 +35765,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 1e8ce65643e007549a30c176c7b5e92e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.000976563, y: 0.000976563, z: 0.136219, w: 0.0239025}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -36923,10 +35800,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -36962,10 +35835,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9acdd0b889a79004aaa5f5c2146c2c7b, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37001,10 +35870,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 1e8ce65643e007549a30c176c7b5e92e, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.000976563, y: 0.000976563, z: 0.998524, w: 0.998512}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37040,10 +35905,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 272357df578ace047b9ed1c727f63f10, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37079,10 +35940,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: ec72192211286f841bb82aada8d1437f, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37118,10 +35975,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: ec72192211286f841bb82aada8d1437f, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37157,10 +36010,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: cf0a248e31437984d94d3b3dc3a3cccb, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.00683594, y: 0.00683594, z: 0.0323775, w: 0.0277772}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37196,10 +36045,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: cf0a248e31437984d94d3b3dc3a3cccb, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0107422, y: 0.0107422, z: 0.0321847, w: 0.0160271}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37235,10 +36080,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 9e7a043e4f02ec047a1c850e89fcbd99, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37274,10 +36115,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 67180a415e51dd547950936802f27a6f, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37313,10 +36150,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 58e9e27289d9df443b192985e850c0ec, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37352,10 +36185,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 58e9e27289d9df443b192985e850c0ec, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37391,10 +36220,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 58e9e27289d9df443b192985e850c0ec, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37430,10 +36255,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 67180a415e51dd547950936802f27a6f, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37469,10 +36290,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: a52bccd8b41e9fb4e9d6ff6497a3cb7a, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37508,10 +36325,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: ac92aa55679bc764e9733cd367e858fc, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37547,10 +36360,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 77de36c70232e674ab93c2b21652988e, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37587,10 +36396,6 @@ MeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: d7ae8c038ee958442ba3751ad7d544ba, type: 2}
   - {fileID: 2100000, guid: 375a1835b9c6a934da57d982a562366b, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0693359, y: 0.0693359, z: 0.591582, w: 0.0761223}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37626,10 +36431,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0488281, y: 0.0488281, z: 0.61323, w: 0.923755}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37665,10 +36466,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.100586, y: 0.100586, z: 0.393908, w: -0.000668076}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37704,10 +36501,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0703125, y: 0.0703125, z: 0.266216, w: 0.932346}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37743,10 +36536,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.100586, y: 0.100586, z: 0.549181, w: 0.231754}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37782,10 +36571,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.100586, y: 0.100586, z: 0.568713, w: 0.14484}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37821,10 +36606,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.09375, y: 0.09375, z: 0.791449, w: 0.15843}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37860,10 +36641,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0693359, y: 0.0693359, z: 0.266228, w: 0.865951}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37899,10 +36676,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.100586, y: 0.100586, z: 0.492541, w: -0.000668076}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37938,10 +36711,6 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 57fb9975bc516a740bf9be530a64698c, type: 2}
-  m_LightmapIndex: 0
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 0.0996094, y: 0.0996094, z: 0.689822, w: 0.0860891}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -48137,6 +46906,17 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 1
+--- !u!114 &2512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce324d9a7ecbee54baaec85239d18df6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!124 &2513
 Behaviour:
   m_ObjectHideFlags: 0
@@ -48202,10 +46982,6 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 86c677f055a92054087c35863acd0f6a, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -48278,10 +47054,6 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 2ab567f8d7dc322499e91a0a2796d2bd, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -48353,10 +47125,6 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 2ab567f8d7dc322499e91a0a2796d2bd, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -48428,10 +47196,6 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: a18f0fb3b0132c14585dd80d7e32d5cb, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -48503,10 +47267,6 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: a18f0fb3b0132c14585dd80d7e32d5cb, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -48578,10 +47338,6 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 2ab567f8d7dc322499e91a0a2796d2bd, type: 2}
-  m_LightmapIndex: 65535
-  m_LightmapIndexDynamic: 65535
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -348658,17 +347414,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Background: {fileID: 2835}
---- !u!114 &2839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6851b2d56d6bb50ccf14f2b89020ec6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -349115,6 +347860,63 @@ MonoBehaviour:
   m_FadeDuration: 1
   m_Font: {fileID: 11409266, guid: 3189e9f581507b041980710f7e98b8db, type: 2}
   m_Font_Kor: {fileID: 11409266, guid: ca5e16983c9708546bcd0f16013e3214, type: 2}
+--- !u!1 &285999873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 285999875}
+  - component: {fileID: 285999874}
+  m_Layer: 0
+  m_Name: '!navmesh'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &285999874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 285999873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 23800000, guid: 3e9307082b444d74a8e75364ed42bd54, type: 2}
+--- !u!4 &285999875
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 285999873}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 28
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &900000000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -349127,7 +347929,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightmapIndex: 0
-  scaleOffset: {x: 0.0214844, y: 0.0214844, z: 5.45431E-05, w: 0.0870445}
+  scaleOffset: {x: 0.0214844, y: 0.0214844, z: 0.0000545431, w: 0.0870445}
 --- !u!114 &900000001
 MonoBehaviour:
   m_ObjectHideFlags: 0
