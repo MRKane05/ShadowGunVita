@@ -380,6 +380,7 @@ public class Mission : MonoBehaviour
 	private IEnumerator SendGameEvent_Corutine(string inEventName, GameEvents.E_State inState, float inDelay)
 	{
 		yield return new WaitForSeconds(inDelay);
+		Debug.Log("Sent Game Event: " + inEventName);
 		GameBlackboard.Instance.GameEvents.Update(inEventName, inState);
 	}
 }

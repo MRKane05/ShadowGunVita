@@ -29,6 +29,7 @@ public class TriggerGameEvent : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
+		Debug.Log("Entered Trigger");
 		if (CheckEnemyType != E_EnemyType.None)
 		{
 			if (other == null || other.GetComponent<Rigidbody>() == null || other.GetComponent<Rigidbody>().gameObject == null)

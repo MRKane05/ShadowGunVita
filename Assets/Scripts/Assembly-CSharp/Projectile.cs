@@ -123,7 +123,7 @@ public class Projectile : MonoBehaviour
 		Transform = GameObject.transform;
 
 		if (s_ProjectileMask == 0)
-			s_ProjectileMask = ~LayerMask.GetMask("Projectile", "TransparentFX");
+			s_ProjectileMask = ~LayerMask.GetMask("Projectile", "TransparentFX", "Ignore Raycast");
 		m_Renderer = GetComponent<Renderer>();
 	}
 

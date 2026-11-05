@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Game : MonoBehaviour
 {
@@ -628,7 +629,8 @@ public class Game : MonoBehaviour
 	public int GetUnlockedMission(int inDlc)
 	{
 		int num = 0;
-		num = ((inDlc != 0) ? PlayerPrefs.GetInt("MissionsUnlocked" + inDlc, 0) : PlayerPrefs.GetInt("MissionsUnlocked", 0));
+		//PROBLEM: Have hacked missions open on the menu select - Kano!
+		num = 9;// ((inDlc != 0) ? PlayerPrefs.GetInt("MissionsUnlocked" + inDlc, 0) : PlayerPrefs.GetInt("MissionsUnlocked", 0));
 		E_GameType e_GameType = E_GameType.SinglePlayer;
 		string text = PlayerPrefs.GetString(string.Concat(e_GameType, "Level"), string.Empty);
 		if (text != string.Empty)
@@ -740,11 +742,36 @@ public class Game : MonoBehaviour
 		yield return Resources.UnloadUnusedAssets();
 		yield return new WaitForEndOfFrame();
 		yield return new WaitForEndOfFrame();
-		Application.LoadLevel(scene);
+		//Application.LoadLevel(scene);
+		Debug.Log("Loading Scene: " + scene);
+		AsyncOperation operation = SceneManager.LoadSceneAsync(scene);
+		Canvas_GameExtras.Instance.UpdateLoadingBar(0.1f, true);
+		// Optional: Keep the scene from activating automatically when fully loaded
+		// operation.allowSceneActivation = false; 
+
+		// While the scene is still loading
+		while (!operation.isDone)
+		{
+			// Unity's operation.progress goes from 0.0 to 0.9. 
+			// The remaining 0.1 (0.9 to 1.0) is handled during scene activation.
+			// Clamping it divided by 0.9 maps the progress smoothly from 0% to 100%.
+			float progressValue = Mathf.Clamp01(operation.progress / 0.9f);
+			if (Canvas_GameExtras.Instance != null)
+			{
+				Canvas_GameExtras.Instance.UpdateLoadingBar(progressValue * 0.9f + 0.1f, true);
+			}
+
+
+			yield return null; // Wait until the next frame before updating again
+		}
+
+		Canvas_GameExtras.Instance.UpdateLoadingBar(1.0f, false);
+
 		GC.Collect(100);
 		yield return new WaitForEndOfFrame();
 		yield return new WaitForEndOfFrame();
 		yield return Resources.UnloadUnusedAssets();
+		Debug.Log("Unloaded Unused Assets");
 		GC.Collect(100);
 	}
 

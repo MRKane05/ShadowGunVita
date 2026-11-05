@@ -55,6 +55,7 @@ public class GameEvents
 
 	public bool Add(string name, E_State state)
 	{
+		Debug.Log("Added event: " + name);
 		if (_Names.Contains(name))
 		{
 			return false;
@@ -82,6 +83,7 @@ public class GameEvents
 			_States[num] = state;
 			if (Application.isPlaying && EventHandlers.ContainsKey(name))
 			{
+				Debug.Log("Event found, passing to Event Handlers: " + name);
 				EventHandlers[name](name, state);
 			}
 		}
