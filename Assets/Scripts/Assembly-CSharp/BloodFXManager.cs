@@ -100,6 +100,8 @@ public class BloodFXManager : MonoBehaviour
 			Instance = this;
 			InitMeshes();
 			m_AspectRatio = (float)Screen.width / (float)Screen.height;
+			Debug.LogError("blood FX Manager on: " + gameObject.name);
+
 		}
 	}
 
@@ -109,17 +111,23 @@ public class BloodFXManager : MonoBehaviour
 		{
 			return;
 		}
-		if ((bool)m_BloodOverlayMeshGOInst)
+		if ((bool)m_BloodOverlayMeshGOInst && bBloodPlaneParented)
 		{
 			Vector4 zero = Vector4.zero;
 			zero.x = m_CurrHealth * 0.8f;
 			zero.y = m_HeartBeatFreqScale;
-			m_BloodOverlayMeshGOInst.transform.position = Camera.main.transform.position;
+			//PROBLEM: The positioning of the blood overlay mesh could probably be done once at start, but I'd imagine there's main camera switching
+			//m_BloodOverlayMeshGOInst.transform.position = Camera.main.transform.position + Camera.main.transform.forward * 0.5f; //Offset this effect in front of the camera
+			//m_BloodOverlayMeshGOInst.transform.rotation = Camera.main.transform.rotation;
 			for (int i = 0; i < m_BloodOverlayMeshGOInst.GetComponent<Renderer>().materials.Length; i++)
 			{
 				m_BloodOverlayMeshGOInst.GetComponent<Renderer>().materials[i].SetVector("_Params", zero);
 			}
+		} else if (!bBloodPlaneParented)
+        {
+			ParentBloodPlane();
 		}
+
 		KillOldDecals();
 		UpdateHealthState();
 		if (m_DecalsVersion != m_BuffersVersion)
@@ -128,6 +136,8 @@ public class BloodFXManager : MonoBehaviour
 			m_BuffersVersion = m_DecalsVersion;
 		}
 	}
+
+	private bool bBloodPlaneParented = false;
 
 	private void InitMeshes()
 	{
@@ -146,6 +156,19 @@ public class BloodFXManager : MonoBehaviour
 			DebugUtils.Assert(m_BloodOverlayMeshGOInst);
 			DebugUtils.Assert(m_BloodOverlayMeshGameObj.GetComponent<Renderer>());
 			m_BloodOverlayMeshGOInst.transform.eulerAngles = new Vector3(45f, 45f, 45f);
+
+			ParentBloodPlane();
+		}
+	}
+
+	private void ParentBloodPlane()
+    {
+		if (Camera.main.transform.parent.name.ToLower().Contains("ingame"))
+		{
+			m_BloodOverlayMeshGOInst.transform.SetParent(Camera.main.transform);
+			m_BloodOverlayMeshGOInst.transform.localPosition = new Vector3(0, 0, 0.5f); //Small offset to put this in front of the camera
+			m_BloodOverlayMeshGOInst.transform.localEulerAngles = Vector3.zero;
+			bBloodPlaneParented = true;
 		}
 	}
 

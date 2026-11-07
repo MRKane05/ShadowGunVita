@@ -387,6 +387,13 @@ public class Turret : Agent, IHitZoneOwner
 		if (m_EnableShieldFX && !m_ShieldFXMeshRenderer)
 		{
 			Debug.LogWarning("Turrent has no 'hitbox' child");
+		} else
+        {
+			m_ShieldFXMeshRenderer.gameObject.SetActive(m_EnableShieldFX);
+			if (m_EnableShieldFX)
+            {
+				Debug.LogError("Usecase where turret shield is active. Shield needs addressed");
+            }
 		}
 		if (!boxCollider)
 		{
