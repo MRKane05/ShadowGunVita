@@ -33,9 +33,13 @@ public class AnimStateGoToByAnim : AnimState
 
 	public override void OnDeactivate()
 	{
-		if (Owner.NavMeshAgent.enabled)
+		// Unity 3.5's Stop() only halted the current path, and the next SetDestination moved the
+		// agent again. From Unity 5 on, Stop() sets isStopped, which SetDestination does NOT clear,
+		// so every later move played the run animation on the spot ("huffing"). Setting isStopped
+		// here and clearing it before each SetDestination restores the old behaviour.
+		if (Owner.NavMeshAgent.enabled && Owner.NavMeshAgent.isOnNavMesh)
 		{
-			Owner.NavMeshAgent.Stop();
+			Owner.NavMeshAgent.isStopped = true;
 		}
 		Owner.BlackBoard.MotionType = E_MotionType.None;
 		Owner.BlackBoard.Velocity = (Owner.BlackBoard.MoveDir = Vector3.zero);
@@ -122,6 +126,10 @@ public class AnimStateGoToByAnim : AnimState
 
 	private void InitializeMove()
 	{
+		if (Owner.NavMeshAgent.isOnNavMesh)
+		{
+			Owner.NavMeshAgent.isStopped = false; // see OnDeactivate
+		}
 		Owner.NavMeshAgent.SetDestination(Action.FinalPosition);
 		AnimName = Owner.AnimSet.GetMoveAnim();
 		CrossFade(AnimName, 0.2f, PlayMode.StopSameLayer);

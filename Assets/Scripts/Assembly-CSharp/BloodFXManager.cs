@@ -100,8 +100,6 @@ public class BloodFXManager : MonoBehaviour
 			Instance = this;
 			InitMeshes();
 			m_AspectRatio = (float)Screen.width / (float)Screen.height;
-			Debug.LogError("blood FX Manager on: " + gameObject.name);
-
 		}
 	}
 

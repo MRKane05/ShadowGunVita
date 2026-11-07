@@ -79,6 +79,11 @@ public class AnimState
 
 	protected virtual bool SetTargetLocation(Vector3 pos)
 	{
+		// Clear the stop set when the previous move ended (Unity 5+ no longer does this itself).
+		if (Owner.NavMeshAgent.isOnNavMesh)
+		{
+			Owner.NavMeshAgent.isStopped = false;
+		}
 		return Owner.NavMeshAgent.SetDestination(pos);
 	}
 

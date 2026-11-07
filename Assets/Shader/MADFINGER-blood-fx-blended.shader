@@ -38,6 +38,7 @@ Properties {
 				fixed4 c = tex2D(_MainTex, i.uv);
 				float health = saturate(_Params.x / 0.8);
 				float hurt = saturate(1.0 - health);
+				//hurt = 0.5;
 				// gentle pulse while hurt; _Params.y is the heartbeat rate
 				float pulse = 1.0 + 0.15 * sin(_Time.y * max(_Params.y, 0.0001) * 6.2831853);
 				c.rgb += _ColorBooster.rgb * hurt;
