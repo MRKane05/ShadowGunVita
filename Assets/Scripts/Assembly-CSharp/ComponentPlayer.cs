@@ -214,9 +214,10 @@ public class ComponentPlayer : MonoBehaviour
 				}
 				else if (num > 0f)
 				{
+					// Measured along the cover, so sideways drift off the wall can't keep this open.
 					Vector3 rightEdge = Owner.BlackBoard.Cover.RightEdge;
 					rightEdge.y = Owner.Position.y;
-					if ((Owner.Position - rightEdge).magnitude > 0.01f)
+					if (Vector3.Dot(rightEdge - Owner.Position, Owner.BlackBoard.Cover.Right) > 0.01f)
 					{
 						flag = true;
 					}
@@ -225,7 +226,7 @@ public class ComponentPlayer : MonoBehaviour
 				{
 					Vector3 leftEdge = Owner.BlackBoard.Cover.LeftEdge;
 					leftEdge.y = Owner.Position.y;
-					if ((Owner.Position - leftEdge).magnitude > 0.01f)
+					if (Vector3.Dot(leftEdge - Owner.Position, Owner.BlackBoard.Cover.Left) > 0.01f)
 					{
 						flag = true;
 					}

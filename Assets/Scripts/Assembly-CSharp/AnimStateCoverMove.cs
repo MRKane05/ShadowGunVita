@@ -27,7 +27,7 @@ public class AnimStateCoverMove : AnimState
 			{
 				Vector3 leftEdge = Owner.BlackBoard.Cover.LeftEdge;
 				leftEdge.y = Owner.Position.y;
-				if ((leftEdge - Owner.Position).magnitude < 0.02f)
+				if (Mathf.Abs(Vector3.Dot(leftEdge - Owner.Position, Owner.BlackBoard.Cover.Left)) < 0.02f)
 				{
 					Owner.Transform.position = leftEdge;
 					Owner.BlackBoard.CoverPosition = E_CoverDirection.Left;
@@ -38,7 +38,7 @@ public class AnimStateCoverMove : AnimState
 			{
 				Vector3 rightEdge = Owner.BlackBoard.Cover.RightEdge;
 				rightEdge.y = Owner.Position.y;
-				if ((rightEdge - Owner.Position).magnitude < 0.02f)
+				if (Mathf.Abs(Vector3.Dot(rightEdge - Owner.Position, Owner.BlackBoard.Cover.Right)) < 0.02f)
 				{
 					Owner.Transform.position = rightEdge;
 					Owner.BlackBoard.CoverPosition = E_CoverDirection.Right;
@@ -137,18 +137,31 @@ public class AnimStateCoverMove : AnimState
 		return false;
 	}
 
+	// The original test stopped only when the straight-line distance to the edge dropped below
+	// one frame's step (a few millimetres). It relied on the player sitting exactly on the cover
+	// line. In Unity 2018 the CharacterController gets pushed off the wall slightly every frame
+	// (AnimComponent nudges it up/down and PhysX 3 resolves the wall contact), so that distance
+	// never got small enough and the player slid past either edge. Now the player is held on the
+	// cover line and the stop is measured along the cover only.
 	protected bool Move()
 	{
-		Vector3 vector = ((Action.Direction != AgentActionCoverMove.E_Direction.Left) ? Owner.BlackBoard.Cover.RightEdge : Owner.BlackBoard.Cover.LeftEdge);
-		vector.y = Owner.Position.y;
-		float magnitude = (vector - Owner.Position).magnitude;
+		Cover cover = Owner.BlackBoard.Cover;
+		Vector3 vector = ((Action.Direction != AgentActionCoverMove.E_Direction.Left) ? cover.RightEdge : cover.LeftEdge);
+		Vector3 position = Owner.Position;
+		vector.y = position.y;
+		Vector3 onLine = cover.GetNearestPointOnCover(position);
+		onLine.y = position.y;
+		Vector3 direction = MoveDirection;
+		direction.y = 0f;
+		direction.Normalize();
+		float remaining = Vector3.Dot(vector - onLine, direction);
 		float num = Owner.BlackBoard.Speed * Time.deltaTime;
-		if (magnitude < num)
+		if (remaining <= num)
 		{
 			Transform.position = vector;
 			return false;
 		}
-		Transform.position += MoveDirection * num;
+		Transform.position = onLine + direction * num;
 		return true;
 	}
 
