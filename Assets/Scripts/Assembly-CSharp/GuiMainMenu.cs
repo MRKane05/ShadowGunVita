@@ -1056,7 +1056,7 @@ public class GuiMainMenu : MonoBehaviour
 		yield return new WaitForSeconds(1f);
 		if (m_LevelIdx == -1 && m_Dlc == 0)
 		{
-			Game.PauseScreenTimeout(120f);
+			Game.PauseScreenTimeout(240f); // the intro runs 3:47
 			yield return StartCoroutine(FullScreenVideo.Play("introHD.mp4"));
 			ChangeState(E_MenuState.E_MS_LOADING);
 			yield return new WaitForEndOfFrame();

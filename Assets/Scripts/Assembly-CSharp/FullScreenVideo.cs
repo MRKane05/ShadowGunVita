@@ -38,13 +38,42 @@ public static class FullScreenVideo
 		PSVitaMovieEventListener listener = vitaGo.AddComponent<PSVitaMovieEventListener>();
 		listener.Texture = vitaTexture;
 
+		// "Raw/" is the iOS StreamingAssets folder. On Vita, StreamingAssets ship in
+		// Media/StreamingAssets, which Application.streamingAssetsPath points at.
+		string path = Application.streamingAssetsPath + "/" + fileName;
+		Debug.Log("[VIDEO] playing " + path + " (file found: " + File.Exists(path) + ")");
+
 		PSVitaVideoPlayer.Init(vitaTexture);
-		PSVitaVideoPlayer.Play("Raw/" + fileName, PSVitaVideoPlayer.Looping.None, PSVitaVideoPlayer.Mode.RenderToTexture);
-		while (listener.IsPlaying && !Skipped())
+		PSVitaVideoPlayer.Play(path, PSVitaVideoPlayer.Looping.None, PSVitaVideoPlayer.Mode.RenderToTexture);
+		float startTime = Time.realtimeSinceStartup;
+		string endReason = "movie finished";
+		while (listener.IsPlaying)
 		{
 			PSVitaVideoPlayer.Update();
+			float elapsed = Time.realtimeSinceStartup - startTime;
+			// Ignore input for the first half second so the menu press that started the
+			// game can't skip the movie straight away.
+			if (elapsed > 0.5f && Skipped())
+			{
+				endReason = "skipped by player";
+				break;
+			}
+			// No event at all from the player means it never opened the file: give up
+			// rather than sit on a black screen.
+			if (!listener.AnyEvent && elapsed > NoEventTimeout)
+			{
+				endReason = "no response from video player after " + NoEventTimeout + " s";
+				break;
+			}
+			// Safety cap in case the stop event never arrives.
+			if (elapsed > MaxPlayTime)
+			{
+				endReason = "safety cap of " + MaxPlayTime + " s reached";
+				break;
+			}
 			yield return null;
 		}
+		Debug.Log(string.Concat("[VIDEO] ended: ", endReason, " after ", (Time.realtimeSinceStartup - startTime).ToString("F1"), " s"));
 		PSVitaVideoPlayer.Stop();
 		Object.Destroy(vitaGo);
 		vitaTexture.Release();
@@ -95,6 +124,13 @@ public static class FullScreenVideo
 #endif
 	}
 
+#if UNITY_PSP2
+	private const float NoEventTimeout = 10f;
+
+	// introHD.mp4 runs 3:47; the cap only matters if the stop event never arrives.
+	private const float MaxPlayTime = 260f;
+#endif
+
 	private static bool Skipped()
 	{
 		return Input.anyKeyDown || Input.touchCount > 0;
@@ -106,10 +142,13 @@ public static class FullScreenVideo
 	private class PSVitaMovieEventListener : MonoBehaviour
 	{
 		public bool IsPlaying = true;
+		public bool AnyEvent;
 		public RenderTexture Texture;
 
 		private void OnMovieEvent(int eventID)
 		{
+			AnyEvent = true;
+			Debug.Log("[VIDEO] event " + (PSVitaVideoPlayer.MovieEvent)eventID + " (" + eventID + ")");
 			if ((PSVitaVideoPlayer.MovieEvent)eventID == PSVitaVideoPlayer.MovieEvent.STOP)
 			{
 				IsPlaying = false;
@@ -120,7 +159,10 @@ public static class FullScreenVideo
 		{
 			Rect fullScreen = new Rect(0f, 0f, Screen.width, Screen.height);
 			GUI.DrawTexture(fullScreen, Texture2D.blackTexture);
-			GUI.DrawTexture(fullScreen, Texture, ScaleMode.ScaleToFit, false);
+			// The Vita video player writes frames top-down, but Unity draws textures
+			// bottom-up, so draw it with the V coordinate flipped. The texture is
+			// screen-sized, so no aspect fitting is needed.
+			GUI.DrawTextureWithTexCoords(fullScreen, Texture, new Rect(0f, 1f, 1f, -1f));
 		}
 	}
 #endif
