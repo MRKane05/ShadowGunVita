@@ -14,6 +14,7 @@ Properties {
 		Tags { "Queue"="Overlay" "IgnoreProjector"="True" "RenderType"="Transparent" }
 		LOD 100
 		Blend SrcAlpha OneMinusSrcAlpha
+		//Blend DstColor Zero
 		ZWrite Off
 		ZTest Always
 		Cull Off
@@ -41,8 +42,9 @@ Properties {
 				//hurt = 0.5;
 				// gentle pulse while hurt; _Params.y is the heartbeat rate
 				float pulse = 1.0 + 0.15 * sin(_Time.y * max(_Params.y, 0.0001) * 6.2831853);
-				c.rgb += _ColorBooster.rgb * hurt;
+				//c.rgb += _ColorBooster.rgb * hurt;
 				c.a *= hurt * pulse;
+				//c.rgb = lerp(fixed3(1, 1, 1), c.rgb, hurt * c.a);
 				return c;
 			}
 			ENDCG

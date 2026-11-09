@@ -13,6 +13,7 @@ Properties {
 		Tags { "Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent" }
 		LOD 200
 		Blend DstColor Zero
+		//Blend SrcAlpha OneMinusSrcAlpha
 		ZWrite Off
 		Offset -1, -1
 		Cull Off

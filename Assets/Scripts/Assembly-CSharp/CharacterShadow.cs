@@ -152,12 +152,12 @@ public class CharacterShadow : MonoBehaviour
 			vector.w = m_PelvisAOSphereRadius;
 			Vector4 vector2 = default(Vector4);
 			vector2.x = zero2.x;
-			vector2.y = zero2.y + m_FootAOSphereRadius * 0.8f;
+			vector2.y = zero2.y;// + m_FootAOSphereRadius * 0.8f;
 			vector2.z = zero2.z;
 			vector2.w = m_FootAOSphereRadius;
 			Vector4 vector3 = default(Vector4);
 			vector3.x = zero3.x;
-			vector3.y = zero3.y + m_FootAOSphereRadius * 0.8f;
+			vector3.y = zero3.y;// + m_FootAOSphereRadius * 0.8f;
 			vector3.z = zero3.z;
 			vector3.w = m_FootAOSphereRadius;
 			material.SetVector("_Sphere0", vector);

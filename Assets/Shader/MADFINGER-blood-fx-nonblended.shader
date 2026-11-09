@@ -1,7 +1,8 @@
 Shader "MADFINGER/FX/Blood FX nonblended" {
 Properties {
- _Params ("Params", Vector) = (0,1,0,0)
- _Color ("Color", Color) = (0,0,0,0)
+	 _MainTex("Main Tex", 2D) = "white" {}
+	 _Params ("Params", Vector) = (0,1,0,0)
+	 _ColorBooster("Color", Color) = (0,0,0,0)
 }
 	// Reconstructed. BloodFXManager drives this every frame with
 	//   _Params.x = currentHealth * 0.8   (so 0.8 == full health, 0 == dead)
@@ -36,7 +37,7 @@ Properties {
 			fixed4 frag(v2f i) : SV_Target {
 				fixed4 c = tex2D(_MainTex, i.uv);
 				float health = saturate(_Params.x / 0.8);
-				float hurt = saturate(1.0 - health);
+				float hurt = 0;// saturate(1.0 - health);
 				// gentle pulse while hurt; _Params.y is the heartbeat rate
 				float pulse = 1.0 + 0.15 * sin(_Time.y * max(_Params.y, 0.0001) * 6.2831853);
 				c.rgb += _ColorBooster.rgb * hurt;
