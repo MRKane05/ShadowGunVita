@@ -74,6 +74,26 @@ public class GameCamera : MonoBehaviour
 	{
 		DisabledTime = 0f;
 		IgnoredCollider = Player.Instance.Owner.CharacterController;
+
+		SetupPlayerCamera();
+
+	}
+
+	void SetupPlayerCamera()
+    {
+		if (!CameraBehaviour)   //Try to get this based off of what we know
+		{
+			if (Player.Instance)
+			{
+				if (Player.Instance.gameObject.GetComponent<CameraBehaviour>() != null)
+				{
+					CameraBehaviour = Player.Instance.gameObject.GetComponent<CameraBehaviour>();
+					//desiredCameraTransform = CameraBehaviour.GetDesiredCameraTransform();
+					//We can get our head location from our player setup too
+					CameraOrigin = Player.Instance.gameObject.GetComponent<AgentHuman>().TransformEye;
+				}
+			}
+		}
 	}
 
 	private void LateUpdate()

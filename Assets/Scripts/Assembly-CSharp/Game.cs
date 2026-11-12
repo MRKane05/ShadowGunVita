@@ -244,7 +244,7 @@ public class Game : MonoBehaviour
 
 	private string _CurrentLevel;
 
-	private int _CurrentGameZone;
+	public int _CurrentGameZone;
 
 	private int _Score;
 
@@ -630,7 +630,7 @@ public class Game : MonoBehaviour
 	{
 		int num = 0;
 		//PROBLEM: Have hacked missions open on the menu select - Kano!
-		num = 10;// ((inDlc != 0) ? PlayerPrefs.GetInt("MissionsUnlocked" + inDlc, 0) : PlayerPrefs.GetInt("MissionsUnlocked", 0));
+		num = 11;// ((inDlc != 0) ? PlayerPrefs.GetInt("MissionsUnlocked" + inDlc, 0) : PlayerPrefs.GetInt("MissionsUnlocked", 0));
 		E_GameType e_GameType = E_GameType.SinglePlayer;
 		string text = PlayerPrefs.GetString(string.Concat(e_GameType, "Level"), string.Empty);
 		if (text != string.Empty)

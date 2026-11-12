@@ -4,7 +4,7 @@ using UnityEngine;
 
 [AddComponentMenu("Interaction/Damage Switch")]
 [RequireComponent(typeof(BoxCollider))]
-public class DamageSwitch : MonoBehaviour, IGameZoneControledObject
+public class DamageSwitch : MonoBehaviour, IGameZoneControledObject, IProjectileHitReceiver
 {
 	public enum E_State
 	{

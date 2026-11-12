@@ -28,7 +28,7 @@ public class Mission : MonoBehaviour
 
 	public int LeaderBoardID;
 
-	[NonSerialized]
+	//[NonSerialized]
 	public GameZoneBaze CurrentGameZone;
 
 	public static Mission Instance;
@@ -121,6 +121,14 @@ public class Mission : MonoBehaviour
 	private IEnumerator PrepareForStart()
 	{
 		StartGui();
+		// Move the (still inactive) player to the start zone's spawn point BEFORE re-activating it.
+		// Otherwise its CharacterController comes back at wherever the player object was placed in
+		// the scene, and if that is inside another zone's trigger box, that zone's OnTriggerEnter
+		// enables it and takes over as the current zone (e.g. level_05 starting in zone 07).
+		Transform spawn = CurrentGameZone.PlayerSpawn.Transform;
+		Player.Instance.Owner.Transform.position = spawn.position;
+		Player.Instance.Owner.Transform.rotation = spawn.rotation;
+		Physics.SyncTransforms();
 		Player.Instance.Owner.GameObject.SetActiveRecursively(true);
 		Player.Instance.Owner.SendMessage("Activate", CurrentGameZone.PlayerSpawn);
 		Player.Instance.Owner.WeaponComponent.Initialize();

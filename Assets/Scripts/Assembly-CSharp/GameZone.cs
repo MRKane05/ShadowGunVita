@@ -290,10 +290,15 @@ public class GameZone : GameZoneBaze
 		for (int num2 = InteractionObjects.Length - 1; num2 >= 0; num2--)
 		{
 			InteractionObject interactionObject = InteractionObjects[num2];
+			
 			if (interactionObject.IsActive && (interactionObject.Position - center).sqrMagnitude < num)
 			{
+				Debug.Log("Interaction object in range");
 				return true;
-			}
+			} else if (interactionObject.IsActive)
+            {
+				//Debug.Log((interactionObject.Position - center).sqrMagnitude);
+            }
 		}
 		return false;
 	}

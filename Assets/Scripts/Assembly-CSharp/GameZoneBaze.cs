@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+[SerializeField]
 public class GameZoneBaze : MonoBehaviour
 {
 	public SpawnPointPlayer PlayerSpawn;
