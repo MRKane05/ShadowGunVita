@@ -53,6 +53,8 @@ public class MusicManager : MonoBehaviour
 	{
 		Instance = this;
 		Audio = base.GetComponent<AudioSource>();
+
+
 	}
 
 	private void Start()

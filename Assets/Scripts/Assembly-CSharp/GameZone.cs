@@ -180,6 +180,16 @@ public class GameZone : GameZoneBaze
 		if (!SpecialObjects.Contains(inObject))
 		{
 			SpecialObjects.Add(inObject);
+			// Objects normally register in Awake at level load and get Enable() when the zone starts.
+			// Some only wake up later: e.g. Drill.Awake deactivates its own hierarchy except the
+			// ObjectDamage children. In Unity 3.x those children stayed active; from Unity 4 on they go
+			// inactive with their parent, so their Awake (and this registration) only happens once the
+			// drill is switched on mid-zone - after Enable() was already sent, leaving them disabled
+			// (ObjectDamage.AllEventsAreOn stuck false). Enable late joiners of the running zone now.
+			if (State == E_State.E_IN_PROGRESS && Mission.Instance != null && Mission.Instance.CurrentGameZone == this)
+			{
+				inObject.Enable();
+			}
 		}
 	}
 
