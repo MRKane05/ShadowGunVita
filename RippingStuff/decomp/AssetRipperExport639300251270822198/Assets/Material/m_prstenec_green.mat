@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: m_prstenec_green
+  m_Shader: {fileID: 4800000, guid: f21be4e8e8d6d4a4c9a621ffd8f534cf, type: 3}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 2800000, guid: e77b5d87110e7974b99b907fe570355c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: _FadeOutDistNear
+      second: 1
+    - first:
+        name: _FadeOutDistFar
+      second: 100
+    - first:
+        name: _Multiplier
+      second: 1
+    - first:
+        name: _Bias
+      second: 0.5
+    - first:
+        name: _TimeOnDuration
+      second: 0.5
+    - first:
+        name: _TimeOffDuration
+      second: 0.2
+    - first:
+        name: _BlinkingTimeOffsScale
+      second: 1
+    - first:
+        name: _SizeGrowStartDist
+      second: 1
+    - first:
+        name: _SizeGrowEndDist
+      second: 35
+    - first:
+        name: _MaxGrowSize
+      second: 0
+    - first:
+        name: _NoiseAmount
+      second: 0.5
+    - first:
+        name: _VerticalBillboarding
+      second: 1
+    m_Colors:
+    - first:
+        name: _Color
+      second: {r: 0.38405314, g: 0.76119405, b: 0.18745822, a: 1}

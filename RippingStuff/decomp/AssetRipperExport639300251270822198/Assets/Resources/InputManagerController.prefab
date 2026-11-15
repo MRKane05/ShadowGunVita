@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1788532861281675}
+  m_IsPrefabParent: 1
+  m_IsExploded: 0
+--- !u!1 &1788532861281675
+GameObject:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - 4: {fileID: 4803833654740739}
+  - 114: {fileID: 114503126389886509}
+  m_Layer: 0
+  m_Name: InputManagerController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4803833654740739
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1788532861281675}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -220.9338, y: 227.4869, z: -606.5896}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &114503126389886509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1788532861281675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 388d345af733989d97e3dd8375fc8f81, type: 3}
+  m_Name:
+  inputManagerLogo: {fileID: 2800000, guid: e182d44590e1c1d449c42c530e4c41aa, type: 3}
+  DescriptionString: 2edb00002fdb000035db000031db000032db000030db000033db000034db000036db000037db000038db000039db0000
+  isInput:
+  isInputDown:
+  isInputUp:
+  OurSkin: {fileID: 11400000, guid: f8b4692e4008e8d448fb0db862cc90d8, type: 2}
+  OurSkin_Korean: {fileID: 11400000, guid: c3859f23bf4a8fa4096a8eb880a540ad, type: 2}
