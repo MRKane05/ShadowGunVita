@@ -1,3 +1,5 @@
+// Rebuilt from the shipped Shadowgun 1.3.5 (Unity 3.5.7) GLES2 programs by Tools/ShaderPort/sg_glsl2hlsl.py.
+// Exact transliteration of the original maths; edit the generator rather than this file where possible.
 Shader "MADFINGER/Environment/Scroll 2 Layers Multiplicative No Lightmap Sine2)" {
 Properties {
  _MainTex ("Base layer (RGB)", 2D) = "white" {}
@@ -16,62 +18,127 @@ Properties {
  _SineFreqY2 ("2nd layer sine freq Y", Float) = 10
  _MMultiplier ("Layer Multiplier", Float) = 2
 }
-	// Reconstructed: the exporter left a stub using a *lit* Lambert surface shader.
-	// This game bakes its lighting and has almost no runtime lights, so that rendered
-	// nearly black. The name says Unlit/Lightmap, so this samples the base texture and
-	// modulates it by the baked lightmap instead.
-	// Vertex colour is deliberately NOT used: 421 of 561 meshes have no colour channel,
-	// and reading it there yields zero, which made geometry vanish.
-	// Scrolling uses _Time.x (t/20), not _Time.y (t): _ScrollX 0.5 on the sky meant half
-	// a UV per second, which span far too fast.
-	SubShader {
-		Tags { "RenderType"="Opaque" }
-		LOD 200
-		Lighting Off
-		Pass {
-			CGPROGRAM
-			#pragma vertex vert
-			#pragma fragment frag
-			#pragma multi_compile _ LIGHTMAP_ON
-			#include "UnityCG.cginc"
-			sampler2D _MainTex;
-			float4 _MainTex_ST;
-			sampler2D _DetailTex;
-			float4 _DetailTex_ST;
-			float _ScrollX;
-			float _ScrollY;
-			float _Scroll2X;
-			float _Scroll2Y;
-			float _MMultiplier;
-			struct v2f {
-				float4 pos : SV_POSITION;
-				float2 uv : TEXCOORD0;
-				float2 uv2 : TEXCOORD1;
-				float2 lmuv : TEXCOORD2;
-			};
-			v2f vert(appdata_full v) {
-				v2f o;
-				o.pos = UnityObjectToClipPos(v.vertex);
-				o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
-				o.uv += float2(_ScrollX, _ScrollY) * _Time.x;
-				o.uv2 = TRANSFORM_TEX(v.texcoord, _DetailTex);
-				o.uv2 += float2(_Scroll2X, _Scroll2Y) * _Time.x;
-				o.lmuv = v.texcoord1.xy * unity_LightmapST.xy + unity_LightmapST.zw;
-				return o;
-			}
-			fixed4 frag(v2f i) : SV_Target {
-				fixed4 c = tex2D(_MainTex, i.uv);
-				fixed4 dt = tex2D(_DetailTex, i.uv2);
-				c.rgb *= dt.rgb * _MMultiplier;
-				#ifdef LIGHTMAP_ON
-				c.rgb *= UNITY_SAMPLE_TEX2D(unity_Lightmap, i.lmuv).rgb * 2.0;   // dLDR: the game's own
-				// recovered Mobile-Lightmap-Unlit shader does 'combine texture * previous double',
-				// i.e. a plain sample x2. DecodeLightmap() assumes RGBM and shifted colours blue.
-				#endif
-				return c;
-			}
-			ENDCG
-		}
-	}
-	Fallback "Unlit/Texture"
+SubShader { 
+ LOD 100
+ Tags { "QUEUE"="Transparent" "IGNOREPROJECTOR"="True" "RenderType"="Transparent" }
+ Pass {
+  Tags { "QUEUE"="Transparent" "IGNOREPROJECTOR"="True" "RenderType"="Transparent" }
+  ZWrite Off
+  Cull Off
+  Fog {
+   Color (0,0,0,0)
+  }
+  Blend One One
+CGPROGRAM
+  #pragma vertex vert
+  #pragma fragment frag
+  #pragma multi_compile _ LIGHTMAP_ON
+  #include "UnityCG.cginc"
+  sampler2D _DetailTex;
+  float4 _DetailTex_ST;
+  float _MMultiplier;
+  sampler2D _MainTex;
+  float4 _MainTex_ST;
+  float _Scroll2X;
+  float _Scroll2Y;
+  float _ScrollX;
+  float _ScrollY;
+  float _SineAmplX;
+  float _SineAmplX2;
+  float _SineAmplY;
+  float _SineAmplY2;
+  float _SineFreqX;
+  float _SineFreqX2;
+  float _SineFreqY;
+  float _SineFreqY2;
+  #if defined(LIGHTMAP_ON)
+  struct sg_appdata {
+    float4 vertex : POSITION;
+    float4 color : COLOR;
+    float4 texcoord : TEXCOORD0;
+  };
+  struct sg_v2f {
+    float4 pos : SV_POSITION;
+    half4 xlv_TEXCOORD1 : TEXCOORD1;
+    float4 xlv_TEXCOORD0 : TEXCOORD0;
+  };
+  sg_v2f vert (sg_appdata v)
+  {
+    sg_v2f o;
+    UNITY_INITIALIZE_OUTPUT(sg_v2f, o);
+    float4 tmpvar_1;
+    half4 tmpvar_2;
+    float2 tmpvar_3;
+    tmpvar_3.x = _ScrollX;
+    tmpvar_3.y = _ScrollY;
+    tmpvar_1.xy = (((v.texcoord.xy * _MainTex_ST.xy) + _MainTex_ST.zw) + frac((tmpvar_3 * _Time.xy)));
+    float2 tmpvar_4;
+    tmpvar_4.x = _Scroll2X;
+    tmpvar_4.y = _Scroll2Y;
+    tmpvar_1.zw = (((v.texcoord.xy * _DetailTex_ST.xy) + _DetailTex_ST.zw) + frac((tmpvar_4 * _Time.xy)));
+    tmpvar_1.x = (tmpvar_1.x + (sin((_Time * _SineFreqX)) * _SineAmplX).x);
+    tmpvar_1.y = (tmpvar_1.y + (sin((_Time * _SineFreqY)) * _SineAmplY).x);
+    tmpvar_1.z = (tmpvar_1.z + (sin((_Time * _SineFreqX2)) * _SineAmplX2).x);
+    tmpvar_1.w = (tmpvar_1.w + (sin((_Time * _SineFreqY2)) * _SineAmplY2).x);
+    float4 tmpvar_5;
+    tmpvar_5 = (((float4)_MMultiplier) * v.color.w);
+    tmpvar_2 = tmpvar_5;
+    o.pos = (UnityObjectToClipPos(v.vertex));
+    o.xlv_TEXCOORD0 = tmpvar_1;
+    o.xlv_TEXCOORD1 = tmpvar_2;
+    return o;
+  }
+  fixed4 frag (sg_v2f i) : SV_Target
+  {
+    fixed4 sg_FragColor = 0;
+    sg_FragColor = ((tex2D(_MainTex, i.xlv_TEXCOORD0.xy) * tex2D(_DetailTex, i.xlv_TEXCOORD0.zw)) * i.xlv_TEXCOORD1);
+    return sg_FragColor;
+  }
+  #else
+  struct sg_appdata {
+    float4 vertex : POSITION;
+    float4 color : COLOR;
+    float4 texcoord : TEXCOORD0;
+  };
+  struct sg_v2f {
+    float4 pos : SV_POSITION;
+    half4 xlv_TEXCOORD1 : TEXCOORD1;
+    float4 xlv_TEXCOORD0 : TEXCOORD0;
+  };
+  sg_v2f vert (sg_appdata v)
+  {
+    sg_v2f o;
+    UNITY_INITIALIZE_OUTPUT(sg_v2f, o);
+    float4 tmpvar_1;
+    half4 tmpvar_2;
+    float2 tmpvar_3;
+    tmpvar_3.x = _ScrollX;
+    tmpvar_3.y = _ScrollY;
+    tmpvar_1.xy = (((v.texcoord.xy * _MainTex_ST.xy) + _MainTex_ST.zw) + frac((tmpvar_3 * _Time.xy)));
+    float2 tmpvar_4;
+    tmpvar_4.x = _Scroll2X;
+    tmpvar_4.y = _Scroll2Y;
+    tmpvar_1.zw = (((v.texcoord.xy * _DetailTex_ST.xy) + _DetailTex_ST.zw) + frac((tmpvar_4 * _Time.xy)));
+    tmpvar_1.x = (tmpvar_1.x + (sin((_Time * _SineFreqX)) * _SineAmplX).x);
+    tmpvar_1.y = (tmpvar_1.y + (sin((_Time * _SineFreqY)) * _SineAmplY).x);
+    tmpvar_1.z = (tmpvar_1.z + (sin((_Time * _SineFreqX2)) * _SineAmplX2).x);
+    tmpvar_1.w = (tmpvar_1.w + (sin((_Time * _SineFreqY2)) * _SineAmplY2).x);
+    float4 tmpvar_5;
+    tmpvar_5 = (((float4)_MMultiplier) * v.color.w);
+    tmpvar_2 = tmpvar_5;
+    o.pos = (UnityObjectToClipPos(v.vertex));
+    o.xlv_TEXCOORD0 = tmpvar_1;
+    o.xlv_TEXCOORD1 = tmpvar_2;
+    return o;
+  }
+  fixed4 frag (sg_v2f i) : SV_Target
+  {
+    fixed4 sg_FragColor = 0;
+    sg_FragColor = ((tex2D(_MainTex, i.xlv_TEXCOORD0.xy) * tex2D(_DetailTex, i.xlv_TEXCOORD0.zw)) * i.xlv_TEXCOORD1);
+    return sg_FragColor;
+  }
+  #endif
+  ENDCG
+ }
+}
 }
