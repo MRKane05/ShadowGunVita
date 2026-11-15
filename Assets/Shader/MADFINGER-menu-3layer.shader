@@ -1,3 +1,5 @@
+// Rebuilt from the shipped Shadowgun 1.3.5 (Unity 3.5.7) GLES2 programs by Tools/ShaderPort/sg_glsl2hlsl.py.
+// Exact transliteration of the original maths; edit the generator rather than this file where possible.
 Shader "MADFINGER/FX/Menu - 3 layers" {
 Properties {
  _BaseTex ("Base layer", 2D) = "white" {}
@@ -8,60 +10,99 @@ Properties {
  _ScrollAdd ("Add layer scroll speed ", Vector) = (0,0,0,0)
  _Multiplier ("Multiplier", Float) = 1
 }
-	// Reconstructed body: the original shader code was not recovered by the
-	// exporter, which left a //DummyShaderTextExporter stub that sampled an
-	// undeclared _MainTex and rendered flat. The Properties block above and the
-	// values in menubg.mat describe the real interface, so this reimplements the
-	// obvious reading of it: three scrolling layers composited base*mul + add.
-	SubShader{
-		Tags { "RenderType" = "Opaque" }
-		LOD 200
-
-		Pass {
-			CGPROGRAM
-			#pragma vertex vert
-			#pragma fragment frag
-			#include "UnityCG.cginc"
-
-			sampler2D _BaseTex;
-			sampler2D _MulTex;
-			sampler2D _AddTex;
-			float4 _BaseTex_ST;
-			float4 _MulTex_ST;
-			float4 _AddTex_ST;
-			float4 _ScrollBase;
-			float4 _ScrollMul;
-			float4 _ScrollAdd;
-			float _Multiplier;
-
-			struct v2f {
-				float4 pos : SV_POSITION;
-				float2 uvBase : TEXCOORD0;
-				float2 uvMul : TEXCOORD1;
-				float2 uvAdd : TEXCOORD2;
-			};
-
-			v2f vert(appdata_base v)
-			{
-				v2f o;
-				o.pos = UnityObjectToClipPos(v.vertex);
-				o.uvBase = TRANSFORM_TEX(v.texcoord, _BaseTex) + _ScrollBase.xy * _Time.y;
-				o.uvMul  = TRANSFORM_TEX(v.texcoord, _MulTex)  + _ScrollMul.xy  * _Time.y;
-				o.uvAdd  = TRANSFORM_TEX(v.texcoord, _AddTex)  + _ScrollAdd.xy  * _Time.y;
-				return o;
-			}
-
-			fixed4 frag(v2f i) : SV_Target
-			{
-				fixed4 b = tex2D(_BaseTex, i.uvBase);
-				fixed4 m = tex2D(_MulTex, i.uvMul);
-				fixed4 a = tex2D(_AddTex, i.uvAdd);
-				fixed4 c = b * m * _Multiplier + a;
-				c.a = 1;
-				return c;
-			}
-			ENDCG
-		}
-	}
-	Fallback "Unlit/Texture"
+SubShader { 
+ LOD 100
+ Tags { "RenderType"="Transparent" }
+ Pass {
+  Tags { "RenderType"="Transparent" }
+  Fog { Mode Off }
+  Blend SrcAlpha OneMinusSrcAlpha
+CGPROGRAM
+  #pragma vertex vert
+  #pragma fragment frag
+  #pragma multi_compile _ LIGHTMAP_ON
+  #include "UnityCG.cginc"
+  sampler2D _AddTex;
+  sampler2D _BaseTex;
+  sampler2D _MulTex;
+  float _Multiplier;
+  float4 _ScrollAdd;
+  float4 _ScrollBase;
+  float4 _ScrollMul;
+  #if defined(LIGHTMAP_ON)
+  struct sg_appdata {
+    float4 vertex : POSITION;
+    float4 color : COLOR;
+    float4 texcoord : TEXCOORD0;
+  };
+  struct sg_v2f {
+    float4 pos : SV_POSITION;
+    half4 xlv_TEXCOORD2 : TEXCOORD2;
+    float2 xlv_TEXCOORD1 : TEXCOORD1;
+    float4 xlv_TEXCOORD0 : TEXCOORD0;
+  };
+  sg_v2f vert (sg_appdata v)
+  {
+    sg_v2f o;
+    UNITY_INITIALIZE_OUTPUT(sg_v2f, o);
+    half4 tmpvar_1;
+    float4 tmpvar_2;
+    tmpvar_2.xy = (v.texcoord.xy + frac((_ScrollBase.xy * _Time.xy)));
+    tmpvar_2.zw = (v.texcoord.xy + frac((_ScrollMul.xy * _Time.xy)));
+    tmpvar_1 = v.color;
+    float3 tmpvar_3;
+    tmpvar_3 = (v.color.xyz * _Multiplier);
+    tmpvar_1.xyz = tmpvar_3;
+    o.pos = (UnityObjectToClipPos(v.vertex));
+    o.xlv_TEXCOORD0 = tmpvar_2;
+    o.xlv_TEXCOORD1 = (v.texcoord.xy + frac((_ScrollAdd.xy * _Time.xy)));
+    o.xlv_TEXCOORD2 = tmpvar_1;
+    return o;
+  }
+  fixed4 frag (sg_v2f i) : SV_Target
+  {
+    fixed4 sg_FragColor = 0;
+    sg_FragColor = (((tex2D(_BaseTex, i.xlv_TEXCOORD0.xy) + tex2D(_AddTex, i.xlv_TEXCOORD1)) * tex2D(_MulTex, i.xlv_TEXCOORD0.zw)) * i.xlv_TEXCOORD2);
+    return sg_FragColor;
+  }
+  #else
+  struct sg_appdata {
+    float4 vertex : POSITION;
+    float4 color : COLOR;
+    float4 texcoord : TEXCOORD0;
+  };
+  struct sg_v2f {
+    float4 pos : SV_POSITION;
+    half4 xlv_TEXCOORD2 : TEXCOORD2;
+    float2 xlv_TEXCOORD1 : TEXCOORD1;
+    float4 xlv_TEXCOORD0 : TEXCOORD0;
+  };
+  sg_v2f vert (sg_appdata v)
+  {
+    sg_v2f o;
+    UNITY_INITIALIZE_OUTPUT(sg_v2f, o);
+    half4 tmpvar_1;
+    float4 tmpvar_2;
+    tmpvar_2.xy = (v.texcoord.xy + frac((_ScrollBase.xy * _Time.xy)));
+    tmpvar_2.zw = (v.texcoord.xy + frac((_ScrollMul.xy * _Time.xy)));
+    tmpvar_1 = v.color;
+    float3 tmpvar_3;
+    tmpvar_3 = (v.color.xyz * _Multiplier);
+    tmpvar_1.xyz = tmpvar_3;
+    o.pos = (UnityObjectToClipPos(v.vertex));
+    o.xlv_TEXCOORD0 = tmpvar_2;
+    o.xlv_TEXCOORD1 = (v.texcoord.xy + frac((_ScrollAdd.xy * _Time.xy)));
+    o.xlv_TEXCOORD2 = tmpvar_1;
+    return o;
+  }
+  fixed4 frag (sg_v2f i) : SV_Target
+  {
+    fixed4 sg_FragColor = 0;
+    sg_FragColor = (((tex2D(_BaseTex, i.xlv_TEXCOORD0.xy) + tex2D(_AddTex, i.xlv_TEXCOORD1)) * tex2D(_MulTex, i.xlv_TEXCOORD0.zw)) * i.xlv_TEXCOORD2);
+    return sg_FragColor;
+  }
+  #endif
+  ENDCG
+ }
+}
 }

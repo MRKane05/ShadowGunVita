@@ -1,55 +1,86 @@
+// Rebuilt from the shipped Shadowgun 1.3.5 (Unity 3.5.7) GLES2 programs by Tools/ShaderPort/sg_glsl2hlsl.py.
+// Exact transliteration of the original maths; edit the generator rather than this file where possible.
 Shader "MADFINGER/Environment/Scroll 1 Layer (Supports Lightmap)" {
 Properties {
  _MainTex ("Base (RGB)", 2D) = "white" {}
  _ScrollX ("Scroll speed X", Float) = 1
  _ScrollY ("Scroll speed Y", Float) = 0
 }
-	// Reconstructed: the exporter left a stub using a *lit* Lambert surface shader.
-	// This game bakes its lighting and has almost no runtime lights, so that rendered
-	// nearly black. The name says Unlit/Lightmap, so this samples the base texture and
-	// modulates it by the baked lightmap instead.
-	// Vertex colour is deliberately NOT used: 421 of 561 meshes have no colour channel,
-	// and reading it there yields zero, which made geometry vanish.
-	// Scrolling uses _Time.x (t/20), not _Time.y (t): _ScrollX 0.5 on the sky meant half
-	// a UV per second, which span far too fast.
-	SubShader {
-		Tags { "RenderType"="Opaque" }
-		LOD 200
-		Lighting Off
-		Pass {
-			CGPROGRAM
-			#pragma vertex vert
-			#pragma fragment frag
-			#pragma multi_compile _ LIGHTMAP_ON
-			#include "UnityCG.cginc"
-			sampler2D _MainTex;
-			float4 _MainTex_ST;
-			float _ScrollX;
-			float _ScrollY;
-			struct v2f {
-				float4 pos : SV_POSITION;
-				float2 uv : TEXCOORD0;
-				float2 lmuv : TEXCOORD2;
-			};
-			v2f vert(appdata_full v) {
-				v2f o;
-				o.pos = UnityObjectToClipPos(v.vertex);
-				o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
-				o.uv += float2(_ScrollX, _ScrollY) * _Time.x;
-				o.lmuv = v.texcoord1.xy * unity_LightmapST.xy + unity_LightmapST.zw;
-				return o;
-			}
-			fixed4 frag(v2f i) : SV_Target {
-				fixed4 c = tex2D(_MainTex, i.uv);
-				#ifdef LIGHTMAP_ON
-				c.rgb *= UNITY_SAMPLE_TEX2D(unity_Lightmap, i.lmuv).rgb * 2.0;   // dLDR: the game's own
-				// recovered Mobile-Lightmap-Unlit shader does 'combine texture * previous double',
-				// i.e. a plain sample x2. DecodeLightmap() assumes RGBM and shifted colours blue.
-				#endif
-				return c;
-			}
-			ENDCG
-		}
-	}
-	Fallback "Unlit/Texture"
+SubShader { 
+ LOD 100
+ Tags { "RenderType"="Opaque" }
+ Pass {
+  Tags { "RenderType"="Opaque" }
+CGPROGRAM
+  #pragma vertex vert
+  #pragma fragment frag
+  #pragma multi_compile _ LIGHTMAP_ON
+  #include "UnityCG.cginc"
+  sampler2D _MainTex;
+  float _ScrollX;
+  float _ScrollY;
+  #if defined(LIGHTMAP_ON)
+  struct sg_appdata {
+    float4 vertex : POSITION;
+    float4 texcoord : TEXCOORD0;
+    float4 texcoord1 : TEXCOORD1;
+  };
+  struct sg_v2f {
+    float4 pos : SV_POSITION;
+    float2 xlv_TEXCOORD1 : TEXCOORD1;
+    float2 xlv_TEXCOORD0 : TEXCOORD0;
+  };
+  sg_v2f vert (sg_appdata v)
+  {
+    sg_v2f o;
+    UNITY_INITIALIZE_OUTPUT(sg_v2f, o);
+    float2 tmpvar_1;
+    tmpvar_1.x = _ScrollX;
+    tmpvar_1.y = _ScrollY;
+    o.pos = (UnityObjectToClipPos(v.vertex));
+    o.xlv_TEXCOORD0 = (v.texcoord.xy + frac((tmpvar_1 * _Time.xy)));
+    o.xlv_TEXCOORD1 = ((v.texcoord1.xy * unity_LightmapST.xy) + unity_LightmapST.zw);
+    return o;
+  }
+  fixed4 frag (sg_v2f i) : SV_Target
+  {
+    fixed4 sg_FragColor = 0;
+    half4 o_g;
+    half4 tmpvar_1;
+    tmpvar_1 = tex2D(_MainTex, i.xlv_TEXCOORD0);
+    o_g = tmpvar_1;
+    o_g.xyz = (tmpvar_1.xyz * (2.0 * UNITY_SAMPLE_TEX2D(unity_Lightmap, i.xlv_TEXCOORD1).xyz));
+    sg_FragColor = o_g;
+    return sg_FragColor;
+  }
+  #else
+  struct sg_appdata {
+    float4 vertex : POSITION;
+    float4 texcoord : TEXCOORD0;
+  };
+  struct sg_v2f {
+    float4 pos : SV_POSITION;
+    float2 xlv_TEXCOORD0 : TEXCOORD0;
+  };
+  sg_v2f vert (sg_appdata v)
+  {
+    sg_v2f o;
+    UNITY_INITIALIZE_OUTPUT(sg_v2f, o);
+    float2 tmpvar_1;
+    tmpvar_1.x = _ScrollX;
+    tmpvar_1.y = _ScrollY;
+    o.pos = (UnityObjectToClipPos(v.vertex));
+    o.xlv_TEXCOORD0 = (v.texcoord.xy + frac((tmpvar_1 * _Time.xy)));
+    return o;
+  }
+  fixed4 frag (sg_v2f i) : SV_Target
+  {
+    fixed4 sg_FragColor = 0;
+    sg_FragColor = tex2D(_MainTex, i.xlv_TEXCOORD0);
+    return sg_FragColor;
+  }
+  #endif
+  ENDCG
+ }
+}
 }
