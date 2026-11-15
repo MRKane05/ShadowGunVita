@@ -1,6 +1,0 @@
-public enum RETURN_TYPES
-{
-	INVALID = -1,
-	FALSE_RETURN = 0,
-	TRUE_RETURN = 1
-}
