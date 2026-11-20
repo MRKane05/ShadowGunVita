@@ -269915,6 +269915,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 3520}
     m_Modifications:
+    - target: {fileID: 114867122829342690, guid: c593a455e12568d468fddbc504b47071,
+        type: 2}
+      propertyPath: MusicEvents.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4825731215581294, guid: c593a455e12568d468fddbc504b47071, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -269950,6 +269955,36 @@ Prefab:
     - target: {fileID: 1759030956810410, guid: c593a455e12568d468fddbc504b47071, type: 2}
       propertyPath: m_Name
       value: MusicManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 114867122829342690, guid: c593a455e12568d468fddbc504b47071,
+        type: 2}
+      propertyPath: MusicEvents.Array.data[2].Name
+      value: 06_CUTSCENE_ONDRA
+      objectReference: {fileID: 0}
+    - target: {fileID: 114867122829342690, guid: c593a455e12568d468fddbc504b47071,
+        type: 2}
+      propertyPath: MusicEvents.Array.data[2].State
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114867122829342690, guid: c593a455e12568d468fddbc504b47071,
+        type: 2}
+      propertyPath: MusicEvents.Array.data[2].Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: c5382ae677c4aa54493b69b50e1a0613, type: 3}
+    - target: {fileID: 114867122829342690, guid: c593a455e12568d468fddbc504b47071,
+        type: 2}
+      propertyPath: MusicEvents.Array.data[2].FadeOutTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114867122829342690, guid: c593a455e12568d468fddbc504b47071,
+        type: 2}
+      propertyPath: MusicEvents.Array.data[2].FadeInTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114867122829342690, guid: c593a455e12568d468fddbc504b47071,
+        type: 2}
+      propertyPath: MusicEvents.Array.data[2].Volume
+      value: 0.73
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c593a455e12568d468fddbc504b47071, type: 2}

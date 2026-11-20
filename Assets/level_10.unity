@@ -64987,6 +64987,86 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114867122829342690, guid: c593a455e12568d468fddbc504b47071,
+        type: 2}
+      propertyPath: DefaultClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 85cddddda73266f499f0f4ec4201c209, type: 3}
+    - target: {fileID: 114867122829342690, guid: c593a455e12568d468fddbc504b47071,
+        type: 2}
+      propertyPath: DefaultFadeInTime
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114867122829342690, guid: c593a455e12568d468fddbc504b47071,
+        type: 2}
+      propertyPath: DefaultVolume
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114867122829342690, guid: c593a455e12568d468fddbc504b47071,
+        type: 2}
+      propertyPath: MusicEvents.Array.data[0].Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 972b5ec1ca4f40a4ab744fc3a7489593, type: 3}
+    - target: {fileID: 114867122829342690, guid: c593a455e12568d468fddbc504b47071,
+        type: 2}
+      propertyPath: MusicEvents.Array.data[0].FadeOutTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114867122829342690, guid: c593a455e12568d468fddbc504b47071,
+        type: 2}
+      propertyPath: MusicEvents.Array.data[0].FadeInTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114867122829342690, guid: c593a455e12568d468fddbc504b47071,
+        type: 2}
+      propertyPath: MusicEvents.Array.data[0].Volume
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114867122829342690, guid: c593a455e12568d468fddbc504b47071,
+        type: 2}
+      propertyPath: MusicEvents.Array.data[1].Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 85cddddda73266f499f0f4ec4201c209, type: 3}
+    - target: {fileID: 114867122829342690, guid: c593a455e12568d468fddbc504b47071,
+        type: 2}
+      propertyPath: MusicEvents.Array.data[1].FadeOutTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114867122829342690, guid: c593a455e12568d468fddbc504b47071,
+        type: 2}
+      propertyPath: MusicEvents.Array.data[1].FadeInTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114867122829342690, guid: c593a455e12568d468fddbc504b47071,
+        type: 2}
+      propertyPath: MusicEvents.Array.data[1].Volume
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114867122829342690, guid: c593a455e12568d468fddbc504b47071,
+        type: 2}
+      propertyPath: MusicEvents.Array.data[2].Name
+      value: BossDead
+      objectReference: {fileID: 0}
+    - target: {fileID: 114867122829342690, guid: c593a455e12568d468fddbc504b47071,
+        type: 2}
+      propertyPath: MusicEvents.Array.data[2].Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 972b5ec1ca4f40a4ab744fc3a7489593, type: 3}
+    - target: {fileID: 114867122829342690, guid: c593a455e12568d468fddbc504b47071,
+        type: 2}
+      propertyPath: MusicEvents.Array.data[2].FadeOutTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114867122829342690, guid: c593a455e12568d468fddbc504b47071,
+        type: 2}
+      propertyPath: MusicEvents.Array.data[2].FadeInTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114867122829342690, guid: c593a455e12568d468fddbc504b47071,
+        type: 2}
+      propertyPath: MusicEvents.Array.data[2].Volume
+      value: 0.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c593a455e12568d468fddbc504b47071, type: 2}
   m_IsPrefabAsset: 0
