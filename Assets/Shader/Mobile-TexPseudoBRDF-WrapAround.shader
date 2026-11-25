@@ -1,336 +1,173 @@
-// Rebuilt from the shipped Shadowgun 1.3.5 (Unity 3.5.7) GLES2 programs by Tools/ShaderPort/sg_glsl2hlsl.py.
-// Exact transliteration of the original maths; edit the generator rather than this file where possible.
-Shader "MADFINGER/Characters/BRDFLit (Supports Backlight)" {
-Properties {
- _MainTex ("Base (RGB) Gloss (A)", 2D) = "grey" {}
- _BumpMap ("Normalmap", 2D) = "bump" {}
- _BRDFTex ("NdotL NdotH (RGB)", 2D) = "white" {}
- _LightProbesLightingAmount ("Light probes lighting amount", Range(0,1)) = 0.9
-}
-SubShader { 
- LOD 400
- Tags { "LIGHTMODE"="ForwardBase" "RenderType"="Opaque" }
- Pass {
-  Name "FORWARD"
-  Tags { "LIGHTMODE"="ForwardBase" "RenderType"="Opaque" }
-CGPROGRAM
-  #pragma vertex vert
-  #pragma fragment frag
-  #pragma multi_compile _ VERTEXLIGHT_ON
-  #include "UnityCG.cginc"
-  // uniform scale of the object (Unity 3.5 kept it apart from _World2Object)
-  inline float sg_ObjScale () { return length(float3(unity_ObjectToWorld[0].x, unity_ObjectToWorld[1].x, unity_ObjectToWorld[2].x)); }
-  // Unity 3.5 _World2Object = inverse world matrix with the scale removed (code multiplies by unity_Scale.w)
-  inline float4x4 sg_World2Object () { float s = sg_ObjScale(); float4x4 m = unity_WorldToObject; m[0] *= s; m[1] *= s; m[2] *= s; return m; }
-  // Unity 3.5 unity_Scale: w = 1 / object scale
-  inline float4 sg_unity_Scale () { float s = sg_ObjScale(); return float4(s, s, s, 1.0 / s); }
-  sampler2D _BRDFTex;
-  sampler2D _BumpMap;
-  float4 _BumpMap_ST;
-  float _LightProbesLightingAmount;
-  sampler2D _MainTex;
-  float4 _MainTex_ST;
-  #if defined(VERTEXLIGHT_ON)
-  struct sg_appdata {
-    float4 vertex : POSITION;
-    float3 normal : NORMAL;
-    float4 tangent : TANGENT;
-    float4 texcoord : TEXCOORD0;
-  };
-  struct sg_v2f {
-    float4 pos : SV_POSITION;
-    half3 xlv_TEXCOORD4 : TEXCOORD4;
-    half3 xlv_TEXCOORD3 : TEXCOORD3;
-    half3 xlv_TEXCOORD2 : TEXCOORD2;
-    half3 xlv_TEXCOORD1 : TEXCOORD1;
-    float4 xlv_TEXCOORD0 : TEXCOORD0;
-  };
-  sg_v2f vert (sg_appdata v)
-  {
-    sg_v2f o;
-    UNITY_INITIALIZE_OUTPUT(sg_v2f, o);
-    float4 tmpvar_1;
-    tmpvar_1.xyz = normalize(v.tangent.xyz);
-    tmpvar_1.w = v.tangent.w;
-    float3 tmpvar_2;
-    tmpvar_2 = normalize(v.normal);
-    float4 tmpvar_3;
-    half3 tmpvar_4;
-    half3 tmpvar_5;
-    half3 tmpvar_6;
-    half3 tmpvar_7;
-    half3 tmpvar_8;
-    float3 SHLighting;
-    float3x3 tmpvar_9;
-    tmpvar_9[0] = transpose(unity_ObjectToWorld)[0].xyz;
-    tmpvar_9[1] = transpose(unity_ObjectToWorld)[1].xyz;
-    tmpvar_9[2] = transpose(unity_ObjectToWorld)[2].xyz;
-    float4 tmpvar_10;
-    tmpvar_10.w = 1.0;
-    tmpvar_10.xyz = (mul(tmpvar_2, tmpvar_9));
-    half3 tmpvar_11;
-    half4 normal;
-    normal = tmpvar_10;
-    half3 x3;
-    float vC;
-    half3 x2;
-    half3 x1;
-    float tmpvar_12;
-    tmpvar_12 = dot(unity_SHAr, normal);
-    x1.x = tmpvar_12;
-    float tmpvar_13;
-    tmpvar_13 = dot(unity_SHAg, normal);
-    x1.y = tmpvar_13;
-    float tmpvar_14;
-    tmpvar_14 = dot(unity_SHAb, normal);
-    x1.z = tmpvar_14;
-    half4 tmpvar_15;
-    tmpvar_15 = (normal.xyzz * normal.yzzx);
-    float tmpvar_16;
-    tmpvar_16 = dot(unity_SHBr, tmpvar_15);
-    x2.x = tmpvar_16;
-    float tmpvar_17;
-    tmpvar_17 = dot(unity_SHBg, tmpvar_15);
-    x2.y = tmpvar_17;
-    float tmpvar_18;
-    tmpvar_18 = dot(unity_SHBb, tmpvar_15);
-    x2.z = tmpvar_18;
-    half tmpvar_19;
-    tmpvar_19 = ((normal.x * normal.x) - (normal.y * normal.y));
-    vC = tmpvar_19;
-    float3 tmpvar_20;
-    tmpvar_20 = (unity_SHC.xyz * vC);
-    x3 = tmpvar_20;
-    tmpvar_11 = ((x1 + x2) + x3);
-    SHLighting = tmpvar_11;
-    float3 tmpvar_21;
-    tmpvar_21 = clamp((SHLighting + ((float3)(1.0 - _LightProbesLightingAmount))), 0.0, 1.0);
-    tmpvar_8 = tmpvar_21;
-    tmpvar_4 = tmpvar_8;
-    tmpvar_3.xy = ((v.texcoord.xy * _MainTex_ST.xy) + _MainTex_ST.zw);
-    tmpvar_3.zw = ((v.texcoord.xy * _BumpMap_ST.xy) + _BumpMap_ST.zw);
-    float3x3 tmpvar_22;
-    tmpvar_22[0] = transpose(unity_ObjectToWorld)[0].xyz;
-    tmpvar_22[1] = transpose(unity_ObjectToWorld)[1].xyz;
-    tmpvar_22[2] = transpose(unity_ObjectToWorld)[2].xyz;
-    float3 tmpvar_23;
-    tmpvar_23 = (mul((tmpvar_2 * sg_unity_Scale().w), tmpvar_22));
-    float3x3 tmpvar_24;
-    tmpvar_24[0] = tmpvar_1.xyz;
-    tmpvar_24[1] = (cross(tmpvar_2, tmpvar_1.xyz) * v.tangent.w);
-    tmpvar_24[2] = tmpvar_2;
-    float3x3 tmpvar_25;
-    tmpvar_25[0].x = tmpvar_24[0].x;
-    tmpvar_25[0].y = tmpvar_24[1].x;
-    tmpvar_25[0].z = tmpvar_24[2].x;
-    tmpvar_25[1].x = tmpvar_24[0].y;
-    tmpvar_25[1].y = tmpvar_24[1].y;
-    tmpvar_25[1].z = tmpvar_24[2].y;
-    tmpvar_25[2].x = tmpvar_24[0].z;
-    tmpvar_25[2].y = tmpvar_24[1].z;
-    tmpvar_25[2].z = tmpvar_24[2].z;
-    float3 tmpvar_26;
-    tmpvar_26 = (mul((mul(sg_World2Object(), _WorldSpaceLightPos0)).xyz, tmpvar_25));
-    tmpvar_5 = tmpvar_26;
-    float4 tmpvar_27;
-    tmpvar_27.w = 1.0;
-    tmpvar_27.xyz = _WorldSpaceCameraPos;
-    float3 tmpvar_28;
-    tmpvar_28 = normalize((mul((((mul(sg_World2Object(), tmpvar_27)).xyz * sg_unity_Scale().w) - v.vertex.xyz), tmpvar_25)));
-    tmpvar_7 = tmpvar_28;
-    float3 tmpvar_29;
-    tmpvar_29 = (mul(unity_ObjectToWorld, v.vertex)).xyz;
-    float4 tmpvar_30;
-    tmpvar_30 = (unity_4LightPosX0 - tmpvar_29.x);
-    float4 tmpvar_31;
-    tmpvar_31 = (unity_4LightPosY0 - tmpvar_29.y);
-    float4 tmpvar_32;
-    tmpvar_32 = (unity_4LightPosZ0 - tmpvar_29.z);
-    float4 tmpvar_33;
-    tmpvar_33 = (((tmpvar_30 * tmpvar_30) + (tmpvar_31 * tmpvar_31)) + (tmpvar_32 * tmpvar_32));
-    float4 tmpvar_34;
-    tmpvar_34 = (max(float4(0.0, 0.0, 0.0, 0.0), ((((tmpvar_30 * tmpvar_23.x) + (tmpvar_31 * tmpvar_23.y)) + (tmpvar_32 * tmpvar_23.z)) * rsqrt(tmpvar_33))) * (1.0 / (1.0 + (tmpvar_33 * unity_4LightAtten0))));
-    float3 tmpvar_35;
-    tmpvar_35 = ((((unity_LightColor[0].xyz * tmpvar_34.x) + (unity_LightColor[1].xyz * tmpvar_34.y)) + (unity_LightColor[2].xyz * tmpvar_34.z)) + (unity_LightColor[3].xyz * tmpvar_34.w));
-    tmpvar_6 = tmpvar_35;
-    o.pos = (UnityObjectToClipPos(v.vertex));
-    o.xlv_TEXCOORD0 = tmpvar_3;
-    o.xlv_TEXCOORD1 = tmpvar_4;
-    o.xlv_TEXCOORD2 = tmpvar_5;
-    o.xlv_TEXCOORD3 = tmpvar_6;
-    o.xlv_TEXCOORD4 = tmpvar_7;
-    return o;
-  }
-  fixed4 frag (sg_v2f i) : SV_Target
-  {
-    fixed4 sg_FragColor = 0;
-    half4 c;
-    half3 tmpvar_1;
-    float2 tmpvar_2;
-    tmpvar_2 = i.xlv_TEXCOORD0.xy;
-    float2 tmpvar_3;
-    tmpvar_3 = i.xlv_TEXCOORD0.zw;
-    tmpvar_1 = i.xlv_TEXCOORD1;
-    half4 tmpvar_4;
-    tmpvar_4 = tex2D(_MainTex, tmpvar_2);
-    half3 tmpvar_5;
-    tmpvar_5 = (tmpvar_4.xyz * tmpvar_1);
-    half3 tmpvar_6;
-    tmpvar_6 = ((tex2D(_BumpMap, tmpvar_3).xyz * 2.0) - 1.0);
-    half4 c_i0;
-    half2 tmpvar_7;
-    tmpvar_7.x = ((dot(tmpvar_6, i.xlv_TEXCOORD2) * 0.5) + 0.5);
-    tmpvar_7.y = dot(tmpvar_6, normalize((i.xlv_TEXCOORD2 + i.xlv_TEXCOORD4)));
-    half4 tmpvar_8;
-    tmpvar_8 = tex2D(_BRDFTex, tmpvar_7);
-    c_i0.xyz = ((tmpvar_5 * (tmpvar_8.xyz + (tmpvar_4.w * tmpvar_8.w))) * 2.0);
-    c_i0.w = 0.0;
-    c = c_i0;
-    c.xyz = (c_i0.xyz + (tmpvar_5 * i.xlv_TEXCOORD3));
-    sg_FragColor = c;
-    return sg_FragColor;
-  }
-  #else
-  struct sg_appdata {
-    float4 vertex : POSITION;
-    float3 normal : NORMAL;
-    float4 tangent : TANGENT;
-    float4 texcoord : TEXCOORD0;
-  };
-  struct sg_v2f {
-    float4 pos : SV_POSITION;
-    half3 xlv_TEXCOORD4 : TEXCOORD4;
-    half3 xlv_TEXCOORD3 : TEXCOORD3;
-    half3 xlv_TEXCOORD2 : TEXCOORD2;
-    half3 xlv_TEXCOORD1 : TEXCOORD1;
-    float4 xlv_TEXCOORD0 : TEXCOORD0;
-  };
-  sg_v2f vert (sg_appdata v)
-  {
-    sg_v2f o;
-    UNITY_INITIALIZE_OUTPUT(sg_v2f, o);
-    float4 tmpvar_1;
-    tmpvar_1.xyz = normalize(v.tangent.xyz);
-    tmpvar_1.w = v.tangent.w;
-    float3 tmpvar_2;
-    tmpvar_2 = normalize(v.normal);
-    float4 tmpvar_3;
-    half3 tmpvar_4;
-    half3 tmpvar_5;
-    half3 tmpvar_6;
-    half3 tmpvar_7;
-    float3 SHLighting;
-    float3x3 tmpvar_8;
-    tmpvar_8[0] = transpose(unity_ObjectToWorld)[0].xyz;
-    tmpvar_8[1] = transpose(unity_ObjectToWorld)[1].xyz;
-    tmpvar_8[2] = transpose(unity_ObjectToWorld)[2].xyz;
-    float4 tmpvar_9;
-    tmpvar_9.w = 1.0;
-    tmpvar_9.xyz = (mul(tmpvar_2, tmpvar_8));
-    half3 tmpvar_10;
-    half4 normal;
-    normal = tmpvar_9;
-    half3 x3;
-    float vC;
-    half3 x2;
-    half3 x1;
-    float tmpvar_11;
-    tmpvar_11 = dot(unity_SHAr, normal);
-    x1.x = tmpvar_11;
-    float tmpvar_12;
-    tmpvar_12 = dot(unity_SHAg, normal);
-    x1.y = tmpvar_12;
-    float tmpvar_13;
-    tmpvar_13 = dot(unity_SHAb, normal);
-    x1.z = tmpvar_13;
-    half4 tmpvar_14;
-    tmpvar_14 = (normal.xyzz * normal.yzzx);
-    float tmpvar_15;
-    tmpvar_15 = dot(unity_SHBr, tmpvar_14);
-    x2.x = tmpvar_15;
-    float tmpvar_16;
-    tmpvar_16 = dot(unity_SHBg, tmpvar_14);
-    x2.y = tmpvar_16;
-    float tmpvar_17;
-    tmpvar_17 = dot(unity_SHBb, tmpvar_14);
-    x2.z = tmpvar_17;
-    half tmpvar_18;
-    tmpvar_18 = ((normal.x * normal.x) - (normal.y * normal.y));
-    vC = tmpvar_18;
-    float3 tmpvar_19;
-    tmpvar_19 = (unity_SHC.xyz * vC);
-    x3 = tmpvar_19;
-    tmpvar_10 = ((x1 + x2) + x3);
-    SHLighting = tmpvar_10;
-    float3 tmpvar_20;
-    tmpvar_20 = clamp((SHLighting + ((float3)(1.0 - _LightProbesLightingAmount))), 0.0, 1.0);
-    tmpvar_7 = tmpvar_20;
-    tmpvar_4 = tmpvar_7;
-    tmpvar_3.xy = ((v.texcoord.xy * _MainTex_ST.xy) + _MainTex_ST.zw);
-    tmpvar_3.zw = ((v.texcoord.xy * _BumpMap_ST.xy) + _BumpMap_ST.zw);
-    float3x3 tmpvar_21;
-    tmpvar_21[0] = tmpvar_1.xyz;
-    tmpvar_21[1] = (cross(tmpvar_2, tmpvar_1.xyz) * v.tangent.w);
-    tmpvar_21[2] = tmpvar_2;
-    float3x3 tmpvar_22;
-    tmpvar_22[0].x = tmpvar_21[0].x;
-    tmpvar_22[0].y = tmpvar_21[1].x;
-    tmpvar_22[0].z = tmpvar_21[2].x;
-    tmpvar_22[1].x = tmpvar_21[0].y;
-    tmpvar_22[1].y = tmpvar_21[1].y;
-    tmpvar_22[1].z = tmpvar_21[2].y;
-    tmpvar_22[2].x = tmpvar_21[0].z;
-    tmpvar_22[2].y = tmpvar_21[1].z;
-    tmpvar_22[2].z = tmpvar_21[2].z;
-    float3 tmpvar_23;
-    tmpvar_23 = (mul((mul(sg_World2Object(), _WorldSpaceLightPos0)).xyz, tmpvar_22));
-    tmpvar_5 = tmpvar_23;
-    float4 tmpvar_24;
-    tmpvar_24.w = 1.0;
-    tmpvar_24.xyz = _WorldSpaceCameraPos;
-    float3 tmpvar_25;
-    tmpvar_25 = normalize((mul((((mul(sg_World2Object(), tmpvar_24)).xyz * sg_unity_Scale().w) - v.vertex.xyz), tmpvar_22)));
-    tmpvar_6 = tmpvar_25;
-    o.pos = (UnityObjectToClipPos(v.vertex));
-    o.xlv_TEXCOORD0 = tmpvar_3;
-    o.xlv_TEXCOORD1 = tmpvar_4;
-    o.xlv_TEXCOORD2 = tmpvar_5;
-    o.xlv_TEXCOORD3 = float3(0.0, 0.0, 0.0);
-    o.xlv_TEXCOORD4 = tmpvar_6;
-    return o;
-  }
-  fixed4 frag (sg_v2f i) : SV_Target
-  {
-    fixed4 sg_FragColor = 0;
-    half4 c;
-    half3 tmpvar_1;
-    float2 tmpvar_2;
-    tmpvar_2 = i.xlv_TEXCOORD0.xy;
-    float2 tmpvar_3;
-    tmpvar_3 = i.xlv_TEXCOORD0.zw;
-    tmpvar_1 = i.xlv_TEXCOORD1;
-    half4 tmpvar_4;
-    tmpvar_4 = tex2D(_MainTex, tmpvar_2);
-    half3 tmpvar_5;
-    tmpvar_5 = (tmpvar_4.xyz * tmpvar_1);
-    half3 tmpvar_6;
-    tmpvar_6 = ((tex2D(_BumpMap, tmpvar_3).xyz * 2.0) - 1.0);
-    half4 c_i0;
-    half2 tmpvar_7;
-    tmpvar_7.x = ((dot(tmpvar_6, i.xlv_TEXCOORD2) * 0.5) + 0.5);
-    tmpvar_7.y = dot(tmpvar_6, normalize((i.xlv_TEXCOORD2 + i.xlv_TEXCOORD4)));
-    half4 tmpvar_8;
-    tmpvar_8 = tex2D(_BRDFTex, tmpvar_7);
-    c_i0.xyz = ((tmpvar_5 * (tmpvar_8.xyz + (tmpvar_4.w * tmpvar_8.w))) * 2.0);
-    c_i0.w = 0.0;
-    c = c_i0;
-    c.xyz = (c_i0.xyz + (tmpvar_5 * i.xlv_TEXCOORD3));
-    sg_FragColor = c;
-    return sg_FragColor;
-  }
-  #endif
-  ENDCG
- }
-}
-Fallback "Diffuse"
+// Readable, corrected version of "MADFINGER/Characters/BRDFLit (Supports Backlight)".
+// Rewritten from the Shadowgun 1.3.5 GLES2 programs for Unity 2018.
+//
+// Normal-direction fixes compared with the generated code:
+//  1. The normal map is unpacked with UnpackNormal(), which handles compressed normal maps
+//     (X stored in alpha). The raw (x * 2 - 1) read gives the wrong X on those maps, so some
+//     faces get a normal facing away from the light and go black.
+//  2. The tangent is made perpendicular to the normal (Gram-Schmidt). Mesh tangents are often
+//     slightly skewed, which tilts the tangent-space basis.
+//  3. The world normal is transformed with the inverse transpose and normalised. The generated
+//     code used the object-to-world matrix and did not renormalise, so the probe lighting
+//     scaled with object scale and could clip to white.
+//  4. The light direction is normalised in object space. This keeps it unit length for
+//     non-uniform scale.
+//
+// Lighting model, probe handling and output are otherwise unchanged.
+
+Shader "MADFINGER/Characters/BRDFLit (Supports Backlight) (Readable)"
+{
+    Properties
+    {
+        _MainTex ("Base (RGB) Gloss (A)", 2D) = "grey" {}
+        _BumpMap ("Normalmap", 2D) = "bump" {}
+        _BRDFTex ("NdotL NdotH (RGB)", 2D) = "white" {}
+        _LightProbesLightingAmount ("Light probes lighting amount", Range(0,1)) = 0.9
+    }
+
+    SubShader
+    {
+        LOD 400
+        Tags { "LightMode"="ForwardBase" "RenderType"="Opaque" }
+
+        Pass
+        {
+            Name "FORWARD"
+            Tags { "LightMode"="ForwardBase" "RenderType"="Opaque" }
+
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #pragma target 2.0
+            #pragma multi_compile _ VERTEXLIGHT_ON
+            #include "UnityCG.cginc"
+
+            sampler2D _MainTex;
+            float4    _MainTex_ST;
+            sampler2D _BumpMap;
+            float4    _BumpMap_ST;
+            sampler2D _BRDFTex;
+            float     _LightProbesLightingAmount;
+
+            struct appdata_t
+            {
+                float4 vertex   : POSITION;
+                float3 normal   : NORMAL;
+                float4 tangent  : TANGENT;
+                float4 texcoord : TEXCOORD0;
+            };
+
+            struct v2f
+            {
+                float4 pos         : SV_POSITION;
+                float4 uv          : TEXCOORD0; // xy = main texture, zw = bump texture
+                half3  probeLight  : TEXCOORD1; // light probe lighting, clamped
+                half3  lightDirTS  : TEXCOORD2; // main light direction, tangent space
+                half3  vertexLight : TEXCOORD3; // extra point-light lighting (zero unless VERTEXLIGHT_ON)
+                half3  viewDirTS   : TEXCOORD4; // view direction, tangent space
+            };
+
+            // Four point lights, evaluated per vertex (VERTEXLIGHT_ON only).
+            // Normal must be unit length.
+            float3 VertexPointLights(float3 worldPos, float3 worldNormal)
+            {
+                float4 toLightX = unity_4LightPosX0 - worldPos.x;
+                float4 toLightY = unity_4LightPosY0 - worldPos.y;
+                float4 toLightZ = unity_4LightPosZ0 - worldPos.z;
+
+                float4 distSq = toLightX * toLightX + toLightY * toLightY + toLightZ * toLightZ;
+
+                // N.L for each light, divided by distance (rsqrt), clamped at zero
+                float4 nDotL = toLightX * worldNormal.x + toLightY * worldNormal.y + toLightZ * worldNormal.z;
+                float4 diffuse = max(float4(0.0, 0.0, 0.0, 0.0), nDotL * rsqrt(distSq));
+
+                // Distance attenuation
+                float4 attenuation = 1.0 / (1.0 + distSq * unity_4LightAtten0);
+                diffuse *= attenuation;
+
+                return unity_LightColor[0].rgb * diffuse.x
+                     + unity_LightColor[1].rgb * diffuse.y
+                     + unity_LightColor[2].rgb * diffuse.z
+                     + unity_LightColor[3].rgb * diffuse.w;
+            }
+
+            v2f vert(appdata_t v)
+            {
+                v2f o;
+                UNITY_INITIALIZE_OUTPUT(v2f, o);
+
+                o.pos = UnityObjectToClipPos(v.vertex);
+                o.uv.xy = v.texcoord.xy * _MainTex_ST.xy + _MainTex_ST.zw;
+                o.uv.zw = v.texcoord.xy * _BumpMap_ST.xy + _BumpMap_ST.zw;
+
+                // Object-space tangent frame
+                float3 objNormal  = normalize(v.normal);
+                float3 objTangent = normalize(v.tangent.xyz);
+
+                // Make the tangent perpendicular to the normal (Gram-Schmidt)
+                objTangent = normalize(objTangent - objNormal * dot(objNormal, objTangent));
+                float3 objBinormal = cross(objNormal, objTangent) * v.tangent.w;
+
+                // Rows are T, B, N, so mul(objectToTangent, dir) gives the direction in tangent space
+                float3x3 objectToTangent = float3x3(objTangent, objBinormal, objNormal);
+
+                // World-space normal. Normals transform with the inverse transpose of the
+                // object-to-world matrix, which is mul(normal, unity_WorldToObject).
+                // The result is normalised, so probe lighting does not depend on object scale.
+                float3 worldNormal = normalize(mul(objNormal, (float3x3)unity_WorldToObject));
+                float3 worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
+
+                // Light probes: spherical harmonics for the unit normal, clamped and lifted by the amount
+                float3 probe = ShadeSH9(float4(worldNormal, 1.0));
+                o.probeLight = saturate(probe + (1.0 - _LightProbesLightingAmount));
+
+                // Main light: direction into object space, normalised (the light is a direction, w = 0)
+                float3 lightObj = normalize(mul((float3x3)unity_WorldToObject, _WorldSpaceLightPos0.xyz));
+                o.lightDirTS = mul(objectToTangent, lightObj);
+
+                // View direction: camera in object space minus the vertex, into tangent space
+                float3 cameraObj = mul(unity_WorldToObject, float4(_WorldSpaceCameraPos, 1.0)).xyz;
+                o.viewDirTS = mul(objectToTangent, normalize(cameraObj - v.vertex.xyz));
+
+                // Point lights
+                o.vertexLight = float3(0.0, 0.0, 0.0);
+            #if defined(VERTEXLIGHT_ON)
+                o.vertexLight = VertexPointLights(worldPos, worldNormal);
+            #endif
+
+                return o;
+            }
+
+            fixed4 frag(v2f i) : SV_Target
+            {
+                half4 albedoGloss = tex2D(_MainTex, i.uv.xy);
+
+                // Unpack the normal map. UnpackNormal handles compressed (X in alpha) maps.
+                half3 normalTS = normalize(UnpackNormal(tex2D(_BumpMap, i.uv.zw)));
+
+                half3 L = normalize(i.lightDirTS);
+                half3 V = normalize(i.viewDirTS);
+                half3 H = normalize(L + V);
+
+                // BRDF lookup: x = N.L remapped to 0..1, y = N.H
+                half2 brdfUV;
+                brdfUV.x = dot(normalTS, L) * 0.5 + 0.5;
+                brdfUV.y = dot(normalTS, H);
+                half4 brdf = tex2D(_BRDFTex, brdfUV);
+
+                // Probe-lit albedo, shaded by the BRDF, with gloss from the main texture alpha
+                half3 albedoLit = albedoGloss.rgb * i.probeLight;
+                half3 color = albedoLit * (brdf.rgb + albedoGloss.a * brdf.a) * 2.0;
+
+                // Point-light contribution
+                color += albedoLit * i.vertexLight;
+
+                // Alpha is zero, as in the original (opaque geometry, no blending)
+                return fixed4(color, 0.0);
+            }
+            ENDCG
+        }
+    }
+
+    Fallback "Diffuse"
 }

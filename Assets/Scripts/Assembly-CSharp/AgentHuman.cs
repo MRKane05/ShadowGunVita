@@ -621,7 +621,7 @@ public class AgentHuman : Agent, IProjectileHitReceiver
 			WorldState.SetWSProperty(E_PropKey.Event, E_EventTypes.Died);
 			if (!IsPlayer)
 			{
-				StartCoroutine(Fadeout(2f));
+				StartCoroutine(DieFadeOut(2f));
 			}
 			BlackBoard.Desires.WeaponTriggerOn = false;
 			AgentActionDeath agentActionDeath = AgentActionFactory.Create(AgentActionFactory.E_Type.Death) as AgentActionDeath;
@@ -693,28 +693,26 @@ public class AgentHuman : Agent, IProjectileHitReceiver
 		base.Transform.rotation = destination.rotation;
 	}
 
-	protected IEnumerator Fadeout(float delay)
+	protected IEnumerator DieFadeOut(float delay)
 	{
-		yield return new WaitForSeconds(2f);
-		if (NavMeshAgent != null)
-		{
-			NavMeshAgent.enabled = false;
-		}
-		WeaponComponent.DropAmmo();
-		yield return new WaitForSeconds(delay - 2f);
-		if (FadeoutMaterial == null)
-		{
-			Mission.Instance.ReturnAgent(base.GameObject);
-			yield break;
-		}
+		yield return new WaitForSeconds(delay);
+		float fadeStart = Time.time;
 		if ((bool)Renderer)
 		{
 			Renderer.material = FadeoutMaterial;
-			Renderer.material.SetFloat("_TimeOffs", 0f - Time.time);
-			Renderer.material.SetFloat("_Invert", 0f);
-			Renderer.material.SetFloat("_Duration", FadeoutFXDuration);
+			//Renderer.material.SetFloat("_TimeOffs", (0f-Time.time));
+			//Renderer.material.SetFloat("_Invert", 0f);
+			//Renderer.material.SetFloat("_Duration", FadeoutFXDuration);
+			Renderer.material.SetFloat("_Dissolve", 0.0f);
 		}
-		yield return new WaitForSeconds(FadeoutFXDuration);
+		while (Time.time < fadeStart + FadeoutFXDuration)
+		{
+			yield return null;
+			Renderer.material.SetFloat("_Dissolve", (Time.time - fadeStart) / FadeoutFXDuration);
+		}
+
+		//yield return new WaitForSeconds(FadeoutFXDuration);
+		Renderer.material.SetFloat("_Dissolve", 1.0f);
 		Mission.Instance.ReturnAgent(base.GameObject);
 	}
 
@@ -722,10 +720,12 @@ public class AgentHuman : Agent, IProjectileHitReceiver
 	{
 		if ((bool)Renderer)
 		{
-			Renderer.material = FadeoutMaterial;
-			Renderer.material.SetFloat("_TimeOffs", 0f - Time.time);
+			//Renderer.material = FadeoutMaterial;
+			/*
+			Renderer.material.SetFloat("_TimeOffs", (0f-Time.time));
 			Renderer.material.SetFloat("_Invert", 0f);
-			Renderer.material.SetFloat("_Duration", 1f);
+			Renderer.material.SetFloat("_Duration", 1f);*/
+			StartCoroutine(FadeOut());
 		}
 	}
 
@@ -734,16 +734,49 @@ public class AgentHuman : Agent, IProjectileHitReceiver
 		StartCoroutine(FadeIn());
 	}
 
-	protected IEnumerator FadeIn()
+	protected IEnumerator FadeOut()
 	{
+		float fadeStart = Time.time;
 		if ((bool)Renderer)
 		{
 			Renderer.material = FadeoutMaterial;
-			Renderer.material.SetFloat("_TimeOffs", 0f - Time.time);
-			Renderer.material.SetFloat("_Invert", 1f);
-			Renderer.material.SetFloat("_Duration", 1f);
+			//Renderer.material.SetFloat("_TimeOffs", (0f-Time.time));
+			//Renderer.material.SetFloat("_Invert", 0f);
+			//Renderer.material.SetFloat("_Duration", FadeoutFXDuration);
+			Renderer.material.SetFloat("_Dissolve", 0.0f);
 		}
-		yield return new WaitForSeconds(1f);
+		while (Time.time < fadeStart + FadeoutFXDuration)
+		{
+			yield return null;
+			Renderer.material.SetFloat("_Dissolve", (Time.time - fadeStart) / FadeoutFXDuration);
+		}
+
+		//yield return new WaitForSeconds(FadeoutFXDuration);
+		Renderer.material.SetFloat("_Dissolve", 1.0f);
+
+		//Renderer.material = DiffuseMaterial;
+	}
+
+	protected IEnumerator FadeIn()
+	{
+		float fadeStart = Time.time;
+		if ((bool)Renderer)
+		{
+			Renderer.material = FadeoutMaterial;
+			//Renderer.material.SetFloat("_TimeOffs", (0f-Time.time));
+			//Renderer.material.SetFloat("_Invert", 0f);
+			//Renderer.material.SetFloat("_Duration", FadeoutFXDuration);
+			Renderer.material.SetFloat("_Dissolve", 1.0f);
+		}
+		while (Time.time < fadeStart + FadeoutFXDuration)
+		{
+			yield return null;
+			Renderer.material.SetFloat("_Dissolve", 1.0f-(Time.time - fadeStart) / FadeoutFXDuration);
+		}
+
+		//yield return new WaitForSeconds(FadeoutFXDuration);
+		Renderer.material.SetFloat("_Dissolve", 0.0f);
+
 		Renderer.material = DiffuseMaterial;
 	}
 

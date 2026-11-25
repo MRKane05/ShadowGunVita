@@ -83367,6 +83367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 351b0d6adaecf72e6fc7c33c0eece600, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _CurrentGameZone: 0
   LeaderBoardID: 0
   GameDifficulty: 0
   LastTouchControlTime: 0
@@ -89533,7 +89534,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Version 0.029
+  m_Text: Version 0.036
 --- !u!222 &318932337
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -89709,7 +89710,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400762, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000015258789
+      value: -0.0000076293945
       objectReference: {fileID: 0}
     - target: {fileID: 22426080, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 2}
       propertyPath: m_AnchorMin.y
