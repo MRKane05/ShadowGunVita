@@ -23,6 +23,8 @@ public class AnimStateMove : AnimState
 
 	public override void OnActivate(AgentAction action)
 	{
+		// Before Initialize() sets the destination (Warp would clear it). See ResumeAgentFollowing.
+		ResumeAgentFollowing();
 		base.OnActivate(action);
 	}
 

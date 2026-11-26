@@ -87,6 +87,25 @@ public class AnimState
 		return Owner.NavMeshAgent.SetDestination(pos);
 	}
 
+	// Cover entry turns NavMeshAgent.updatePosition off, and cover entry/movement then move the body
+	// directly, so the agent's own position is left behind where the enemy started into cover.
+	// In Unity 2018, turning updatePosition back on snaps the body to that stale agent position
+	// (enemies "jumping"); leaving it off makes them run on the spot ("huffing"). This re-syncs the
+	// agent to the body first, and only does anything when updatePosition was actually off.
+	protected void ResumeAgentFollowing()
+	{
+		UnityEngine.AI.NavMeshAgent navMeshAgent = Owner.NavMeshAgent;
+		if (navMeshAgent == null || navMeshAgent.updatePosition)
+		{
+			return;
+		}
+		if (navMeshAgent.enabled)
+		{
+			navMeshAgent.Warp(Owner.Transform.position);
+		}
+		navMeshAgent.updatePosition = true;
+	}
+
 	protected virtual bool Move(Vector3 velocity, bool slide = true)
 	{
 		if (Owner.CharacterController == null)

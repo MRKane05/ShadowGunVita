@@ -19,6 +19,8 @@ public class AnimStateCoverEnter : AnimState
 
 	private bool PositionOK;
 
+	private bool EntryCompleted;
+
 	public AnimStateCoverEnter(Animation anims, AgentHuman owner)
 		: base(anims, owner)
 	{
@@ -40,6 +42,25 @@ public class AnimStateCoverEnter : AnimState
 	{
 		Owner.BlackBoard.ReactOnHits = true;
 		Owner.BlackBoard.BusyAction = false;
+		// If the entry was cut short and the AI has already given up on this cover (its GOAP
+		// CoverEnter action cleared BlackBoard.Cover), the old code still put the cover back and
+		// marked the entry a success. The enemy then carried on standing/moving with a crouch-sized
+		// capsule and NavMeshAgent.updatePosition still false (body frozen = "huffing"). Abort cleanly
+		// instead. When BlackBoard.Cover is still set (e.g. the player pressed something during the
+		// entry), keep the original behaviour.
+		if (!EntryCompleted && Owner.BlackBoard.Cover == null)
+		{
+			Action.Cover.LockPosition(Owner.BlackBoard.Desires.CoverPosition, null);
+			Owner.WorldState.SetWSProperty(E_PropKey.CoverState, E_CoverState.None);
+			Owner.BlackBoard.CoverPosition = E_CoverDirection.Unknown;
+			ResumeAgentFollowing();
+			Action.SetFailed();
+			Action = null;
+			// Lets ComponentEnemyMutant / ComponentPlayer restore the standing capsule.
+			Owner.BlackBoard.ActionAdd(AgentActionFactory.Create(AgentActionFactory.E_Type.CoverTerminated));
+			base.OnDeactivate();
+			return;
+		}
 		Owner.BlackBoard.Cover = Action.Cover;
 		Owner.BlackBoard.CoverPose = ((!Action.Cover.IsStandAllowed) ? E_CoverPose.Crouch : E_CoverPose.Stand);
 		if (Owner.BlackBoard.Desires.CoverPosition == E_CoverDirection.Unknown)
@@ -87,6 +108,7 @@ public class AnimStateCoverEnter : AnimState
 		}
 		if (EndOfStateTime <= Time.timeSinceLevelLoad)
 		{
+			EntryCompleted = true;
 			Release();
 		}
 	}
@@ -112,6 +134,7 @@ public class AnimStateCoverEnter : AnimState
 		base.Initialize(action);
 		Action = action as AgentActionCoverEnter;
 		CurrentMoveTime = 0f;
+		EntryCompleted = false;
 		StartPosition = Transform.position;
 		string coverAnim = Owner.AnimSet.GetCoverAnim(AnimSet.E_CoverAnim.Enter, (!Action.Cover.IsStandAllowed) ? E_CoverPose.Crouch : E_CoverPose.Stand, E_CoverDirection.Middle);
 		CrossFade(coverAnim, 0.1f, PlayMode.StopSameLayer);

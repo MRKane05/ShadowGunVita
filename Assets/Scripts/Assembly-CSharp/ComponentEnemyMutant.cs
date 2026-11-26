@@ -115,5 +115,12 @@ public class ComponentEnemyMutant : ComponentEnemy
 			base.Owner.CollisionController.center = new Vector3(0f, HeightStand * 0.5f + 0.08f, 0f);
 			base.Owner.CollisionController.height = HeightStand;
 		}
+		else if (a is AgentActionGoTo || a is AgentActionMove || a is AgentActionDodgeStrafe)
+		{
+			// Moving orders are only planned once the enemy is out of cover, so it is standing.
+			// Guards against any path that leaves cover without a CoverLeave/CoverTerminated order.
+			base.Owner.CollisionController.center = new Vector3(0f, HeightStand * 0.5f, 0f);
+			base.Owner.CollisionController.height = HeightStand;
+		}
 	}
 }

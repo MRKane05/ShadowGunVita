@@ -66,7 +66,9 @@ public class AnimStateDeath : AnimState
 			Vector3 destination = Action.Impuls + Owner.Position;
 			Owner.NavMeshAgent.speed = Action.Impuls.magnitude / 0.2f;
 			Owner.NavMeshAgent.acceleration = 100f;
-			Owner.NavMeshAgent.updatePosition = true;
+			// Was updatePosition = true: killed while popped up from cover, the body snapped back to
+			// the stale agent position before sliding. Re-sync first (see ResumeAgentFollowing).
+			ResumeAgentFollowing();
 			Owner.NavMeshAgent.autoRepath = false;
 			Owner.NavMeshAgent.obstacleAvoidanceType = ObstacleAvoidanceType.NoObstacleAvoidance;
 			Owner.NavMeshAgent.SetDestination(destination);

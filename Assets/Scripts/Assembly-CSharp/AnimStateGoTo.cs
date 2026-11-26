@@ -19,6 +19,8 @@ public class AnimStateGoTo : AnimState
 	public override void OnActivate(AgentAction action)
 	{
 		Owner.BlackBoard.Velocity = Vector3.zero;
+		// Before Initialize() sets the destination (Warp would clear it). See ResumeAgentFollowing.
+		ResumeAgentFollowing();
 		base.OnActivate(action);
 		AnimName = null;
 	}

@@ -687,6 +687,7 @@ public class AgentHuman : Agent, IProjectileHitReceiver
 		if ((bool)NavMeshAgent)
 		{
 			NavMeshAgent.enabled = true;
+			NavMeshAgent.updatePosition = true; // may still be off if teleported out of cover
 		}
 		AnimComponent.OnTeleport();
 		base.Transform.position = destination.position;

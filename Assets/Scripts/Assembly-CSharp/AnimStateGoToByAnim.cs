@@ -28,6 +28,8 @@ public class AnimStateGoToByAnim : AnimState
 	{
 		CurrentRotationTime = 0f;
 		RotationOk = true;
+		// Before Initialize() sets the destination (Warp would clear it). See ResumeAgentFollowing.
+		ResumeAgentFollowing();
 		base.OnActivate(action);
 	}
 

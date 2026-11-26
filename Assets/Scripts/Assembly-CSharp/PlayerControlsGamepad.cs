@@ -343,11 +343,11 @@ public class PlayerControlsGamepad
 				GuiHUD.Instance.SwitchToIngameMenu();
 			}
 		}
-		if (ButtonDown(E_Input.PrevWeapon) || Input.GetKeyDown(KeyCode.Plus) || Input.GetKeyDown("a"))
+		if (ButtonDown(E_Input.PrevWeapon) || Input.GetKeyDown(KeyCode.Plus) || Input.GetKeyDown("q"))
 		{
 			ChangeWeaponPrev(States);
 		}
-		else if (ButtonDown(E_Input.NextWeapon) || Input.GetKeyDown(KeyCode.Minus) || Input.GetKeyDown("d"))
+		else if (ButtonDown(E_Input.NextWeapon) || Input.GetKeyDown(KeyCode.Minus) || Input.GetKeyDown("e"))
 		{
 			ChangeWeaponNext(States);
 		}
