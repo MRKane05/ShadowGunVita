@@ -349,9 +349,39 @@ public class BigSpider : Agent, IBossHealth, IHitZoneOwner
 			}
 			yield return new WaitForSeconds(m_AnimInfo.Destroy.length - 0.3f);
 		}
-		yield return StartCoroutine(Fadeout(m_FadeoutDelay));
+		yield return StartCoroutine(DieFadeOut(m_FadeoutDelay));
 	}
 
+	protected IEnumerator DieFadeOut(float delay)
+	{
+		yield return new WaitForSeconds(delay);
+		Renderer renderer = GetComponent<Renderer>();
+		if (m_FadeoutMaterial == null || renderer == null)
+		{
+			Mission.Instance.ReturnAgent(base.GameObject);
+			yield break;
+		}
+		
+		float fadeStart = Time.time;
+		if ((bool)renderer)
+		{
+			renderer.material = m_FadeoutMaterial;
+			//Renderer.material.SetFloat("_TimeOffs", (0f-Time.time));
+			//Renderer.material.SetFloat("_Invert", 0f);
+			//Renderer.material.SetFloat("_Duration", FadeoutFXDuration);
+			renderer.material.SetFloat("_Dissolve", 0.0f);
+		}
+		while (Time.time < fadeStart + m_FadeoutFXDuration)
+		{
+			yield return null;
+			renderer.material.SetFloat("_Dissolve", (Time.time - fadeStart) / m_FadeoutFXDuration);
+		}
+
+		//yield return new WaitForSeconds(FadeoutFXDuration);
+		GetComponent<Renderer>().material.SetFloat("_Dissolve", 1.0f);
+		Mission.Instance.ReturnAgent(base.GameObject);
+	}
+	/*
 	protected IEnumerator Fadeout(float delay)
 	{
 		yield return new WaitForSeconds(delay);
@@ -369,7 +399,7 @@ public class BigSpider : Agent, IBossHealth, IHitZoneOwner
 		}
 		yield return new WaitForSeconds(m_FadeoutFXDuration);
 		Mission.Instance.ReturnAgent(base.GameObject);
-	}
+	}*/
 
 	private void RestoreMaterials()
 	{

@@ -1,89 +1,95 @@
-// Rebuilt from the shipped Shadowgun 1.3.5 (Unity 3.5.7) GLES2 programs by Tools/ShaderPort/sg_glsl2hlsl.py.
-// Exact transliteration of the original maths; edit the generator rather than this file where possible.
-Shader "MADFINGER/Characters/Character shadow plane - sphere AO" {
-Properties {
- _Sphere0 ("S0", Vector) = (0,0,0,0)
- _Sphere1 ("S0", Vector) = (0,0,0,0)
- _Sphere2 ("S0", Vector) = (0,0,0,0)
- _Intensity ("Intensity", Float) = 0.9
-}
-SubShader { 
- Tags { "QUEUE"="Transparent-15" "IGNOREPROJECTOR"="True" "RenderType"="Transparent" }
- Pass {
-  Tags { "QUEUE"="Transparent-15" "IGNOREPROJECTOR"="True" "RenderType"="Transparent" }
-  ZWrite Off
-  Cull Off
-  Fog {
-   Color (0,0,0,0)
-  }
-  Blend DstColor Zero
-CGPROGRAM
-  #pragma vertex vert
-  #pragma fragment frag
-  #include "UnityCG.cginc"
-  float _Intensity;
-  float4 _Sphere0;
-  float4 _Sphere1;
-  float4 _Sphere2;
-  struct sg_appdata {
-    float4 vertex : POSITION;
-    float4 color : COLOR;
-    float3 normal : NORMAL;
-  };
-  struct sg_v2f {
-    float4 pos : SV_POSITION;
-    half4 xlv_COLOR : COLOR0;
-  };
-  sg_v2f vert (sg_appdata v)
-  {
-    sg_v2f o;
-    UNITY_INITIALIZE_OUTPUT(sg_v2f, o);
-    half4 tmpvar_1;
-    float3 tmpvar_2;
-    tmpvar_2 = (mul(unity_ObjectToWorld, v.vertex)).xyz;
-    float3x3 tmpvar_3;
-    tmpvar_3[0] = transpose(unity_ObjectToWorld)[0].xyz;
-    tmpvar_3[1] = transpose(unity_ObjectToWorld)[1].xyz;
-    tmpvar_3[2] = transpose(unity_ObjectToWorld)[2].xyz;
-    float3 tmpvar_4;
-    tmpvar_4 = (mul(normalize(v.normal), tmpvar_3));
-    float3 tmpvar_5;
-    tmpvar_5 = (_Sphere0.xyz - tmpvar_2);
-    float tmpvar_6;
-    tmpvar_6 = length(tmpvar_5);
-    float tmpvar_7;
-    tmpvar_7 = (_Sphere0.w / tmpvar_6);
-    float3 tmpvar_8;
-    tmpvar_8 = (_Sphere1.xyz - tmpvar_2);
-    float tmpvar_9;
-    tmpvar_9 = length(tmpvar_8);
-    float tmpvar_10;
-    tmpvar_10 = (_Sphere1.w / tmpvar_9);
-    float3 tmpvar_11;
-    tmpvar_11 = (_Sphere2.xyz - tmpvar_2);
-    float tmpvar_12;
-    tmpvar_12 = length(tmpvar_11);
-    float tmpvar_13;
-    tmpvar_13 = (_Sphere2.w / tmpvar_12);
-    float tmpvar_14;
-    tmpvar_14 = (max((1.0 - clamp(((((dot(tmpvar_4, (tmpvar_5 / tmpvar_6)) * tmpvar_7) * tmpvar_7) + ((dot(tmpvar_4, (tmpvar_8 / tmpvar_9)) * tmpvar_10) * tmpvar_10)) + ((dot(tmpvar_4, (tmpvar_11 / tmpvar_12)) * tmpvar_13) * tmpvar_13)), 0.0, 1.0)), (1.0 - _Intensity)) + (1.0 - v.color.x));
-    float4 tmpvar_15;
-    tmpvar_15.x = tmpvar_14;
-    tmpvar_15.y = tmpvar_14;
-    tmpvar_15.z = tmpvar_14;
-    tmpvar_15.w = tmpvar_14;
-    tmpvar_1 = tmpvar_15;
-    o.pos = (UnityObjectToClipPos(v.vertex));
-    o.xlv_COLOR = tmpvar_1;
-    return o;
-  }
-  fixed4 frag (sg_v2f i) : SV_Target
-  {
-    fixed4 sg_FragColor = 0;
-    sg_FragColor = i.xlv_COLOR;
-    return sg_FragColor;
-  }
-  ENDCG
- }
-}
+// Readable version of "MADFINGER/Characters/Character shadow plane - sphere AO".
+// Rebuilt from the Shadowgun 1.3.5 GLES2 programs for Unity 2018 (Vita).
+//
+// Blob shadow under characters: a ground mesh darkened (multiply blend) by up to three spheres
+// (_SphereN.xyz = world centre, .w = radius) that approximate the character's body. Each sphere
+// occludes by (radius / distance)^2 * cos(angle to sphere). _Intensity limits how dark it gets.
+// Vertex red fades the mesh edges (0 = no darkening).
+//
+// Normal fix, the same as the other MADFINGER shaders:
+//  - The world normal is transformed with the inverse transpose (mul(normal, unity_WorldToObject))
+//    and normalised. The generated code multiplied by the object-to-world matrix without
+//    renormalising, so on a scaled shadow plane the occlusion was scaled too. For unscaled
+//    objects the result is unchanged.
+
+Shader "MADFINGER/Characters/Character shadow plane - sphere AO"
+{
+    Properties
+    {
+        _Sphere0 ("S0", Vector) = (0,0,0,0)
+        _Sphere1 ("S0", Vector) = (0,0,0,0)
+        _Sphere2 ("S0", Vector) = (0,0,0,0)
+        _Intensity ("Intensity", Float) = 0.9
+    }
+
+    SubShader
+    {
+        Tags { "QUEUE" = "Transparent-15" "IGNOREPROJECTOR" = "True" "RenderType" = "Transparent" }
+
+        Pass
+        {
+            Tags { "QUEUE" = "Transparent-15" "IGNOREPROJECTOR" = "True" "RenderType" = "Transparent" }
+            ZWrite Off
+            Cull Off
+            Fog { Color (0,0,0,0) }
+            Blend DstColor Zero
+
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #include "UnityCG.cginc"
+
+            float  _Intensity;
+            float4 _Sphere0; // xyz = world centre, w = radius
+            float4 _Sphere1;
+            float4 _Sphere2;
+
+            // Occlusion from one sphere: cos(angle) * (radius / distance)^2
+            float SphereOcclusion(float4 sphere, float3 worldPos, float3 worldNormal)
+            {
+                float3 toSphere = sphere.xyz - worldPos;
+                float dist = length(toSphere);
+                float size = sphere.w / dist;
+                return dot(worldNormal, toSphere / dist) * size * size;
+            }
+
+            struct appdata_t
+            {
+                float4 vertex : POSITION;
+                float4 color  : COLOR;  // r = 0 at the mesh edges
+                float3 normal : NORMAL;
+            };
+
+            struct v2f
+            {
+                float4 pos   : SV_POSITION;
+                half4  color : COLOR0;
+            };
+
+            v2f vert(appdata_t v)
+            {
+                v2f o;
+                UNITY_INITIALIZE_OUTPUT(v2f, o);
+
+                float3 worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
+                float3 worldNormal = normalize(mul(normalize(v.normal), (float3x3)unity_WorldToObject));
+
+                float occlusion = SphereOcclusion(_Sphere0, worldPos, worldNormal)
+                                + SphereOcclusion(_Sphere1, worldPos, worldNormal)
+                                + SphereOcclusion(_Sphere2, worldPos, worldNormal);
+
+                float shade = max(1.0 - saturate(occlusion), 1.0 - _Intensity) + (1.0 - v.color.r);
+
+                o.pos = UnityObjectToClipPos(v.vertex);
+                o.color = (half4)shade;
+                return o;
+            }
+
+            fixed4 frag(v2f i) : SV_Target
+            {
+                return i.color;
+            }
+            ENDCG
+        }
+    }
 }

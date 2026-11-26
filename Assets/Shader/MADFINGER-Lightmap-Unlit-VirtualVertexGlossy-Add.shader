@@ -1,74 +1,104 @@
-// Rebuilt from the shipped Shadowgun 1.3.5 (Unity 3.5.7) GLES2 programs by Tools/ShaderPort/sg_glsl2hlsl.py.
-// Exact transliteration of the original maths; edit the generator rather than this file where possible.
-Shader "MADFINGER/Environment/Virtual Gloss Per-Vertex Additive (Supports Lightmap)" {
-Properties {
- _MainTex ("Base (RGB) Gloss (A)", 2D) = "white" {}
- _SpecOffset ("Specular Offset from Camera", Vector) = (1,10,2,0)
- _SpecRange ("Specular Range", Float) = 20
- _SpecColor ("Specular Color", Color) = (0.5,0.5,0.5,1)
- _Shininess ("Shininess", Range(0.01,1)) = 0.078125
- _ScrollingSpeed ("Scrolling speed", Vector) = (0,0,0,0)
-}
-SubShader { 
- LOD 100
- Tags { "LIGHTMODE"="ForwardBase" "RenderType"="Opaque" }
- Pass {
-  Tags { "LIGHTMODE"="ForwardBase" "RenderType"="Opaque" }
-CGPROGRAM
-  #pragma vertex vert
-  #pragma fragment frag
-  #include "UnityCG.cginc"
-  sampler2D _MainTex;
-  float4 _ScrollingSpeed;
-  float _Shininess;
-  float3 _SpecColor;
-  float3 _SpecOffset;
-  float _SpecRange;
-  struct sg_appdata {
-    float4 vertex : POSITION;
-    float3 normal : NORMAL;
-    float4 texcoord : TEXCOORD0;
-    float4 texcoord1 : TEXCOORD1;
-  };
-  struct sg_v2f {
-    float4 pos : SV_POSITION;
-    half3 xlv_TEXCOORD2 : TEXCOORD2;
-    float2 xlv_TEXCOORD1 : TEXCOORD1;
-    float2 xlv_TEXCOORD0 : TEXCOORD0;
-  };
-  sg_v2f vert (sg_appdata v)
-  {
-    sg_v2f o;
-    UNITY_INITIALIZE_OUTPUT(sg_v2f, o);
-    half3 tmpvar_1;
-    float3x3 tmpvar_2;
-    tmpvar_2[0] = transpose(UNITY_MATRIX_MV)[0].xyz;
-    tmpvar_2[1] = transpose(UNITY_MATRIX_MV)[1].xyz;
-    tmpvar_2[2] = transpose(UNITY_MATRIX_MV)[2].xyz;
-    float3 tmpvar_3;
-    tmpvar_3 = ((mul(UNITY_MATRIX_MV, v.vertex)).xyz - (_SpecOffset * float3(1.0, 1.0, -1.0)));
-    float3 tmpvar_4;
-    tmpvar_4 = (((_SpecColor * pow(clamp(dot((mul(normalize(v.normal), tmpvar_2)), normalize(((float3(0.0, 0.0, 1.0) + normalize(-(tmpvar_3))) * 0.5))), 0.0, 1.0), (_Shininess * 128.0))) * 2.0) * (1.0 - clamp((length(tmpvar_3) / _SpecRange), 0.0, 1.0)));
-    tmpvar_1 = tmpvar_4;
-    o.pos = (UnityObjectToClipPos(v.vertex));
-    o.xlv_TEXCOORD0 = (v.texcoord + frac((_ScrollingSpeed * _Time.y))).xy;
-    o.xlv_TEXCOORD1 = ((v.texcoord1.xy * unity_LightmapST.xy) + unity_LightmapST.zw);
-    o.xlv_TEXCOORD2 = tmpvar_1;
-    return o;
-  }
-  fixed4 frag (sg_v2f i) : SV_Target
-  {
-    fixed4 sg_FragColor = 0;
-    half4 c;
-    half4 tmpvar_1;
-    tmpvar_1 = tex2D(_MainTex, i.xlv_TEXCOORD0);
-    c = tmpvar_1;
-    c.xyz = (tmpvar_1.xyz + (i.xlv_TEXCOORD2 * tmpvar_1.w));
-    c.xyz = (c.xyz * (2.0 * UNITY_SAMPLE_TEX2D(unity_Lightmap, i.xlv_TEXCOORD1).xyz));
-    sg_FragColor = c;
-    return sg_FragColor;
-  }
-  ENDCG
- }
-}
+// Readable version of "MADFINGER/Environment/Virtual Gloss Per-Vertex Additive (Supports Lightmap)".
+// Rebuilt from the Shadowgun 1.3.5 GLES2 programs for Unity 2018 (Vita).
+//
+// "Virtual" gloss: a per-vertex specular highlight from a light placed at a fixed offset from
+// the camera (_SpecOffset, in view space), fading out with distance (_SpecRange). The highlight
+// is weighted by the texture's alpha (gloss), added to the albedo, and the result is multiplied
+// by the baked lightmap.
+// The base UV scrolls by _ScrollingSpeed (the material tiling/offset fields are not used).
+//
+// Normal fix, the same as the other MADFINGER shaders:
+//  - The view-space normal is transformed with the inverse transpose of the model-view matrix
+//    (UNITY_MATRIX_IT_MV) and normalised, as Unity's COMPUTE_VIEW_NORMAL does. The generated code
+//    used the model-view matrix itself and did not renormalise, which skews the highlight on
+//    scaled objects. For unscaled and uniformly scaled objects the result is unchanged.
+
+Shader "MADFINGER/Environment/Virtual Gloss Per-Vertex Additive (Supports Lightmap)"
+{
+    Properties
+    {
+        _MainTex ("Base (RGB) Gloss (A)", 2D) = "white" {}
+        _SpecOffset ("Specular Offset from Camera", Vector) = (1,10,2,0)
+        _SpecRange ("Specular Range", Float) = 20
+        _SpecColor ("Specular Color", Color) = (0.5,0.5,0.5,1)
+        _Shininess ("Shininess", Range(0.01,1)) = 0.078125
+        _ScrollingSpeed ("Scrolling speed", Vector) = (0,0,0,0)
+    }
+
+    SubShader
+    {
+        LOD 100
+        Tags { "LIGHTMODE" = "ForwardBase" "RenderType" = "Opaque" }
+
+        Pass
+        {
+            Tags { "LIGHTMODE" = "ForwardBase" "RenderType" = "Opaque" }
+
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #include "UnityCG.cginc"
+
+            sampler2D _MainTex;
+            float4    _ScrollingSpeed;
+            float3    _SpecOffset;
+            float     _SpecRange;
+            float3    _SpecColor;
+            float     _Shininess;
+
+            struct appdata_t
+            {
+                float4 vertex    : POSITION;
+                float3 normal    : NORMAL;
+                float4 texcoord  : TEXCOORD0;
+                float4 texcoord1 : TEXCOORD1;
+            };
+
+            struct v2f
+            {
+                float4 pos        : SV_POSITION;
+                float2 uv         : TEXCOORD0;
+                float2 uvLightmap : TEXCOORD1;
+                half3  specular   : TEXCOORD2; // per-vertex specular colour
+            };
+
+            v2f vert(appdata_t v)
+            {
+                v2f o;
+                UNITY_INITIALIZE_OUTPUT(v2f, o);
+
+                o.pos = UnityObjectToClipPos(v.vertex);
+                o.uv = (v.texcoord + frac(_ScrollingSpeed * _Time.y)).xy;
+                o.uvLightmap = v.texcoord1.xy * unity_LightmapST.xy + unity_LightmapST.zw;
+
+                // View space: the camera is at the origin looking down -Z
+                float3 viewNormal = normalize(mul((float3x3)UNITY_MATRIX_IT_MV, normalize(v.normal)));
+                float3 viewPos = mul(UNITY_MATRIX_MV, v.vertex).xyz;
+
+                // Vector from the virtual light (offset from the camera) to the vertex
+                float3 fromLight = viewPos - _SpecOffset * float3(1.0, 1.0, -1.0);
+
+                // Blinn half vector between the light direction and the view axis (+Z)
+                float3 halfDir = normalize((float3(0.0, 0.0, 1.0) + normalize(-fromLight)) * 0.5);
+
+                float specLobe = pow(saturate(dot(viewNormal, halfDir)), _Shininess * 128.0);
+                float rangeFade = 1.0 - saturate(length(fromLight) / _SpecRange);
+
+                o.specular = _SpecColor * specLobe * 2.0 * rangeFade;
+                return o;
+            }
+
+            fixed4 frag(v2f i) : SV_Target
+            {
+                half4 color = tex2D(_MainTex, i.uv);
+
+                color.rgb += i.specular * color.a;
+
+                // The lightmap is stored at half intensity, so it is doubled
+                color.rgb *= 2.0 * UNITY_SAMPLE_TEX2D(unity_Lightmap, i.uvLightmap).rgb;
+                return color;
+            }
+            ENDCG
+        }
+    }
 }

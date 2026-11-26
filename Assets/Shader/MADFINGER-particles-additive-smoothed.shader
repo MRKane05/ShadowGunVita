@@ -1,67 +1,86 @@
-// Rebuilt from the shipped Shadowgun 1.3.5 (Unity 3.5.7) GLES2 programs by Tools/ShaderPort/sg_glsl2hlsl.py.
-// Exact transliteration of the original maths; edit the generator rather than this file where possible.
-Shader "MADFINGER/Particles/Additive + fadeout" {
-Properties {
- _MainTex ("Main tex", 2D) = "white" {}
- _Color ("Tint color", Color) = (0,1,0,0)
-}
-SubShader { 
- LOD 100
- Tags { "QUEUE"="Transparent" "IGNOREPROJECTOR"="True" "RenderType"="Transparent" }
- Pass {
-  Tags { "QUEUE"="Transparent" "IGNOREPROJECTOR"="True" "RenderType"="Transparent" }
-  ZWrite Off
-  Cull Off
-  Fog {
-   Color (0,0,0,0)
-  }
-  Blend One One
-CGPROGRAM
-  #pragma vertex vert
-  #pragma fragment frag
-  #include "UnityCG.cginc"
-  float4 _Color;
-  sampler2D _MainTex;
-  struct sg_appdata {
-    float4 vertex : POSITION;
-    float3 normal : NORMAL;
-    float4 texcoord : TEXCOORD0;
-  };
-  struct sg_v2f {
-    float4 pos : SV_POSITION;
-    float2 xlv_TEXCOORD0 : TEXCOORD0;
-    half4 xlv_COLOR : COLOR0;
-  };
-  sg_v2f vert (sg_appdata v)
-  {
-    sg_v2f o;
-    UNITY_INITIALIZE_OUTPUT(sg_v2f, o);
-    half4 tmpvar_1;
-    float3x3 tmpvar_2;
-    tmpvar_2[0] = transpose(unity_ObjectToWorld)[0].xyz;
-    tmpvar_2[1] = transpose(unity_ObjectToWorld)[1].xyz;
-    tmpvar_2[2] = transpose(unity_ObjectToWorld)[2].xyz;
-    float4 tmpvar_3;
-    tmpvar_3.xyz = _Color.xyz;
-    tmpvar_3.w = clamp((4.0 * abs(dot(normalize((mul(normalize(v.normal), tmpvar_2))), normalize((_WorldSpaceCameraPos - (mul(unity_ObjectToWorld, v.vertex)).xyz))))), 0.0, 1.0);
-    tmpvar_1 = tmpvar_3;
-    o.pos = (UnityObjectToClipPos(v.vertex));
-    o.xlv_COLOR = tmpvar_1;
-    o.xlv_TEXCOORD0 = v.texcoord.xy;
-    return o;
-  }
-  fixed4 frag (sg_v2f i) : SV_Target
-  {
-    fixed4 sg_FragColor = 0;
-    half4 tex;
-    half4 tmpvar_1;
-    tmpvar_1 = tex2D(_MainTex, i.xlv_TEXCOORD0);
-    tex = tmpvar_1;
-    tex.xyz = (tmpvar_1.xyz * i.xlv_COLOR.xyz);
-    sg_FragColor = ((tex * i.xlv_COLOR.w) * i.xlv_COLOR.w);
-    return sg_FragColor;
-  }
-  ENDCG
- }
-}
+// Readable version of "MADFINGER/Particles/Additive + fadeout".
+// Rebuilt from the Shadowgun 1.3.5 GLES2 programs for Unity 2018 (Vita).
+//
+// Additive texture tinted by _Color that fades out where the surface turns edge-on to the camera
+// (fully visible when facing within about 75 degrees of the camera, gone at 90). This hides the
+// hard edges of flat effect cards. Both sides fade the same way.
+//
+// Normal fix, the same as the other MADFINGER shaders:
+//  - The world normal is transformed with the inverse transpose (mul(normal, unity_WorldToObject)).
+//    The generated code multiplied by the object-to-world matrix, which tilts the normal on
+//    non-uniformly scaled objects and changes where the fade happens. For unscaled and uniformly
+//    scaled objects the result is unchanged.
+//
+// Other changes:
+//  - The fade is passed as a single value; the tint is read from _Color in the fragment stage
+//    instead of being copied into an interpolator.
+
+Shader "MADFINGER/Particles/Additive + fadeout"
+{
+    Properties
+    {
+        _MainTex ("Main tex", 2D) = "white" {}
+        _Color ("Tint color", Color) = (0,1,0,0)
+    }
+
+    SubShader
+    {
+        LOD 100
+        Tags { "QUEUE" = "Transparent" "IGNOREPROJECTOR" = "True" "RenderType" = "Transparent" }
+
+        Pass
+        {
+            Tags { "QUEUE" = "Transparent" "IGNOREPROJECTOR" = "True" "RenderType" = "Transparent" }
+            ZWrite Off
+            Cull Off
+            Fog { Color (0,0,0,0) }
+            Blend One One
+
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #include "UnityCG.cginc"
+
+            float4    _Color;
+            sampler2D _MainTex;
+
+            struct appdata_t
+            {
+                float4 vertex   : POSITION;
+                float3 normal   : NORMAL;
+                float4 texcoord : TEXCOORD0;
+            };
+
+            struct v2f
+            {
+                float4 pos  : SV_POSITION;
+                float2 uv   : TEXCOORD0;
+                half   fade : COLOR0;
+            };
+
+            v2f vert(appdata_t v)
+            {
+                v2f o;
+                UNITY_INITIALIZE_OUTPUT(v2f, o);
+
+                float3 worldNormal = normalize(mul(normalize(v.normal), (float3x3)unity_WorldToObject));
+                float3 worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
+                float3 toCamera = normalize(_WorldSpaceCameraPos - worldPos);
+
+                o.pos = UnityObjectToClipPos(v.vertex);
+                o.uv = v.texcoord.xy;
+                o.fade = saturate(4.0 * abs(dot(worldNormal, toCamera)));
+                return o;
+            }
+
+            fixed4 frag(v2f i) : SV_Target
+            {
+                half4 color = tex2D(_MainTex, i.uv);
+                color.rgb *= (half3)_Color.rgb;
+                // The fade is applied twice (squared), as in the original
+                return color * i.fade * i.fade;
+            }
+            ENDCG
+        }
+    }
 }
