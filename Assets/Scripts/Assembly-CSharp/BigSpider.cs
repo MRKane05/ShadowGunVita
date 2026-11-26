@@ -355,15 +355,14 @@ public class BigSpider : Agent, IBossHealth, IHitZoneOwner
 	protected IEnumerator DieFadeOut(float delay)
 	{
 		yield return new WaitForSeconds(delay);
-		Renderer renderer = GetComponent<Renderer>();
-		if (m_FadeoutMaterial == null || renderer == null)
+		if (m_FadeoutMaterial == null)
 		{
 			Mission.Instance.ReturnAgent(base.GameObject);
 			yield break;
 		}
 		
 		float fadeStart = Time.time;
-		if ((bool)renderer)
+		foreach (MeshRenderer renderer in m_BackupDefaultMaterials.Keys)
 		{
 			renderer.material = m_FadeoutMaterial;
 			//Renderer.material.SetFloat("_TimeOffs", (0f-Time.time));
@@ -374,11 +373,17 @@ public class BigSpider : Agent, IBossHealth, IHitZoneOwner
 		while (Time.time < fadeStart + m_FadeoutFXDuration)
 		{
 			yield return null;
-			renderer.material.SetFloat("_Dissolve", (Time.time - fadeStart) / m_FadeoutFXDuration);
+			foreach (MeshRenderer renderer in m_BackupDefaultMaterials.Keys)
+			{
+				renderer.material.SetFloat("_Dissolve", (Time.time - fadeStart) / m_FadeoutFXDuration);
+			}
 		}
 
 		//yield return new WaitForSeconds(FadeoutFXDuration);
-		GetComponent<Renderer>().material.SetFloat("_Dissolve", 1.0f);
+		foreach (MeshRenderer renderer in m_BackupDefaultMaterials.Keys)
+		{
+			renderer.material.SetFloat("_Dissolve", 1.0f);
+		}
 		Mission.Instance.ReturnAgent(base.GameObject);
 	}
 	/*

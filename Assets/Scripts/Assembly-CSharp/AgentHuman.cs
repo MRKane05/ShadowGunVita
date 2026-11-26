@@ -291,14 +291,18 @@ public class AgentHuman : Agent, IProjectileHitReceiver
 	private void Activate(SpawnPoint spawn)
 	{
 		BlackBoard.DontUpdate = false;
+		// Place the agent on the real ground under the spawn point. The original cast used mask 16384
+		// (layer 14, "Decals"), which no collider in the converted levels is on, so it never hit and
+		// agents were left at the raw spawn point height.
+		Vector3 spawnPos = spawn.Transform.position;
 		RaycastHit hitInfo;
-		if (!Physics.Raycast(spawn.Transform.position + Vector3.up, -Vector3.up, out hitInfo, 5f, 16384))
+		if (Physics.Raycast(spawnPos + Vector3.up * SpawnGroundProbeUp, Vector3.down, out hitInfo, SpawnGroundProbeUp + SpawnGroundProbeDown, GroundMask, QueryTriggerInteraction.Ignore))
 		{
-			base.Transform.position = spawn.Transform.position;
+			base.Transform.position = hitInfo.point;
 		}
 		else
 		{
-			base.Transform.position = hitInfo.point;
+			base.Transform.position = spawnPos;
 		}
 		base.Transform.rotation = spawn.Transform.rotation;
 		BlackBoard.Desires.Rotation = spawn.Transform.rotation;
@@ -307,11 +311,85 @@ public class AgentHuman : Agent, IProjectileHitReceiver
 		base.GameObject.active = true;
 		if ((bool)NavMeshAgent)
 		{
+			NavMeshAgent.baseOffset = 0f;
 			NavMeshAgent.enabled = true;
 			NavMeshAgent.updatePosition = true;
 			NavMeshAgent.updateRotation = false;
 		}
 		base.GameObject.layer = 31;
+		// Enabling the agent snaps the body to the navmesh, which can sit below the visible floor
+		// (see GroundOnSpawn), so lift it back onto the ground straight away
+		GroundOnSpawn(spawn);
+	}
+
+	// Layers that count as walkable ground for the spawn casts: everything except Ignore Raycast, HUD,
+	// Enemy, Flayer, CameraBg, Projectile, Navmesh and PhysicBody (agents, ragdolls).
+	private const int GroundMask = ~((1 << 2) | (1 << 8) | (1 << 10) | (1 << 15) | (1 << 17) | (1 << 18) | (1 << 26) | (1 << 31));
+
+	private const float SpawnGroundProbeUp = 1.5f;     // spawn cast starts this far above the spawn point
+	private const float SpawnGroundProbeDown = 2f;     // ...and searches this far below it
+
+	private const float MaxSpawnGroundOffset = 0.6f;   // largest navmesh/ground height gap corrected at spawn
+	private const float SpawnOffsetClearDist = 0.5f;   // the lift is removed once the agent moves this far
+	private const float SpawnOffsetClearSpeed = 3f;    // metres per second the lift eases back to zero
+
+	private bool HasSpawnGroundOffset;
+
+	private Vector3 SpawnGroundPos;
+
+	// The navmesh was rebuilt from Unity 3.5's simplified walk polygons (Editor/NavMeshRestore.cs). They
+	// can sit below decking, steps and other floors, and with updatePosition on, the NavMeshAgent puts the
+	// body on the navmesh, so enemies could spawn knee deep. At spawn only, this casts down from the
+	// agent's navmesh position and uses NavMeshAgent.baseOffset to stand the body on the real ground.
+	// Once the agent walks away, ClearSpawnGroundOffset hands height back to the navmesh.
+	private void GroundOnSpawn(SpawnPoint spawn)
+	{
+		HasSpawnGroundOffset = false;
+		if (IsPlayer || NavMeshAgent == null || !NavMeshAgent.enabled || !NavMeshAgent.isOnNavMesh)
+		{
+			return;
+		}
+		Vector3 navPos = NavMeshAgent.nextPosition;
+		RaycastHit hit;
+		if (!Physics.Raycast(navPos + Vector3.up * MaxSpawnGroundOffset, Vector3.down, out hit, MaxSpawnGroundOffset * 2f, GroundMask, QueryTriggerInteraction.Ignore))
+		{
+			return;
+		}
+		float offset = hit.point.y - navPos.y;
+		if (Mathf.Abs(offset) < 0.01f)
+		{
+			return;
+		}
+		NavMeshAgent.baseOffset = offset / Mathf.Max(base.Transform.lossyScale.y, 0.0001f);
+		base.Transform.position = navPos + Vector3.up * offset;
+		SpawnGroundPos = navPos;
+		HasSpawnGroundOffset = true;
+		if (Mathf.Abs(offset) > 0.05f)
+		{
+			Debug.Log(string.Format("[SpawnGround] {0} at {1}: navmesh y {2:F2}, ground y {3:F2}, lifted {4:F2}", base.name, spawn.name, navPos.y, hit.point.y, offset));
+		}
+	}
+
+	// No raycasts: once the agent is more than SpawnOffsetClearDist from where it spawned, ease the
+	// spawn lift back to zero so the navmesh controls height again.
+	private void ClearSpawnGroundOffset()
+	{
+		if (!HasSpawnGroundOffset || NavMeshAgent == null || !NavMeshAgent.enabled)
+		{
+			return;
+		}
+		Vector3 moved = NavMeshAgent.nextPosition - SpawnGroundPos;
+		moved.y = 0f;
+		if (moved.sqrMagnitude < SpawnOffsetClearDist * SpawnOffsetClearDist)
+		{
+			return;
+		}
+		float scale = Mathf.Max(base.Transform.lossyScale.y, 0.0001f);
+		NavMeshAgent.baseOffset = Mathf.MoveTowards(NavMeshAgent.baseOffset, 0f, SpawnOffsetClearSpeed / scale * Time.deltaTime);
+		if (NavMeshAgent.baseOffset == 0f)
+		{
+			HasSpawnGroundOffset = false;
+		}
 	}
 
 	private void Deactivate()
@@ -325,6 +403,7 @@ public class AgentHuman : Agent, IProjectileHitReceiver
 		{
 			return;
 		}
+		ClearSpawnGroundOffset();
 		RaycastHit hitInfo;
 		if ((BlackBoard.MotionType == E_MotionType.Run || BlackBoard.MotionType == E_MotionType.Walk || BlackBoard.MotionType == E_MotionType.AnimationDrive || BlackBoard.MotionType == E_MotionType.Comlink) && StepTime < Time.timeSinceLevelLoad && Physics.Raycast(base.Position + Vector3.up * 0.1f, -Vector3.up, out hitInfo))
 		{
@@ -423,7 +502,9 @@ public class AgentHuman : Agent, IProjectileHitReceiver
 	{
 		if (NavMeshAgent != null)
 		{
+			NavMeshAgent.baseOffset = 0f;
 			NavMeshAgent.enabled = false;
+			HasSpawnGroundOffset = false;
 		}
 		if (IsInCover)
 		{
