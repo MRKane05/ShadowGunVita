@@ -31,6 +31,15 @@ public static class PlayerSkins
 		// Bones to add to the player if missing, as pairs: bone name, parent bone name
 		public string[] ExtraBones;
 
+		// Bones to scale while this skin is worn, as pairs: bone name, uniform scale
+		public object[] BoneScales;
+
+		public Skin WithBoneScales(params object[] boneScales)
+		{
+			BoneScales = boneScales;
+			return this;
+		}
+
 		// true = the player's own model
 		public bool IsDefault
 		{
@@ -75,7 +84,7 @@ public static class PlayerSkins
 			"pelvis", "chest", "Larm", "Lshoulder", "neck", "head", "Ribs", "stomach", "Lthigh", "Rarm",
 			"Rshoulder", "Rthigh", "Lcalf", "Lfoot", "Lforearm", "Lthumb", "Lwrist", "Lfingers", "Rcalf", "Rfoot",
 			"Rforearm", "Rthumb", "Rwrist", "Rfingers", "face_jaw"
-		}, new string[2] { "face_jaw", "head" })
+		}, new string[2] { "face_jaw", "head" }).WithBoneScales("head", 1.1f) // bigger head evens out her head/shoulder ratio
 	};
 
 	// The player's own model, captured before the first swap so it can be put back
@@ -92,6 +101,43 @@ public static class PlayerSkins
 		public Bounds LocalBounds;
 
 		public Material DiffuseMaterial;
+
+		// Bones scaled by the current skin, with their scale before it, so they can be put back
+		public Dictionary<Transform, Vector3> ScaledBones = new Dictionary<Transform, Vector3>();
+	}
+
+	private static void RestoreBoneScales(OriginalModel original)
+	{
+		foreach (KeyValuePair<Transform, Vector3> scaled in original.ScaledBones)
+		{
+			if (scaled.Key != null)
+			{
+				scaled.Key.localScale = scaled.Value;
+			}
+		}
+		original.ScaledBones.Clear();
+	}
+
+	private static void ApplyBoneScales(Skin skin, OriginalModel original, Dictionary<string, Transform> playerBones)
+	{
+		if (skin.BoneScales == null)
+		{
+			return;
+		}
+		for (int i = 0; i + 1 < skin.BoneScales.Length; i += 2)
+		{
+			Transform bone;
+			if (!playerBones.TryGetValue((string)skin.BoneScales[i], out bone))
+			{
+				Debug.LogWarning("[PlayerSkin] " + skin.Name + ": no bone " + skin.BoneScales[i] + " to scale");
+				continue;
+			}
+			if (!original.ScaledBones.ContainsKey(bone))
+			{
+				original.ScaledBones.Add(bone, bone.localScale);
+			}
+			bone.localScale = original.ScaledBones[bone] * (float)skin.BoneScales[i + 1];
+		}
 	}
 
 	public static int ClampIndex(int index)
@@ -132,6 +178,7 @@ public static class PlayerSkins
 		Skin skin = Skins[ClampIndex(index)];
 		if (skin.IsDefault)
 		{
+			RestoreBoneScales(original);
 			renderer.sharedMesh = original.Mesh;
 			renderer.bones = original.Bones;
 			renderer.rootBone = original.RootBone;
@@ -195,6 +242,9 @@ public static class PlayerSkins
 		{
 			rootBone = original.RootBone;
 		}
+
+		RestoreBoneScales(original);
+		ApplyBoneScales(skin, original, playerBones);
 
 		renderer.sharedMesh = mesh;
 		renderer.bones = bones;

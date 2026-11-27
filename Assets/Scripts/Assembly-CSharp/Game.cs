@@ -733,6 +733,7 @@ public class Game : MonoBehaviour
 		StartCoroutine(LoadScene(CurrentLevel));
 	}
 
+	float lerpProgress = 0;
 	private IEnumerator LoadScene(string scene)
 	{
 		PauseScreenTimeout(120f);
@@ -753,6 +754,7 @@ public class Game : MonoBehaviour
 		Debug.Log("Loading Scene: " + scene);
 		AsyncOperation operation = SceneManager.LoadSceneAsync(scene);
 		Canvas_GameExtras.Instance.UpdateLoadingBar(0.1f, true);
+		lerpProgress = 0.1f;
 		// Optional: Keep the scene from activating automatically when fully loaded
 		// operation.allowSceneActivation = false; 
 
@@ -763,9 +765,10 @@ public class Game : MonoBehaviour
 			// The remaining 0.1 (0.9 to 1.0) is handled during scene activation.
 			// Clamping it divided by 0.9 maps the progress smoothly from 0% to 100%.
 			float progressValue = Mathf.Clamp01(operation.progress / 0.9f);
+			lerpProgress = Mathf.Lerp(lerpProgress, progressValue, Time.deltaTime * 5f);
 			if (Canvas_GameExtras.Instance != null)
 			{
-				Canvas_GameExtras.Instance.UpdateLoadingBar(progressValue * 0.9f + 0.1f, true);
+				Canvas_GameExtras.Instance.UpdateLoadingBar(lerpProgress * 0.9f + 0.1f, true);
 			}
 
 
