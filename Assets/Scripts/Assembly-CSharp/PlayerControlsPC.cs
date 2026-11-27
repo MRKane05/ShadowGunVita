@@ -195,6 +195,10 @@ public class PlayerControlsPC
 		{
 			ChangeWeapon(E_WeaponType.PlasmaRifle);
 		}
+		if (Input.GetKeyDown("6"))
+		{
+			ChangeWeapon(E_WeaponType.Gatling);
+		}
 	}
 
 	private void ChangeWeapon(E_WeaponType type)

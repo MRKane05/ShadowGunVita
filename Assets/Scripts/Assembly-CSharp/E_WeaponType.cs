@@ -13,5 +13,6 @@ public enum E_WeaponType
 	StickyLauncher = 10,
 	PlasmaRifle = 11,
 	Max = 12,
-	None = 13
+	None = 13,
+	Gatling = 14 // the player's Gatling (WeaponGatlingPlayer); GatlingMutant stays the enemy version
 }

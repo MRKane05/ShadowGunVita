@@ -96,6 +96,9 @@ public class ComponentPlayer : MonoBehaviour
 		}
 	}
 
+	// The player's own model, recorded by PlayerSkins the first time a skin is applied
+	private PlayerSkins.OriginalModel m_OriginalModel;
+
 	private void Awake()
 	{
 		Player.Instance = this;
@@ -148,6 +151,10 @@ public class ComponentPlayer : MonoBehaviour
 		Controls.ChangeWeaponDelegate = ActionChangeWeapon;
 		BlackBoard blackBoard = Owner.BlackBoard;
 		blackBoard.ActionHandler = (BlackBoard.AgentActionHandler)Delegate.Combine(blackBoard.ActionHandler, new BlackBoard.AgentActionHandler(HandleAction));
+		if (GuiOptions.playerSkin != 0)
+		{
+			PlayerSkins.Apply(Owner, ref m_OriginalModel, GuiOptions.playerSkin);
+		}
 	}
 
 	private void Activate(SpawnPoint spawn)
@@ -167,6 +174,20 @@ public class ComponentPlayer : MonoBehaviour
 
 	private void Update()
 	{
+		// PROBLEM: Character hot-swap needs disabled on final build
+		// Skin test: F8 in the editor, or Select on the Vita, cycles the player skins and saves the
+		// choice for later levels. Select is otherwise unused in game. Vita builds can't be debug
+		// builds, so this is active in every Vita build until removed.
+		if ((Application.isEditor && Input.GetKeyDown(KeyCode.F8)) || (VitaInput.IsVita && Input.GetKeyDown(VitaInput.BTN_SELECT)))
+		{
+			int next = (GuiOptions.playerSkin + 1) % PlayerSkins.Skins.Length;
+			if (PlayerSkins.Apply(Owner, ref m_OriginalModel, next))
+			{
+				GuiOptions.playerSkin = next;
+				GuiOptions.Save();
+				Debug.Log("[PlayerSkin] " + PlayerSkins.Skins[next].Name);
+			}
+		}
 		if (NextUpdateTime < Time.timeSinceLevelLoad)
 		{
 			SlowUpdate();

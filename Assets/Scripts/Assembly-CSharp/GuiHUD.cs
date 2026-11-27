@@ -206,7 +206,7 @@ public class GuiHUD : MonoBehaviour
 
 	private static string s_UseButtonName = "UseButton";
 
-	private static string[] s_WeaponButtonName = new string[5] { "W_SMG_selected", "W_Grn_selected", "W_Sht_selected", "W_Rck_selected", "W_Plasma_selected" };
+	private static string[] s_WeaponButtonName = new string[6] { "W_SMG_selected", "W_Grn_selected", "W_Sht_selected", "W_Rck_selected", "W_Plasma_selected", "W_Gatling_selected" };
 
 	private static string s_AmmoMagName = "Ammo_Mag";
 
@@ -226,22 +226,23 @@ public class GuiHUD : MonoBehaviour
 
 	private static string s_LayoutMemoryWarning = "MemoryWarning_Layout";
 
-	private static E_WeaponType[] s_WeaponType = new E_WeaponType[5]
+	private static E_WeaponType[] s_WeaponType = new E_WeaponType[6]
 	{
 		E_WeaponType.SMG,
 		E_WeaponType.GrenadeLauncher,
 		E_WeaponType.Shotgun,
 		E_WeaponType.RocketLauncher,
-		E_WeaponType.PlasmaRifle
+		E_WeaponType.PlasmaRifle,
+		E_WeaponType.Gatling
 	};
 
-	private static int[] s_CriticalAmmo = new int[5] { 10, 0, 2, 0, 10 };
+	private static int[] s_CriticalAmmo = new int[6] { 10, 0, 2, 0, 10, 30 };
 
 	private bool m_AmmoBlink;
 
 	private bool m_PlayingCutscene;
 
-	private static GUIBase_Button.TouchDelegate[] s_SelectWeaponDlgt = new GUIBase_Button.TouchDelegate[5] { TouchDelegateSMG, TouchDelegateGrn, TouchDelegateSht, TouchDelegateRck, TouchDelegatePlasma };
+	private static GUIBase_Button.TouchDelegate[] s_SelectWeaponDlgt = new GUIBase_Button.TouchDelegate[6] { TouchDelegateSMG, TouchDelegateGrn, TouchDelegateSht, TouchDelegateRck, TouchDelegatePlasma, TouchDelegateGatling };
 
 	private E_CrosshairType m_CrosshairType;
 
@@ -303,6 +304,8 @@ public class GuiHUD : MonoBehaviour
 			return 3;
 		case E_WeaponType.PlasmaRifle:
 			return 4;
+		case E_WeaponType.Gatling:
+			return 5;
 		default:
 			Debug.LogWarning("Trying to set weapon unssupported for player: " + t);
 			return 0;
@@ -323,6 +326,8 @@ public class GuiHUD : MonoBehaviour
 			return E_HudMessageType.E_006_PickedAmmoRPG;
 		case E_WeaponType.PlasmaRifle:
 			return E_HudMessageType.E_012_PickedAmmoPlasma;
+		case E_WeaponType.Gatling:
+			return E_HudMessageType.E_003_PickedAmmoSMG; // shares SMG ammo
 		default:
 			return E_HudMessageType.E_NONE;
 		}
@@ -780,6 +785,11 @@ public class GuiHUD : MonoBehaviour
 	private static void TouchDelegatePlasma()
 	{
 		Instance.SelectWeapon(E_WeaponType.PlasmaRifle);
+	}
+
+	private static void TouchDelegateGatling()
+	{
+		Instance.SelectWeapon(E_WeaponType.Gatling);
 	}
 
 	private void OnWeaponSelectTouchOutside()

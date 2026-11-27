@@ -54,6 +54,9 @@ public class GuiOptions
 	// looks. Kept separate from leftHandAiming, which mirrors the touch HUD.
 	public static bool leftHandSticks = false;
 
+	// Index into PlayerSkins.Skins (0 = the player's own model)
+	public static int playerSkin = 0;
+
 	public static E_ControlScheme m_ControlScheme = E_ControlScheme.Scheme1;
 
 	public static float ListenerVolume = 1f;
@@ -127,6 +130,7 @@ public class GuiOptions
 		subtitles = DefaultSubtitles;
 		invertYAxis = DefaultInvertYAxis;
 		leftHandSticks = DefaultLeftHandSticks;
+		playerSkin = 0;
 		m_ControlScheme = DefaultScheme;
 		m_XperiaPad = DefaultXperiPad;
 		SetLanguage(DefaultLanguage);
@@ -166,6 +170,7 @@ public class GuiOptions
 		PlayerPrefs.SetInt("OptionsInvertYAxis", invertYAxis ? 1 : 0);
 		PlayerPrefs.SetInt("OptionsLeftHandAiming", leftHandAiming ? 1 : 0);
 		PlayerPrefs.SetInt("OptionsLeftHandSticks", leftHandSticks ? 1 : 0);
+		PlayerPrefs.SetInt("OptionsPlayerSkin", playerSkin);
 		PlayerPrefs.SetInt("OptionsControlScheme", (int)m_ControlScheme);
 		PlayerPrefs.SetInt("OptionsLanguage", (int)m_Language);
 		PlayerPrefs.SetInt("OptionsXperiaViewPad", (int)m_XperiaPad);
@@ -192,6 +197,7 @@ public class GuiOptions
 		invertYAxis = PlayerPrefs.GetInt("OptionsInvertYAxis", DefaultInvertYAxis ? 1 : 0) != 0;
 		leftHandAiming = PlayerPrefs.GetInt("OptionsLeftHandAiming", DefaultLeftHandAiming ? 1 : 0) != 0;
 		leftHandSticks = PlayerPrefs.GetInt("OptionsLeftHandSticks", DefaultLeftHandSticks ? 1 : 0) != 0;
+		playerSkin = PlayerSkins.ClampIndex(PlayerPrefs.GetInt("OptionsPlayerSkin", 0));
 		m_ControlScheme = (E_ControlScheme)PlayerPrefs.GetInt("OptionsControlScheme", (int)DefaultScheme);
 		SetLanguage((E_Language)PlayerPrefs.GetInt("OptionsLanguage", (int)DefaultLanguage));
 		m_XperiaPad = (E_XperiPad)PlayerPrefs.GetInt("OptionsXperiaViewPad", (int)DefaultXperiPad);

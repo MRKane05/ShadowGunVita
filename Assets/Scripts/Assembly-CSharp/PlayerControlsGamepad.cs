@@ -80,13 +80,14 @@ public class PlayerControlsGamepad
 
 	private ViewJoypad ViewJoystick = new ViewJoypad();
 
-	private static E_WeaponType[] wepons = new E_WeaponType[5]
+	private static E_WeaponType[] wepons = new E_WeaponType[6]
 	{
 		E_WeaponType.SMG,
 		E_WeaponType.Shotgun,
 		E_WeaponType.GrenadeLauncher,
 		E_WeaponType.RocketLauncher,
-		E_WeaponType.PlasmaRifle
+		E_WeaponType.PlasmaRifle,
+		E_WeaponType.Gatling
 	};
 
 	private float ViewSensitivityX

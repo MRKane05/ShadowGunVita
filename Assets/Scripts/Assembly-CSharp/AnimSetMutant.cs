@@ -244,6 +244,7 @@ public class AnimSetMutant : AnimSet
 		switch (weapon)
 		{
 		case E_WeaponType.SMG:
+		case E_WeaponType.Gatling: // the player's Gatling fires SMG bullets
 			if (BlackBoard.MotionType != E_MotionType.None)
 			{
 				return DeathInMove.Get();

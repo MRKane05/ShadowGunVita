@@ -22,6 +22,7 @@ internal class WeaponManager : MonoBehaviour
 		WeaponsCache[E_WeaponType.RocketLauncher] = new ResourceCache("Weapons/WeaponRocketLauncher", 1);
 		WeaponsCache[E_WeaponType.GatlingMutant] = new ResourceCache("Weapons/WeaponGatlingMutant", 1);
 		WeaponsCache[E_WeaponType.PlasmaRifle] = new ResourceCache("Weapons/WeaponPlasma", 1);
+		WeaponsCache[E_WeaponType.Gatling] = new ResourceCache("Weapons/WeaponGatlingPlayer", 1);
 		AmmoCache[E_WeaponType.SMG] = new ResourceCache("Weapons/AmmoSMG", 1);
 		AmmoCache[E_WeaponType.SMGMutant] = new ResourceCache("Weapons/AmmoSMG", 1);
 		AmmoCache[E_WeaponType.Shotgun] = new ResourceCache("Weapons/AmmoShells", 1);
@@ -30,6 +31,7 @@ internal class WeaponManager : MonoBehaviour
 		AmmoCache[E_WeaponType.GrenadeLauncherMutant] = new ResourceCache("Weapons/AmmoGrenades", 1);
 		AmmoCache[E_WeaponType.RocketLauncher] = new ResourceCache("Weapons/AmmoRockets", 1);
 		AmmoCache[E_WeaponType.GatlingMutant] = new ResourceCache("Weapons/AmmoRockets", 1);
+		AmmoCache[E_WeaponType.Gatling] = new ResourceCache("Weapons/AmmoSMG", 1); // shares SMG ammo
 		AmmoCache[E_WeaponType.PlasmaRifle] = new ResourceCache("Weapons/AmmoPlasma", 1);
 	}
 

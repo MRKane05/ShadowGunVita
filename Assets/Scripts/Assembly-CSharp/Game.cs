@@ -97,6 +97,13 @@ public class Game : MonoBehaviour
 					}
 					break;
 				}
+				// TESTING: give the Gatling at the start of every level. Remove once it's placed in
+				// weapon boxes (InteractionWeaponBox.Weapon = Gatling).
+				Weapons.Add(E_WeaponType.Gatling, new WeaponInfo
+				{
+					AmmoInClip = 150,
+					AmmonInWeapon = 300
+				});
 				WeaponSelected = E_WeaponType.SMG;
 			}
 

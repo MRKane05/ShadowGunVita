@@ -128,9 +128,20 @@ public class ComponentWeapons : MonoBehaviour
 
 	public void AddAmmoToWeapon(AmmoBox a)
 	{
-		if (Weapons.ContainsKey(a.ForWeaponType) && !Weapons[a.ForWeaponType].IsFull)
+		// SMG ammo also feeds the Gatling. The box is used if either weapon can take ammo.
+		bool smgAmmo = a.ForWeaponType == E_WeaponType.SMG;
+		bool forOwnType = Weapons.ContainsKey(a.ForWeaponType) && !Weapons[a.ForWeaponType].IsFull;
+		bool forGatling = smgAmmo && Weapons.ContainsKey(E_WeaponType.Gatling) && !Weapons[E_WeaponType.Gatling].IsFull;
+		if (forOwnType || forGatling)
 		{
-			Weapons[a.ForWeaponType].AddAmmo(a.Ammo);
+			if (forOwnType)
+			{
+				Weapons[a.ForWeaponType].AddAmmo(a.Ammo);
+			}
+			if (forGatling)
+			{
+				Weapons[E_WeaponType.Gatling].AddAmmo(a.Ammo);
+			}
 			a.Disable();
 			if (a.Dropped)
 			{

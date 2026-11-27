@@ -149,6 +149,11 @@ public abstract class WeaponBase : MonoBehaviour
 		Audio = base.GetComponent<AudioSource>();
 		Transform = GameObject.transform;
 		TransformShot = base.transform.Find("Shoot");
+		if (TransformShot == null)
+		{
+			// Weapons with an adjustable "Model" child keep the shoot point under it (WeaponGatlingPlayer)
+			TransformShot = base.transform.Find("Model/Shoot");
+		}
 		InitProjSettings = new Projectile.InitSettings();
 		InitProjSettings.Weapon = WeaponType;
 		InitProjSettings.Speed = Speed;

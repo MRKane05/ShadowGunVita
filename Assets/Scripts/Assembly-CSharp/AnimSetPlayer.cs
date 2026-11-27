@@ -154,6 +154,8 @@ public class AnimSetPlayer : AnimSet
 			ArmCoverStand = "CoverStandShowWeapon",
 			DisarmCoverStand = "CoverStandHideWeapon"
 		});
+		// The Gatling has no player animations of its own, so it uses the SMG's
+		WeaponAnimations.Add(E_WeaponType.Gatling, WeaponAnimations[E_WeaponType.SMG]);
 		WeaponAnimations.Add(E_WeaponType.PlasmaRifle, new WeaponAnims
 		{
 			FireIdle = "IdleFireShotgun",

@@ -206,6 +206,19 @@ public class GuiMainMenu : MonoBehaviour
 
 	private int m_ShowingExtras = -1;
 
+	// Player skins screen, opened by the SKINS button on the Extras screen (Skins_Button, added in
+	// MainMenuBackground.unity opposite Back). It reuses the mobile release's "More Games" screen
+	// (MainSale), with an Extras-style frame and card buttons (Skin01_Button..Skin07_Button) added.
+	private const int maxSkinButtons = 7;
+
+	private GUIBase_Layout m_LayoutSkins;
+
+	private GUIBase_Button m_SkinsMainButton;
+
+	private GUIBase_Button[] m_SkinButtons = new GUIBase_Button[0];
+
+	private GUIBase_Label[] m_SkinLabels = new GUIBase_Label[0];
+
 	public AudioSource m_MenuMusic;
 
 	private float m_MusicVolume = 1f;
@@ -325,16 +338,7 @@ public class GuiMainMenu : MonoBehaviour
 		GuiBaseUtils.RegisterButtonDelegate(m_LayoutMainButtons, s_ButtonOptName, null, OnTouchButtonOpt);
 		GuiBaseUtils.RegisterButtonDelegate(m_LayoutMainButtons, s_ButtonHelpName, null, OnTouchButtonHelp);
 		GuiBaseUtils.RegisterButtonDelegate(m_LayoutMainButtons, s_ButtonExitName, null, OnTouchButtonExit);
-		GUIBase_Widget widget = m_LayoutMainButtons.GetWidget(s_ButtonMoreGames);
-		if (widget != null)
-		{
-			widget.m_VisibleOnLayoutShow = false;
-			GUIBase_Widget[] componentsInChildren = widget.GetComponentsInChildren<GUIBase_Widget>();
-			foreach (GUIBase_Widget gUIBase_Widget in componentsInChildren)
-			{
-				gUIBase_Widget.m_VisibleOnLayoutShow = false;
-			}
-		}
+		RegisterSkinsMenu();
 		GuiBaseUtils.RegisterButtonDelegate(m_LayoutAboutButtons, s_ButtonBackName, null, OnAboutButtonBack);
 		GuiBaseUtils.RegisterButtonDelegate(m_LayoutMoreButtons, s_ButtonBackName, null, OnMoreButtonBack);
 		GuiBaseUtils.RegisterButtonDelegate(m_LayoutHelpButtons, s_ButtonBackName, null, OnHelpButtonBack);
@@ -362,6 +366,134 @@ public class GuiMainMenu : MonoBehaviour
 		{
 			GuiBaseUtils.RegisterButtonDelegate(m_LayoutMainButtons, s_ButtonShowcaseName, null, OnTouchButtonShowcase);
 		}
+	}
+
+	// The Extras screen's SKINS button opens the skins screen. The main menu's own "More Games"
+	// button stays hidden, as in the original Vita menu.
+	private void RegisterSkinsMenu()
+	{
+		GUIBase_Widget widget = m_LayoutMainButtons.GetWidget(s_ButtonMoreGames);
+		if (widget != null)
+		{
+			widget.m_VisibleOnLayoutShow = false;
+			GUIBase_Widget[] componentsInChildren = widget.GetComponentsInChildren<GUIBase_Widget>();
+			foreach (GUIBase_Widget gUIBase_Widget in componentsInChildren)
+			{
+				gUIBase_Widget.m_VisibleOnLayoutShow = false;
+			}
+		}
+		GUIBase_Widget skinsWidget = m_LayoutMoreButtons.GetWidget("Skins_Button", false);
+		if (skinsWidget != null)
+		{
+			m_SkinsMainButton = GuiBaseUtils.RegisterButtonDelegate(m_LayoutMoreButtons, "Skins_Button", null, OnTouchButtonSkins);
+			GUIBase_Label label = skinsWidget.GetComponentInChildren<GUIBase_Label>();
+			if ((bool)label)
+			{
+				label.SetNewText("SKINS");
+			}
+		}
+		m_LayoutSkins = GuiBaseUtils.GetLayout(s_LayoutPlayButtonsName, m_PivotMoreGames);
+		if (m_LayoutSkins == null)
+		{
+			return;
+		}
+		// Hide the mobile "buy" artwork and buttons
+		HideSkinsWidget("podklad");
+		HideSkinsWidget("BuySamurai_Button");
+		HideSkinsWidget("BuySamurai2_Button");
+		GUIBase_Widget bg = m_LayoutSkins.GetWidget("Bg_Pivot", false);
+		GUIBase_Label title = ((bool)bg) ? bg.GetComponentInChildren<GUIBase_Label>() : null;
+		if (title == null)
+		{
+			GUIBase_Label[] labels = m_LayoutSkins.GetComponentsInChildren<GUIBase_Label>(true);
+			foreach (GUIBase_Label l in labels)
+			{
+				if (l.transform.parent != null && l.transform.parent.name == "Bg_Pivot")
+				{
+					title = l;
+				}
+			}
+		}
+		if ((bool)title)
+		{
+			title.SetNewText("PLAYER SKINS / CHOOSE A LOOK FOR YOUR NEXT RUN");
+		}
+		int count = Mathf.Min(PlayerSkins.Skins.Length, maxSkinButtons);
+		m_SkinButtons = new GUIBase_Button[count];
+		m_SkinLabels = new GUIBase_Label[count];
+		for (int i = 0; i < maxSkinButtons; i++)
+		{
+			string buttonName = string.Format("Skin{0:00}_Button", i + 1);
+			if (i >= count)
+			{
+				HideSkinsWidget(buttonName);
+				continue;
+			}
+			int skin = i;
+			m_SkinButtons[i] = GuiBaseUtils.RegisterButtonDelegate(m_LayoutSkins, buttonName, null, delegate(bool inside)
+			{
+				OnTouchButtonSkin(skin, inside);
+			});
+			if ((bool)m_SkinButtons[i])
+			{
+				// All skins are selectable for now (the cards were copied from the Extras bonus cards,
+				// which start locked until collected)
+				m_SkinButtons[i].SetDisabled(false);
+				m_SkinLabels[i] = m_SkinButtons[i].GetComponentInChildren<GUIBase_Label>();
+			}
+		}
+		GuiBaseUtils.RegisterButtonDelegate(m_LayoutSkins, s_ButtonBackName, null, OnTouchMoreGamesBack);
+		UpdateSkinButtons();
+	}
+
+	private void HideSkinsWidget(string widgetName)
+	{
+		GUIBase_Widget widget = m_LayoutSkins.GetWidget(widgetName, false);
+		if (widget == null)
+		{
+			return;
+		}
+		widget.m_VisibleOnLayoutShow = false;
+		GUIBase_Widget[] children = widget.GetComponentsInChildren<GUIBase_Widget>(true);
+		foreach (GUIBase_Widget child in children)
+		{
+			child.m_VisibleOnLayoutShow = false;
+		}
+	}
+
+	// Card labels: "DEFAULT", "MUTANT", ... with the chosen skin marked "> MUTANT <". The labels use
+	// the footer text size (set in MainMenuBackground.unity), so names stay short enough to fit.
+	private void UpdateSkinButtons()
+	{
+		int current = PlayerSkins.ClampIndex(GuiOptions.playerSkin);
+		for (int i = 0; i < m_SkinLabels.Length; i++)
+		{
+			if (m_SkinLabels[i] == null)
+			{
+				continue;
+			}
+			string text = PlayerSkins.Skins[i].Name.ToUpper();
+			m_SkinLabels[i].SetNewText((i == current) ? ("> " + text + " <") : text);
+		}
+	}
+
+	private void OnTouchButtonSkins(bool inside)
+	{
+		if (inside)
+		{
+			ChangeState(E_MenuState.E_MS_MORE_GAMES);
+		}
+	}
+
+	private void OnTouchButtonSkin(int skin, bool inside)
+	{
+		if (!inside)
+		{
+			return;
+		}
+		GuiOptions.playerSkin = PlayerSkins.ClampIndex(skin);
+		GuiOptions.Save();
+		UpdateSkinButtons();
 	}
 
 	private void RegisterLevelDelegates()
@@ -441,8 +573,23 @@ public class GuiMainMenu : MonoBehaviour
 		{
 			MenuItems[3].Add(value);
 		}
+		if ((bool)m_SkinsMainButton)
+		{
+			MenuItems[3].Add(m_SkinsMainButton); // index 20, before Back
+		}
 		MenuItems[3].Add(GuiBaseUtils.GetButton(m_LayoutMoreButtons, s_ButtonBackName));
 		MenuItems[4] = new ArrayList();
+		foreach (GUIBase_Button skinButton in m_SkinButtons)
+		{
+			if ((bool)skinButton)
+			{
+				MenuItems[4].Add(skinButton);
+			}
+		}
+		if ((bool)m_LayoutSkins)
+		{
+			MenuItems[4].Add(GuiBaseUtils.GetButton(m_LayoutSkins, s_ButtonBackName)); // Back must stay last
+		}
 		MenuItems[5] = new ArrayList();
 		MenuItems[6] = new ArrayList();
 		MenuItems[6].Add(GuiBaseUtils.GetButton(m_LayoutHelpButtons, s_ButtonBackName));
@@ -569,6 +716,7 @@ public class GuiMainMenu : MonoBehaviour
 			MFGuiManager.Instance.ShowPivot(m_PivotMore, true);
 			break;
 		case E_MenuState.E_MS_MORE_GAMES:
+			UpdateSkinButtons();
 			MFGuiManager.Instance.ShowPivot(m_PivotMoreGames, true);
 			break;
 		case E_MenuState.E_MS_OPT:
@@ -961,11 +1109,12 @@ public class GuiMainMenu : MonoBehaviour
 		}
 	}
 
+	// Back from the skins screen returns to Extras, where it was opened from
 	private void OnTouchMoreGamesBack(bool inside)
 	{
 		if (inside)
 		{
-			ChangeState(E_MenuState.E_MS_MAIN);
+			ChangeState(E_MenuState.E_MS_MORE);
 		}
 	}
 
@@ -1354,6 +1503,15 @@ public class GuiMainMenu : MonoBehaviour
 				}
 			}
 		}
+		else if (m_CurrentState == E_MenuState.E_MS_MORE_GAMES)
+		{
+			int backIndex = MenuItems[4].Count - 1;
+			int up = (MenuSelection == backIndex) ? (backIndex - 1) : (MenuSelection - 4);
+			if (up >= 0 && IsMenuButtonEnabled(up))
+			{
+				UpdateSelection(up);
+			}
+		}
 		else if (m_CurrentState == E_MenuState.E_MS_MORE && m_ShowingExtras == -1 && MenuSelection >= 4)
 		{
 			int num2 = ((MenuSelection != 16) ? (MenuSelection - 4) : (MenuSelection - 1));
@@ -1386,6 +1544,18 @@ public class GuiMainMenu : MonoBehaviour
 				if (IsMenuButtonEnabled(num))
 				{
 					UpdateSelection(num);
+				}
+			}
+		}
+		else if (m_CurrentState == E_MenuState.E_MS_MORE_GAMES)
+		{
+			int backIndex = MenuItems[4].Count - 1;
+			if (MenuSelection < backIndex)
+			{
+				int down = Mathf.Min(MenuSelection + 4, backIndex);
+				if (IsMenuButtonEnabled(down))
+				{
+					UpdateSelection(down);
 				}
 			}
 		}
@@ -1445,6 +1615,12 @@ public class GuiMainMenu : MonoBehaviour
 	{
 		switch (menu)
 		{
+		case E_MenuState.E_MS_MORE_GAMES:
+		{
+			// Start the controller cursor on the skin that's already chosen
+			int current = PlayerSkins.ClampIndex(GuiOptions.playerSkin);
+			return (current < m_SkinButtons.Length) ? current : 0;
+		}
 		case E_MenuState.E_MS_PLAY:
 			if (m_LayoutPlayConfirm.IsVisible())
 			{
@@ -1586,11 +1762,12 @@ public class GuiMainMenu : MonoBehaviour
 		}
 		if (m_CurrentState == E_MenuState.E_MS_MORE)
 		{
-			if (newSel == m_ExtrasButtons.Length)
+			// After the 20 cards come SKINS (if present) and Back
+			if (newSel >= m_ExtrasButtons.Length)
 			{
-				return true;
+				return newSel < MenuItems[3].Count;
 			}
-			if (newSel < 0 || newSel > m_ExtrasButtons.Length)
+			if (newSel < 0)
 			{
 				return false;
 			}
