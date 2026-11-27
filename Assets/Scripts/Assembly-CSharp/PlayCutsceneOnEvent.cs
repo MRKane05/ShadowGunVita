@@ -97,6 +97,15 @@ public class PlayCutsceneOnEvent : MonoBehaviour, IGameZoneControledObject
 					a.Agent.Teleport(a.StartTransform);
 				}
 			}
+			// Cutscene clips move the body well away from the agent's root (in level_13's CS_01 the body
+			// walks from 5 m to 1.9 m behind it), so the collision capsule can end up inside scenery.
+			// Unity 2018's CharacterController pushes itself out of anything it overlaps whenever it is
+			// moved (AnimComponent nudges it every frame), dragging the whole cutscene off its marks.
+			// Unity 3.5 never did this, so switch the capsule off until the cutscene ends.
+			if ((bool)a.Agent && (bool)a.Agent.CharacterController)
+			{
+				a.Agent.CharacterController.enabled = false;
+			}
 		}
 		Camera old = Camera.main;
 		GameCamera.Instance.StoreShakingState();
@@ -133,6 +142,10 @@ public class PlayCutsceneOnEvent : MonoBehaviour, IGameZoneControledObject
 		yield return new WaitForSeconds(FadeOutTime * 0.5f);
 		foreach (Actor a3 in Actors)
 		{
+			if ((bool)a3.Agent && (bool)a3.Agent.CharacterController)
+			{
+				a3.Agent.CharacterController.enabled = true;
+			}
 			if ((bool)a3.LeaveTransform)
 			{
 				if ((bool)a3.AnimatedGameObject)

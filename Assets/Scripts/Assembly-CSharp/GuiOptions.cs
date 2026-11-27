@@ -50,6 +50,10 @@ public class GuiOptions
 
 	public static bool leftHandAiming = false;
 
+	// Gamepad (Vita) left-handed controls: swaps the sticks so the right stick moves and the left stick
+	// looks. Kept separate from leftHandAiming, which mirrors the touch HUD.
+	public static bool leftHandSticks = false;
+
 	public static E_ControlScheme m_ControlScheme = E_ControlScheme.Scheme1;
 
 	public static float ListenerVolume = 1f;
@@ -65,6 +69,8 @@ public class GuiOptions
 	private static bool DefaultInvertYAxis = false;
 
 	private static bool DefaultLeftHandAiming = false;
+
+	private static bool DefaultLeftHandSticks = false;
 
 	private static E_ControlScheme DefaultScheme = E_ControlScheme.Scheme1;
 
@@ -120,6 +126,7 @@ public class GuiOptions
 		musicVolume = DefaultMusicVolume;
 		subtitles = DefaultSubtitles;
 		invertYAxis = DefaultInvertYAxis;
+		leftHandSticks = DefaultLeftHandSticks;
 		m_ControlScheme = DefaultScheme;
 		m_XperiaPad = DefaultXperiPad;
 		SetLanguage(DefaultLanguage);
@@ -158,6 +165,7 @@ public class GuiOptions
 		PlayerPrefs.SetInt("OptionsSubtitles", subtitles ? 1 : 0);
 		PlayerPrefs.SetInt("OptionsInvertYAxis", invertYAxis ? 1 : 0);
 		PlayerPrefs.SetInt("OptionsLeftHandAiming", leftHandAiming ? 1 : 0);
+		PlayerPrefs.SetInt("OptionsLeftHandSticks", leftHandSticks ? 1 : 0);
 		PlayerPrefs.SetInt("OptionsControlScheme", (int)m_ControlScheme);
 		PlayerPrefs.SetInt("OptionsLanguage", (int)m_Language);
 		PlayerPrefs.SetInt("OptionsXperiaViewPad", (int)m_XperiaPad);
@@ -183,6 +191,7 @@ public class GuiOptions
 		subtitles = PlayerPrefs.GetInt("OptionsSubtitles", DefaultSubtitles ? 1 : 0) != 0;
 		invertYAxis = PlayerPrefs.GetInt("OptionsInvertYAxis", DefaultInvertYAxis ? 1 : 0) != 0;
 		leftHandAiming = PlayerPrefs.GetInt("OptionsLeftHandAiming", DefaultLeftHandAiming ? 1 : 0) != 0;
+		leftHandSticks = PlayerPrefs.GetInt("OptionsLeftHandSticks", DefaultLeftHandSticks ? 1 : 0) != 0;
 		m_ControlScheme = (E_ControlScheme)PlayerPrefs.GetInt("OptionsControlScheme", (int)DefaultScheme);
 		SetLanguage((E_Language)PlayerPrefs.GetInt("OptionsLanguage", (int)DefaultLanguage));
 		m_XperiaPad = (E_XperiPad)PlayerPrefs.GetInt("OptionsXperiaViewPad", (int)DefaultXperiPad);

@@ -326,11 +326,11 @@ public class PlayerControlsGamepad
 		{
 			States.UseDelegate();
 		}
-		if (ButtonDown(E_Input.Reload) || Input.GetKeyDown("7"))
+		if (ButtonDown(E_Input.Reload) || Input.GetKeyDown("r"))
 		{
 			States.ReloadDelegate();
 		}
-		if (ButtonDown(E_Input.Roll) || Input.GetKeyDown("4"))
+		if (ButtonDown(E_Input.Roll) || Input.GetKeyDown("f"))
 		{
 			States.RollDelegate();
 		}
@@ -569,7 +569,29 @@ public class PlayerControlsGamepad
 		}
 	}
 
+	// Left-handed controls (GuiOptions.leftHandSticks): the move and view axes are swapped, so the right
+	// stick moves and the left stick looks. Each axis keeps its own sign handling in ReadGpadAxis, so
+	// "up" still means forward for moving and up for looking (and invert Y still applies to looking).
 	private float GetGpadAxis(E_Input inp)
+	{
+		if (GuiOptions.leftHandSticks)
+		{
+			switch (inp)
+			{
+			case E_Input.Axis_MoveRight:
+				return ReadGpadAxis(E_Input.Axis_ViewRight);
+			case E_Input.Axis_MoveUp:
+				return ReadGpadAxis(E_Input.Axis_ViewUp);
+			case E_Input.Axis_ViewRight:
+				return ReadGpadAxis(E_Input.Axis_MoveRight);
+			case E_Input.Axis_ViewUp:
+				return ReadGpadAxis(E_Input.Axis_MoveUp);
+			}
+		}
+		return ReadGpadAxis(inp);
+	}
+
+	private float ReadGpadAxis(E_Input inp)
 	{
 		string axisName = custom_inputs.Instance.GetAxisName((int)inp);
 		if (axisName != string.Empty)

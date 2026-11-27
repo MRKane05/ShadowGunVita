@@ -94,10 +94,13 @@ public class Explosion : MonoBehaviour
 		ParticleSystem[] emitters = m_Emitters;
 		foreach (ParticleSystem particleSystem in emitters)
 		{
-			if (particleSystem.isPlaying || particleSystem.particleCount > 0)
+			if (particleSystem != null)
 			{
-				flag = true;
-				break;
+				if (particleSystem.isPlaying || particleSystem.particleCount > 0)
+				{
+					flag = true;
+					break;
+				}
 			}
 		}
 		if (!flag && !base.GetComponent<AudioSource>().isPlaying)

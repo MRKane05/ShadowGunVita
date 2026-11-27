@@ -222,11 +222,9 @@ public class GuiOptionsMenu : MonoBehaviour
 		MenuItems[0].Add(GuiBaseUtils.GetButton(m_LayoutOptControls, "GUI_slider_right"));
 		MenuItems[0].Add(m_SwitchYAxis.m_Buttons[0]);
 		MenuItems[0].Add(m_SwitchYAxis.m_Buttons[1]);
-		if (showTouchOptions)
-		{
-			MenuItems[0].Add(m_SwitchLefthanded.m_Buttons[0]);
-			MenuItems[0].Add(m_SwitchLefthanded.m_Buttons[1]);
-		}
+		// The left-handed switch is shown for both touch (mirrors the HUD) and gamepad (swaps the sticks)
+		MenuItems[0].Add(m_SwitchLefthanded.m_Buttons[0]);
+		MenuItems[0].Add(m_SwitchLefthanded.m_Buttons[1]);
 		if (showTouchOptions && (bool)m_CustomiseButton)
 		{
 			MenuItems[0].Add(m_CustomiseButton);
@@ -261,7 +259,7 @@ public class GuiOptionsMenu : MonoBehaviour
 		m_SliderSensitivity.SetValue(GuiOptions.sensitivity);
 		m_SwitchSubtitles.SetValue(GuiOptions.subtitles);
 		m_SwitchYAxis.SetValue(GuiOptions.invertYAxis);
-		m_SwitchLefthanded.SetValue(GuiOptions.leftHandAiming);
+		m_SwitchLefthanded.SetValue(showTouchOptions ? GuiOptions.leftHandAiming : GuiOptions.leftHandSticks);
 		m_ControlSchemeEnum.SetValue((int)GuiOptions.m_ControlScheme);
 		m_LanguageEnum.SetValue((int)GuiOptions.m_Language);
 		m_XperiaViewEnum.SetValue((int)GuiOptions.m_XperiaPad);
@@ -300,9 +298,8 @@ public class GuiOptionsMenu : MonoBehaviour
 				MFGuiManager.Instance.ShowWidget(m_CustomiseButton.Widget, false, true);
 			}
 			MFGuiManager.Instance.ShowWidget(m_ControlSchemeEnum.Widget, false, true);
-			MFGuiManager.Instance.ShowWidget(m_SwitchLefthanded.Widget, false, true);
 			MFGuiManager.Instance.ShowWidget(m_ControlSchemeLabel.Widget, false, true);
-			MFGuiManager.Instance.ShowWidget(m_LeftHandLabel.Widget, false, true);
+			// The left-handed switch and its label stay visible: with a gamepad they swap the sticks
 		}
 		UpdateConfigButton();
 	}
@@ -387,7 +384,14 @@ public class GuiOptionsMenu : MonoBehaviour
 
 	private void OnLefthandedChange(bool switchValue)
 	{
-		GuiOptions.SetNewLeftHandAiming(switchValue);
+		if (showTouchOptions)
+		{
+			GuiOptions.SetNewLeftHandAiming(switchValue);
+		}
+		else
+		{
+			GuiOptions.leftHandSticks = switchValue;
+		}
 		if (switchValue)
 		{
 			MenuSelection++;
