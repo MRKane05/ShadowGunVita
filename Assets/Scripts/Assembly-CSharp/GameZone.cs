@@ -303,7 +303,7 @@ public class GameZone : GameZoneBaze
 			
 			if (interactionObject.IsActive && (interactionObject.Position - center).sqrMagnitude < num)
 			{
-				Debug.Log("Interaction object in range");
+				//Debug.Log("Interaction object in range");
 				return true;
 			} else if (interactionObject.IsActive)
             {

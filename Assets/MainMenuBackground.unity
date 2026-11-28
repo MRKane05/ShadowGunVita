@@ -22371,6 +22371,7 @@ Transform:
   - {fileID: 1659280993}
   - {fileID: 1659281020}
   - {fileID: 1659281047}
+  - {fileID: 1659281101}
   m_Father: {fileID: 1383}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -94408,4 +94409,89 @@ MonoBehaviour:
   m_FadeAlpha: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Width: 159.99995
+  m_Height: 73.00098
+
+--- !u!4 &1659281101
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1659281100}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 960, y: 985, z: -10}
+  m_LocalScale: {x: 0.637, y: 0.637, z: 0.637}
+  m_Children: []
+  m_Father: {fileID: 1384}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1659281100
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1659281101}
+  - component: {fileID: 1659281102}
+  - component: {fileID: 1659281103}
+  m_Layer: 0
+  m_Name: Hint_Label
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1659281101
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1659281100}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 960, y: 985, z: -10}
+  m_LocalScale: {x: 0.637, y: 0.637, z: 0.637}
+  m_Children: []
+  m_Father: {fileID: 1384}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1659281102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1659281100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd97fa44407f59992f17262f31dbf9a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TextID: 0
+  m_Text: SKINS WILL UNLOCK AS YOU COLLECT BONUS CARDS
+  m_TextDyn: SKINS WILL UNLOCK AS YOU COLLECT BONUS CARDS
+  m_Font: {fileID: 3998}
+  m_AnchorPoint: 4
+  m_Alignment: 0
+  m_LineSpace2: 0
+  m_UseFontExGen: 0
+--- !u!114 &1659281103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1659281100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fd9b2485245c5a9a8154e3213b65b56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 813a18e97781a924192bc7cc7d0139a1, type: 2}
+  m_FocusID: -1
+  m_InTexPos: {x: 0.40039062, y: 0.40039062}
+  m_InTexSize: {x: 0.19921875, y: 0.19921875}
+  m_GuiWidgetLayer: 1
+  m_InitProxyFlag: 0
+  m_VisibleOnLayoutShow: 1
+  m_FadeAlpha: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Width: 1097.9994
   m_Height: 73.00098
